@@ -1,13 +1,17 @@
-// <?php include("vue_head.php"); ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title></title>
+    <?php include_once 'head.php'; ?>
+</head>
+
 <body>
-	<?php 
-		include('../controleurs/ctrl_index.php'); 
-	    include("vue_topbar.php"); 
-	 ?>
-	<div class="container title-container">
-		<div class="container">
-			<h1 class="title">Bienvenue !</h1>
-		</div>
-	</div>
+    <?php include_once 'topbar.php'; ?>
+
+    <main class="container">
+    </main>
+
+    <?php include_once 'footer.php'; ?>
 </body>
-// <?php require_once("vue_footer.php"); ?>
+
+</html>

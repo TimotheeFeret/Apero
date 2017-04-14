@@ -1,4 +1,9 @@
-	<div class="footer">
-		<p>AVOUSTIN Alice &nbsp & &nbsp PEPIN Jeremy &nbsp & &nbsp FERET Timothee &nbsp - &nbsp 2017</p>
+<footer class="page-footer">
+	<div class="footer-copyright">
+		<div class="container">
+            <span class="center">
+                AVOUSTIN Alice - PÉPIN Jérémy - FÉRET Timothée
+            </span>
+		</div>
 	</div>
-</html>
+</footer>
