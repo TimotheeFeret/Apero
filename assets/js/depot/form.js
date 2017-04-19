@@ -1,8 +1,9 @@
 /**
- * Created by jerem on 14/04/2017.
+ * Created by jerem on 19/04/2017.
  */
 
 $( document ).ready(function() {
+
     $(document).submit(function() {
         event.preventDefault();
     });

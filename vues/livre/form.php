@@ -2,12 +2,13 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field">
+                <i class="material-icons prefix">book</i>
                 <input id="isbn" type="text" class="validate" required>
                 <label for="isbn">ISBN</label>
             </div>
 
             <div class="input-field">
-                <i class="material-icons prefix">book</i>
+                <i class="material-icons prefix">font_download</i>
                 <input id="nom_livre" type="text" class="validate" required>
                 <label for="nom_livre">Nom</label>
             </div>

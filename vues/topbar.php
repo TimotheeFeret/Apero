@@ -7,9 +7,10 @@
                     <li><a href="vues/famille/list.php">Familles</a></li>
                     <li><a href="vues/etablissement/list.php">Établissements</a></li>
                     <li><a href="vues/livre/list.php">Livres</a></li>
-                    <li><a href="#">Stock</a></li>
-                    <li><a href="#">Dépôt</a></li>
-                    <li><a href="#">Achat</a></li>
+                    <li><a href="vues/stock/list.php">Stock</a></li>
+                    <li><a href="vues/historique/list.php">Historique</a></li>
+                    <li><a href="vues/depot/add.php">Dépôt</a></li>
+                    <li><a href="vues/achat/add.php">Achat</a></li>
                 </ul>
             </div>
         </div>
