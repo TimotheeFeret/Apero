@@ -9,4 +9,13 @@
 	$enfant2->add();
 	/*echo '// Récupération de tous les enfants dans un tableau.';
 	var_dump($enfant1->getAll());*/
+	/*var_dump($enfant2->getAll());*/
+	// Insérer l'id de l'enfant pour pouvoir le supprimer.
+	var_dump($enfant2['id']);
+	if ($this->id != null)
+	{
+		var_dump($enfant2->delete());
+		var_dump('Test de passage.');
+	}
+	var_dump($enfant2->getAll());
 ?>

@@ -1,0 +1,10 @@
+
+	--	fonctions.php
+	//	Créer une fonction getId() ?
+	Lors du test de la fonction delete(), comment puis-je savoir quel est l'id de l'enfant sachant que c'est la base qui a auto-incrémenté l'id ?
+
+	//	Comment fonctionne la fonction update() ?
+	Doit-on passer en paramètre les noms des champs qui vont être modifier ?
+
+	// TODO
+	Comment récupérer les noms des champs de la table pour un objet donné ?
