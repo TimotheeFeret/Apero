@@ -11,8 +11,7 @@
     <main class="container">
         <h1 class="center">Ajouter une famille</h1>
         
-<!--        TODO : faire l'ajout d'enfant-->
-        <?php 
+        <?php
             $submit_text = 'Ajouter';
             include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/famille/form.php'; 
         ?>
