@@ -18,5 +18,5 @@
             <?php echo $submit_text ?>
         </button>
     </form>
-
 </div>
+<script type="application/javascript" src="assets/js/etablissement/form.js"></script>
