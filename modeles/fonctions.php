@@ -40,9 +40,9 @@
 		{
 			$reqConstructor = $this->constructRequest();
 			$nomTable = $this::nomTable;
+			var_dump("INSERT INTO $nomTable SET $reqConstructor;");
 			// Envoi de la requête vers la base de données.
 			$req = DB::connect()->exec(" INSERT INTO $nomTable SET $reqConstructor; ");
-			var_dump("INSERT INTO $nomTable SET $reqConstructor;");
 			var_dump($req);
 		}
 
@@ -69,9 +69,10 @@
 			$nomTable = $this::nomTable;
 	        $params = func_get_args();
 	        $reqConstructor = $params ? "WHERE id IN (".implode(', ', $params).")" : "";
-
 			$bdd = new PDO('mysql:host=localhost;dbname=apero;charset=utf8', 'root', '');
-			$req = DB::connect()->query(" SELECT * FROM $nomTable $reqConstructor ;");
+			$req = DB::connect()->query(" SELECT * FROM $nomTable $reqConstructor ; ");
+			/*// VISUALISER LA CONSTRUCTION DE LA REQUETE
+			var_dump($req);*/
 			$donnees = $req->fetchAll(PDO::FETCH_ASSOC);
 			$req->closeCursor(); // Termine le traitement de la requête
 			return $donnees;
