@@ -18,5 +18,9 @@
     </main>
 
     <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/footer.php'; ?>
+
+    <script>
+        var event = <?php echo json_encode('add'); ?>;
+    </script>
 </body>
 </html>
