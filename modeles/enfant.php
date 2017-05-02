@@ -16,24 +16,23 @@
 		const nomTable = 'enfant';
 		
 		function __construct() {
-		        $argv = func_get_args();
-		        switch( func_num_args() ) {
-		            case 1:
-		                self::__construct1($argv[0]);
-		                break;
-		            case 5:
-		            //	On récupère tous les paramètres de l'enfant sauf l'id.
-		                self::__construct2( $argv[0], $argv[1], $argv[2], $argv[3], $argv[4] );
-		                break;
-		            case 6:
-		            //	On récupère tous les paramètres de l'enfant.
-		                self::__construct3( $argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5] );
-		                break;
-		            default :
-		            	echo 'Erreur lors de la construction de l\'objet enfant. Nombre de paramètres inapproprié.';
-		         }
-		     }
-
+	        $nbParam = func_get_args();
+	        switch( func_num_args() ) {
+	            case 1:
+	                self::__construct1($nbParam[0]);
+	                break;
+	            case 5:
+	            //	On récupère tous les paramètres de l'enfant sauf l'id.
+	                self::__construct2( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4] );
+	                break;
+	            case 6:
+	            //	On récupère tous les paramètres de l'enfant.
+	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5] );
+	                break;
+	            default :
+	            	echo '<br/>Erreur lors de la construction de l\'objet enfant. Nombre de paramètres inapproprié.';
+	         }
+	     }
 
 		/**
 		*

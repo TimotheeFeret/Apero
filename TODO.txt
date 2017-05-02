@@ -1,3 +1,6 @@
-
+Tim
 	--	fonctions.php
 	//	Terminer la function update et la tester.
+	
+	--	Modele/enfant.php
+	Pour get enfant, créer un 4° constructeur.
