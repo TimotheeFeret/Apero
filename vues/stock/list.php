@@ -16,7 +16,7 @@
         <tr>
             <th>Livre</th>
             <th>Famille déposante</th>
-            <th>Prix de ventea</th>
+            <th>Prix de vente</th>
         </tr>
         </thead>
 

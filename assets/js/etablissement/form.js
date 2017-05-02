@@ -3,11 +3,6 @@
  */
 
 $(document).ready(function () {
-
-    if(typeof id !== 'undefined') {
-        id = null;
-    }
-
     $(document).submit(function () {
         event.preventDefault();
         $.ajax({

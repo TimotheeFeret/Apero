@@ -11,8 +11,6 @@ $( document ).ready(function() {
 
     initBtnSupprimerEnfant();
 
-    var data = JSON.stringify({enfant: {id: 'test', name: 'nametest'}});
-
     // EVENTS
     // A la soumission du formulaire
     $(document).submit(function() {
@@ -151,36 +149,30 @@ $( document ).ready(function() {
      */
     function constructFormEnfant(idEnfant) {
         var div = $('<div>', {id: idEnfant, class: 'tab_content'});
-        var row = $('<div>', { class: 'row'});
-        var input_field = $('<div>', { class: 'input-field'});
-        var icon = $('<i>', { class: 'material-icons prefix'});
-        var input_text = $('<input>', { type: 'text', class: 'validate', required: 'true'});
-        var input_date = $('<input>', { type: 'date', class: 'datepicker validate', required: 'true'});
-        var select = $('<select>');
-        var label = $('<label>');
+        var row = bc_row();
 
         // Nom
-        var input_field_nom = input_field.clone().addClass('col s6');
-        input_field_nom.append(icon.clone().text('account_circle'));
-        input_field_nom.append(input_text.clone().attr('name', 'nom#'+idEnfant));
-        input_field_nom.append(label.clone().attr('for', 'nom#'+idEnfant).text('Nom'));
+        var input_field_nom = bc_input_field().addClass('col s6');
+        input_field_nom.append(bc_icon().text('account_circle'));
+        input_field_nom.append(bc_input_text().attr('name', 'nom#'+idEnfant));
+        input_field_nom.append(bc_label().attr('for', 'nom#'+idEnfant).text('Nom'));
 
         // Prénom
-        var input_field_prenom = input_field.clone().addClass('col s6');
-        input_field_prenom.append(input_text.clone().attr('name', 'prenom#'+idEnfant).addClass('prenom_enfant'));
-        input_field_prenom.append(label.clone().attr('for', 'prenom#'+idEnfant).text('Prénom'));
+        var input_field_prenom = bc_input_field().addClass('col s6');
+        input_field_prenom.append(bc_input_text().attr('name', 'prenom#'+idEnfant).addClass('prenom_enfant'));
+        input_field_prenom.append(bc_label().attr('for', 'prenom#'+idEnfant).text('Prénom'));
 
         // Date de naissance
-        var input_field_date_naissance = input_field.clone();
-        input_field_date_naissance.append(icon.clone().text('date_range'));
-        input_field_date_naissance.append(input_date.clone().attr({name: 'date_naissance#'+idEnfant, id: 'date_naissance#'+idEnfant}));
-        input_field_date_naissance.append(label.clone().attr('for', 'date_naissance#'+idEnfant).text('Date de naissance'));
+        var input_field_date_naissance = bc_input_field();
+        input_field_date_naissance.append(bc_icon().text('date_range'));
+        input_field_date_naissance.append(bc_input_date().attr({name: 'date_naissance#'+idEnfant, id: 'date_naissance#'+idEnfant}));
+        input_field_date_naissance.append(bc_label().attr('for', 'date_naissance#'+idEnfant).text('Date de naissance'));
 
         // Sections
-        var input_field_section = input_field.clone();
-        input_field_section.append(icon.clone().text('class'));
-        input_field_section.append(select.clone().attr('name', 'section#'+idEnfant));
-        input_field_section.append(label.clone().attr('for', 'section#'+idEnfant).text('Section'));
+        var input_field_section = bc_input_field();
+        input_field_section.append(bc_icon().text('class'));
+        input_field_section.append(bc_select().attr('name', 'section#'+idEnfant));
+        input_field_section.append(bc_label().attr('for', 'section#'+idEnfant).text('Section'));
 
         row.append(input_field_nom);
         row.append(input_field_prenom);

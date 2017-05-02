@@ -21,12 +21,11 @@
         <div class="row">
             <div class="col s12">
                 <div class="card">
-                    <div class="card-content">
+                    <div id="CardExemplaires" class="card-content">
 
                         <div class="row">
-
 <!--                            Formulaire pour l'ajout d'un exemplaire-->
-                            <div class="input-field col s4">
+                            <div class="input-field col s5">
                                 <i class="material-icons prefix">book</i>
                                 <select>
                                     <option value="" disabled selected>Choisissez un livre</option>
@@ -37,7 +36,7 @@
                                 <label>Livre de référence</label>
                             </div>
 
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <i class="material-icons prefix">grade</i>
                                 <select>
                                     <option value="" disabled selected>Choisissez un état</option>
@@ -48,16 +47,21 @@
                                 <label>État du livre</label>
                             </div>
 
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <i class="material-icons prefix">euro_symbol</i>
                                 <input id="prix_livre_1" type="text" class="validate" required>
                                 <label for="prix_livre_1">Prix</label>
                             </div>
+
+                            <div class="input-field col s1">
+                                <a class="waves-effect waves-light btn"><i class="material-icons">delete</i></a>
+                            </div>
                         </div>
+                        
                     </div>
 
                     <div class="card-action">
-                        <a href="#">Ajouter un exemplaire</a>
+                        <a id="BtAddExemplaire" href="#">Ajouter un exemplaire</a>
                     </div>
                 </div>
             </div>
@@ -70,4 +74,5 @@
     </form>
 </div>
 
+<script type="application/javascript" src="assets/js/base_components.js"></script>
 <script type="application/javascript" src="assets/js/depot/form.js"></script>

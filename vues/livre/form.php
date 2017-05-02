@@ -34,4 +34,8 @@
 
 </div>
 
+<script>
+    var id = <?php echo json_encode( (empty($_GET['id']) ? null : $_GET['id']) ); ?>;
+    var event = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
+</script>
 <script type="application/javascript" src="assets/js/livre/form.js"></script>

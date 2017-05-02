@@ -48,4 +48,5 @@
 <script>
     var emptyTab = <?php echo json_encode($emptyTab); ?>;
 </script>
+<script type="application/javascript" src="assets/js/base_components.js"></script>
 <script type="application/javascript" src="assets/js/famille/form.js"></script>
