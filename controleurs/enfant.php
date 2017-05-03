@@ -11,7 +11,7 @@
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$enfant = new Enfant($data['nom'], $data['prenom'], $data['date_naissance']);
+			$enfant = new Enfant($data['famille_id'], $data['section_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
 			// Ajoute l'enfant ou génère une erreur si l'ajout a échoué.
 			try {
 				$enfant->add();
@@ -44,7 +44,7 @@
 				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
 			}
 			$data = explode('&', $_POST['data']);
-			$enfant = new Enfant($_POST['id'],$data['nom'],$data['prenom'],$data['date_naissance']);
+			$enfant = new Enfant($_POST['id'], $data['famille_id'], $data['section_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
 			// Faire un nouveau constructeur avec l'id et les data
 			try {
 				$enfant->update();
@@ -53,7 +53,7 @@
 			}
 			break;
 
-		case 'getAll':
+		case 'get':
 			// Instanciation par défaut de enfant pour avoir accès à l'attribut nomTable.
 			$enfant = new Enfant();
 			try {

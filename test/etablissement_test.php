@@ -28,7 +28,7 @@
 	// ******************** AFFICHAGE ETABLISSEMENT ******************** //
 	// OK
 	/*echo '// ******************** AFFICHAGE ETABLISSEMENT ******************** //';
-	$etablissement5 = new Etablissement('1');
+	$etablissement5 = new Etablissement();
 	echo "<br/>SELECT DE TOUS LES ETABLISSEMENTS.";
 	var_dump($etablissement5->get());
 	echo "<br/>SELECT D'UN SEUL ETABLISSEMENT.";

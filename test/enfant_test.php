@@ -13,27 +13,28 @@
 
 	// ******************** AJOUT ENFANT ******************** //
 	// OK
-	echo '// ******************** AJOUT ENFANT ******************** //';
+	/*echo '// ******************** AJOUT ENFANT ******************** //';
 	echo '</br>// Création d\'un enfant avec (famille_id, section_id, nom, prenom, date_naissance).';
 	$enfant3 = new Enfant('1', '1', 'Tom', 'Jedusor', '2017-04-01');
-	$enfant3->add();
+	$enfant3->add();*/
 
 	// ******************** UPDATE ENFANT ******************** //
+	// OK
 	/*echo '// ******************** UPDATE ENFANT ******************** //';
 	echo '<br/>// Mise à jour d\'un enfant avec (id, famille_id, section_id, nom, prenom, date_naissance).';
-	$enfant4 = new Enfant('101', '1', '1', 'enfant modifié', 'enfant modifié', '2017-04-01');
+	$enfant4 = new Enfant('19', '1', '1', 'enfant modifié', 'enfant modifié', '2017-04-01');
 	$enfant4->update();*/
 
 	// ******************** AFFICHAGE ENFANT ******************** //
-	/*// OK
-	echo '// ******************** AFFICHAGE ENFANT ******************** //';
-	$enfant5 = new Enfant('1');
+	// OK
+	/*echo '// ******************** AFFICHAGE ENFANT ******************** //';
+	$enfant5 = new Enfant();
 	echo "<br/>SELECT DE TOUS LES ENFANTS.";
 	var_dump($enfant5->get());
 	echo "<br/>SELECT D'UN SEUL ENFANT.";
-	var_dump($enfant5->get('78'));
+	var_dump($enfant5->get('17'));
 	echo "<br/>SELECT DE PLUSIEURS ENFANTS.";
-	var_dump($enfant5->get('78', '79', '80'));*/
+	var_dump($enfant5->get('17', '18', '80'));*/
 
 	// ******************** SUPPRESSION ENFANT ******************** //
 	// OK
