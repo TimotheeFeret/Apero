@@ -11,3 +11,16 @@ main {
 .large {
     font-size: 11pt !important;
 }
+
+label {
+    width: 100%;
+}
+
+label:after {
+    transition-property: all !important;
+    font-size: 0.8rem;
+    transform: none;
+}
+label:not(.active):after {
+    transform: translateY(-140%);
+}

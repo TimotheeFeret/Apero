@@ -15,4 +15,17 @@ $(document).ready(function () {
                 console.log("success");
             })
     });
+
+    $('form').validate({
+        rules: {
+            id: {
+                numbers_with_dashes: true,
+                minlength: 5,
+            },
+
+            prix: {
+                money: true
+            }
+        }
+    });
 });
