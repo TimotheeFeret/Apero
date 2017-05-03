@@ -23,7 +23,9 @@
 	/*echo '// ******************** UPDATE ENFANT ******************** //';
 	echo '<br/>// Mise à jour d\'un enfant avec (id, famille_id, section_id, nom, prenom, date_naissance).';
 	$enfant4 = new Enfant('19', '1', '1', 'enfant modifié', 'enfant modifié', '2017-04-01');
-	$enfant4->update();*/
+	$enfant4->update();
+	echo '<br/>// Requête sur l''enfant id = 19 suite à l''update';
+	var_dump($enfant4->get('19'));*/
 
 	// ******************** AFFICHAGE ENFANT ******************** //
 	// OK

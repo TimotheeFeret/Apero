@@ -39,7 +39,7 @@
 		*/		
 		function __construct1()
 		{
-			// Ce constructeur est utilisé pour faire un get de tous les établissements.
+			// Ce constructeur est notamment utilisé pour faire un get de tous les établissements.
 			/*var_dump ('Constructeur 1');*/
 		}
 

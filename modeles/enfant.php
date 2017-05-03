@@ -42,7 +42,7 @@
 		*/		
 		function __construct1()
 		{
-			// Ce constructeur est utilisé pour faire un get de tous les enfants.
+			// Ce constructeur est notamment utilisé pour faire un get de tous les enfants.
 			/*var_dump ('Constructeur 1');*/
 		}
 

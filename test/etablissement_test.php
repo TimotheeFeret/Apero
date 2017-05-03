@@ -23,7 +23,9 @@
 	echo '<br/>// Mise à jour d\'un enfant (id, nom, telephone).';*/
 	/*$etablissement4 = new Etablissement('8', 'Lycée modification nom', 'tel modif 0477598521');
 	var_dump($etablissement4->update());
-	$etablissement4->update();*/
+	$etablissement4->update();
+	echo '<br/>// Requête sur l''établissement id = 8 suite à l''update';
+	var_dump($etablissement4->get('8'));*/
 
 	// ******************** AFFICHAGE ETABLISSEMENT ******************** //
 	// OK
