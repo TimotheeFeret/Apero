@@ -1,6 +1,6 @@
 <?php 
 	require_once "fonctions.php";
-	require_once "../config/connexion_bd.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/connexion_bd.php";
 
 	/**
 	* 

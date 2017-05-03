@@ -22,7 +22,8 @@
             </div>
         </div>
 
-<!--        Liste des enfants-->
+        <!--        Liste des enfants-->
+        <span class="new badge large" data-badge-caption="Appuyez sur la touche '+' ou '-' de votre clavier pour gérer les enfants"></span>
         <h5>Enfants</h5>
         <div id="CardEnfant" class="card">
             <div class="card-tabs ">
@@ -47,6 +48,7 @@
 
 <script>
     var emptyTab = <?php echo json_encode($emptyTab); ?>;
+    var eventPage = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
 </script>
 <script type="application/javascript" src="assets/js/base_components.js"></script>
 <script type="application/javascript" src="assets/js/famille/form.js"></script>

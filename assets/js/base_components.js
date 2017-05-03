@@ -23,7 +23,7 @@ function bc_input_date() {
 }
 
 function bc_select() {
-    return $('<select>');
+    return $('<select>', { required: 'required'});
 }
 
 function bc_label() {
