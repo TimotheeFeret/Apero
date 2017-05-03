@@ -17,5 +17,10 @@
     echo '<script src="'.$domain.'/lib/js/jquery-3.1.1.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/lib/js/materialize.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/lib/js/fr_FR.js'.'" type="text/javascript"></script>';
+    echo '<script src="'.$domain.'/lib/js/formatter.min.js'.'" type="text/javascript"></script>';
+    echo '<script src="'.$domain.'/lib/js/jquery.formatter.min.js'.'" type="text/javascript"></script>';
+    echo '<script src="'.$domain.'/lib/js/jquery.validate/jquery.validate.min.js'.'" type="text/javascript"></script>';
+    echo '<script src="'.$domain.'/lib/js/jquery.validate/localization/messages_fr.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/assets/js/js_general.js'.'" type="text/javascript"></script>';
+    echo '<script src="'.$domain.'/assets/js/jquery.validator.custom.js'.'" type="text/javascript"></script>';
 ?>

@@ -11,17 +11,14 @@
     <main class="container">
         <h1 class="center">Établissements</h1>
 
-        <table>
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Téléphone</th>
-            </tr>
-            </thead>
+        <!--        Récupération & afficharge des données-->
+        <?php
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/etablissement.php';
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Table.php';
 
-            <tbody>
-            </tbody>
-        </table>
+        $etablissement = new Etablissement();
+        Table::render(['nom' => 'Établissement', 'telephone' => 'Téléphone'], $etablissement->get());
+        ?>
 
         <div class="fixed-action-btn">
             <a href="vues/etablissement/add.php" class="btn-floating btn-large">

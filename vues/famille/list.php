@@ -11,19 +11,15 @@
     <main class="container">
         <h1 class="center">Familles</h1>
 
-        <table>
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Adresse</th>
-                <th>Téléphone</th>
-            </tr>
-            </thead>
+        <!--        Récupération & afficharge des données-->
+        <?php
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/famille.php';
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Table.php';
 
-            <tbody>
-            </tbody>
-        </table>
-
+        $famille = new Famille();
+        Table::render(['nom' => 'Nom', 'adresse' => 'Adresse', 'telephone' => 'Téléphone'], $famille->get());
+        ?>
+        
         <div class="fixed-action-btn">
             <a href="vues/famille/add.php" class="btn-floating btn-large">
                 <i class="large material-icons">add</i>

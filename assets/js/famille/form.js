@@ -9,44 +9,40 @@ $( document ).ready(function() {
     var btnAddEnfant = $('#BtAddEnfant');
     var btnDelEnfant = $('#BtDeleteEnfant');
 
-    initBtnSupprimerEnfant();
+    refreshBtnSupprimerEnfant();
 
     // EVENTS
     // A la soumission du formulaire
     $(document).submit(function() {
         event.preventDefault();
 
-        // Sérialize les données des enfants
-        var enfants = {};   var i = 0;
-        // Parcours les enfants
-        $.each($('#Enfants>div'), function (indexEnfant, valEnfant) {
-            var enfant = {};
-
-            // Parcours les informations des enfants
-            $.each($(valEnfant).find("input[type!='hidden']"), function (indexInfo, valInfo) {
-                var name = $(valInfo).attr('name');
-
-                if(name == undefined)
-                    return;
-
-                name = name.split('#')[0];
-
-                enfant[name] =  $(valInfo).val();
-            });
-            enfants[i++] = enfant;
-        });
-        enfants = JSON.stringify(enfants);
-
         $.ajax({
-            url: '/apero/test/test.php',
+            url: '/apero/controleurs/famille.php',
             type: 'POST',
             dataType: 'json',
-            data: {data: {'famille': $('#Informations :input').serialize(),  'enfants': enfants}},
+            data: {event: eventPage, data: $('#Informations :input').serialize(), enfants: serializeArray($('#Enfants>div'))}
         })
         .done(function () {
             console.log("success");
+        });
+    });
 
-        })
+    /**
+     * Sur l'appuie d'une touche au clavier
+     */
+    $(document).on('keyup', function (e) {
+        switch (e.keyCode) {
+            case 107: // '+ ver. num'
+            case 187: // '+ ligne de chiffre'
+                addEnfant();
+                break;
+
+            case 109: // '- ver. num'
+            case 54: // '- ligne de chiffre'
+                delEnfant();
+                break;
+            default:
+        }
     });
 
     /**
@@ -54,29 +50,37 @@ $( document ).ready(function() {
      */
     btnAddEnfant.click(function() {
         event.preventDefault();
-
-        $('li.empty').remove(); // Supprime le tab obligatoire
-
-        var id = 'enfant_'+(++nbEnfants);
-        
-        tabEnfants.append(constructTabEnfant(id));
-        contentEnfant.append(constructFormEnfant(id));
-
-        initBtnSupprimerEnfant();
-        initDateNaissance();
-        initSelect();
-        initEventsFormEnfants();
-        initTabs();
-
-        tabEnfants.tabs('select_tab', id);
+        addEnfant();
     });
+
 
     /**
      * Supprime le formulaire d'ajout d'un enfant
      */
     btnDelEnfant.click(function() {
         event.preventDefault();
+        delEnfant();
+    });
 
+    // FUNCTIONS
+    function addEnfant() {
+        $('li.empty').remove(); // Supprime le tab obligatoire
+
+        var id = 'enfant_'+(++nbEnfants);
+
+        tabEnfants.append(constructTabEnfant(id));
+        contentEnfant.append(constructFormEnfant(id));
+
+        refreshBtnSupprimerEnfant();
+        initDateNaissance();
+        initSelect();
+        initEventsFormEnfants();
+        initTabs();
+
+        tabEnfants.tabs('select_tab', id);
+    }
+
+    function delEnfant() {
         if(tabEnfants.find('li').length == 1)
             tabEnfants.append(emptyTab) // Ajoute le tab obligatoire
 
@@ -91,16 +95,14 @@ $( document ).ready(function() {
             tabEnfants.tabs('select_tab', id);
         }
 
-        initBtnSupprimerEnfant();
-    });
-
-    // FUNCTIONS
+        refreshBtnSupprimerEnfant();
+    }
 
     /**
-     * Supprime l'enfant courant
+     * Met à jour l'état du bouton 3SUPPRIMER
      */
-    function initBtnSupprimerEnfant() {
-        if(tabEnfants.find('li').length == 0) {
+    function refreshBtnSupprimerEnfant() {
+        if($('#Enfants div').length == 0) {
             btnDelEnfant.fadeOut();
         } else {
             btnDelEnfant.fadeIn();
@@ -152,10 +154,11 @@ $( document ).ready(function() {
         var row = bc_row();
 
         // Nom
+        var nomFamille = $('#nom').val();
         var input_field_nom = bc_input_field().addClass('col s6');
         input_field_nom.append(bc_icon().text('account_circle'));
-        input_field_nom.append(bc_input_text().attr('name', 'nom#'+idEnfant));
-        input_field_nom.append(bc_label().attr('for', 'nom#'+idEnfant).text('Nom'));
+        input_field_nom.append(bc_input_text().attr('name', 'nom#'+idEnfant).val(nomFamille));
+        input_field_nom.append(bc_label().addClass(nomFamille ? 'active' : '').attr('for', 'nom#'+idEnfant).text('Nom'));
 
         // Prénom
         var input_field_prenom = bc_input_field().addClass('col s6');
@@ -180,6 +183,7 @@ $( document ).ready(function() {
 
         div.append(input_field_date_naissance);
         div.append(input_field_section);
+
 
         return div;
     }

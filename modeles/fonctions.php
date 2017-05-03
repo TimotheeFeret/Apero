@@ -1,6 +1,5 @@
 <?php
-	require_once "../modeles/enfant.php";
-	require_once "../config/connexion_bd.php";
+	include_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/connexion_bd.php";
 	/**
 	* 
 	*/
