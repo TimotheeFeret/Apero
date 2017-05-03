@@ -1,2 +1,7 @@
 
-	--	fonctions.php
+	--	section.php
+	Comment faire pour les différents cas du constructeur de la classe Section ?
+	Deux cas possible où le constructeur ne doit prendre qu'un seul paramètre d'entrée : L'id OU le nom.
+
+	--	SQL
+	Une section doit-elle être unique ?
