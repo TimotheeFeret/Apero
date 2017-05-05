@@ -10,6 +10,8 @@
 		protected $id;
 		protected $adhesion_id;
 		protected $nom;
+		protected $code_postal;
+		protected $ville;
 		protected $adresse;
 		protected $telephone;
 		const nomTable = 'famille';
@@ -24,13 +26,13 @@
 	            //	On récupère l'id de la famille.
 	                self::__construct2($nbParam[0]);
 	                break;
-	            case 4:
+	            case 6:
 	            //	On récupère tous les paramètres de la famille sauf l'id.
-	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3] );
+	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5] );
 	                break;
-	            case 5:
+	            case 7:
 	            //	On récupère tous les paramètres de la famille.
-	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4] );
+	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6] );
 	                break;
 	            default :
 	            	echo '<br/>Erreur lors de la construction de l\'objet famille. Nombre de paramètres inapproprié.';
@@ -58,10 +60,12 @@
 		/**
 		*
 		*/	
-		function __construct3($adhesion_id, $nom, $adresse, $telephone)
+		function __construct3($adhesion_id, $nom, $code_postal, $ville, $adresse, $telephone)
 		{
 			$this->adhesion_id = $adhesion_id;
 			$this->nom = $nom;
+			$this->code_postal = $code_postal;
+			$this->ville = $ville;
 			$this->adresse = $adresse;
 			$this->telephone = $telephone;
 			/*var_dump ('Constructeur 3');*/
@@ -70,11 +74,13 @@
 		/**
 		*
 		*/	
-		function __construct4($id, $adhesion_id, $nom, $adresse, $telephone)
+		function __construct4($id, $adhesion_id, $nom, $code_postal, $ville, $adresse, $telephone)
 		{
 			$this->id = $id;
 			$this->adhesion_id = $adhesion_id;
 			$this->nom = $nom;
+			$this->code_postal = $code_postal;
+			$this->ville = $ville;
 			$this->adresse = $adresse;
 			$this->telephone = $telephone;
 			/*var_dump ('Constructeur 4');*/

@@ -11,7 +11,8 @@
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$famille = new Famille($data['adhesion_id'], $data['nom'], $data['adresse'], $data['telephone'] );
+			$famille = new Famille($data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
+				$data['telephone'] );
 			// Ajoute la famille ou génère une erreur si l'ajout a échoué.
 			try {
 				$famille->add();
@@ -44,7 +45,8 @@
 				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
 			}
 			$data = explode('&', $_POST['data']);
-			$famille = new Famille($_POST['id'], $data['adhesion_id'], $data['nom'], $data['adresse'], $data['telephone']);
+			$famille = new Famille($_POST['id'], $data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
+				$data['telephone']);
 			// Faire un nouveau constructeur avec l'id et les data
 			try {
 				$famille->update();
@@ -61,7 +63,5 @@
 			} catch (Exception $e) {
 				return echo json_encode('error' => $e->getMessage());
 			}
-
-
 	}
 ?>
