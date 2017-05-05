@@ -192,7 +192,21 @@ $( document ).ready(function() {
         $('.datepicker').pickadate({
             selectMonths: true,
             selectYears: 15,
-            max: new Date(2007,12,31)
+            max: new Date(2007,12,31),
+            format: 'dd/mm/yyyy'
         });
     }
+
+    // VALIDATION DE SAISIE
+    $('form').validate({
+        rules: {
+            code_postal: {
+                zip_code: true
+            },
+
+            telephone: {
+                phone: true
+            }
+        }
+    });
 });

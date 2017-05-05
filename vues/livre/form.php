@@ -4,25 +4,25 @@
         <div class="row">
             <div class="input-field">
                 <i class="material-icons prefix">book</i>
-                <input id="id" name="id" type="text" required="" aria-required="true">
+                <input id="id" name="id" type="text" required>
                 <label for="id">ISBN</label>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">font_download</i>
-                <input id="nom_livre" name="nom_livre" type="text" required aria-required="true">
+                <input id="nom_livre" name="nom_livre" type="text" required>
                 <label for="nom_livre">Nom</label>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">euro_symbol</i>
-                <input id="prix"  name="prix" type="text" required aria-required="true">
+                <input id="prix"  name="prix" type="text" required>
                 <label for="prix">Prix</label>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">date_range</i>
-                <input id="annee_usage" name="annee_usage" type="text" required aria-required="true">
+                <input id="annee_usage" name="annee_usage" type="text" required>
                 <label for="annee_usage">Année d'usage</label>
             </div>
         </div>

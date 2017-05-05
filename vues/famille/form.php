@@ -5,19 +5,36 @@
         <div class="row" id="Informations">
             <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="nom" name="nom" type="text" class="validate" required>
+                <input id="nom" name="nom" type="text" required>
                 <label for="nom">Nom</label>
+            </div>
+
+            <div class="row">
+                <div class="col s6">
+                    <div class="input-field">
+                        <i class="material-icons prefix">location_city</i>
+                        <input id="code_postal" name="code_postal" type="text" required>
+                        <label for="code_postal">Code postal</label>
+                    </div>
+                </div>
+
+                <div class="col s6">
+                    <div class="input-field">
+                        <input id="ville" name="ville" type="text" required>
+                        <label for="ville">Ville</label>
+                    </div>
+                </div>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">place</i>
-                <input id="adresse" name="adresse" type="text" class="validate" required>
+                <input id="adresse" name="adresse" type="text" required>
                 <label for="adresse">Adresse</label>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">phone</i>
-                <input id="telephone" name="telephone" type="text" class="validate" required>
+                <input id="telephone" name="telephone" type="text" required>
                 <label for="telephone">Téléphone</label>
             </div>
         </div>

@@ -16,6 +16,7 @@ $(document).ready(function () {
             })
     });
 
+    // VALIDATION DE SAISIE
     $('form').validate({
         rules: {
             id: {
@@ -25,6 +26,10 @@ $(document).ready(function () {
 
             prix: {
                 money: true
+            },
+            
+            annee_usage: {
+                year: true
             }
         }
     });
