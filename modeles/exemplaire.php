@@ -13,6 +13,8 @@
 		protected $famille_vendeuse_id;
 		protected $etat_id;
 		protected $prix;
+		protected $date_depot;
+		protected $date_achat;
 		const nomTable = 'exemplaire_occasion';
 		
 		function __construct() {
@@ -25,13 +27,13 @@
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
 	                self::__construct2($nbParam[0]);
 	                break;
-	            case 5:
+	            case 7:
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
-	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4] );
+	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6] );
 	                break;
-	            case 6:
+	            case 8:
 	            //	On récupère tous les paramètres de l'exemplaire.
-	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5] );
+	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6], $nbParam[7] );
 	                break;
 	            default :
 	            	echo '<br/>Erreur lors de la construction de l\'objet exemplaire. Nombre de paramètres inapproprié.';
@@ -58,21 +60,23 @@
 
 		/**
 		*
-		*/	
-		function __construct3($livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix)
+		*/
+		function __construct3($livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->livre_id = $livre_id
 			$this->famille_acheteuse_id = $famille_acheteuse_id;
 			$this->famille_vendeuse_id = $famille_vendeuse_id;
 			$this->etat_id = $etat_id;
 			$this->prix = $prix;
+			$this->date_depot = $date_depot;
+			$this->date_achat = $date_achat;
 			/*var_dump ('Constructeur 3');*/
 		}
 
 		/**
 		*
 		*/	
-		function __construct4($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix)
+		function __construct4($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->id = $id;
 			$this->livre_id = $livre_id
@@ -80,6 +84,8 @@
 			$this->famille_vendeuse_id = $famille_vendeuse_id;
 			$this->etat_id = $etat_id;
 			$this->prix = $prix;
+			$this->date_depot = $date_depot;
+			$this->date_achat = $date_achat;
 			/*var_dump ('Constructeur 4');*/
 		}
 

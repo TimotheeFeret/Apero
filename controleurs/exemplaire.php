@@ -11,7 +11,8 @@
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$exemplaire = new Exemplaire($data['livre_id'], $data['famille_acheteuse_id'], $data['famille_vendeuse_id'], $data['etat_id'], $data['prix']);
+			$exemplaire = new Exemplaire($data['livre_id'], $data['famille_acheteuse_id'], $data['famille_vendeuse_id'], $data['etat_id'],
+				$data['prix'], $data['date_depot'], $data['date_achat']);
 			// Ajoute l'exemplaire ou génère une erreur si l'ajout a échoué.
 			try {
 				$exemplaire->add();
@@ -44,7 +45,8 @@
 				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
 			}
 			$data = explode('&', $_POST['data']);
-			$exemplaire = new Exemplaire($_POST['id'], $data['livre_id'], $data['famille_acheteuse_id'], $data['famille_vendeuse_id'], $data['etat_id'], $data['prix']);
+			$exemplaire = new Exemplaire($_POST['id'], $data['livre_id'], $data['famille_acheteuse_id'], $data['famille_vendeuse_id'],
+				$data['etat_id'], $data['prix'], $data['date_depot'], $data['date_achat']);
 			// Faire un nouveau constructeur avec l'id et les data
 			try {
 				$exemplaire->update();

@@ -8,10 +8,11 @@
 	class Famille extends Fonctions
 	{
 		protected $id;
+		protected $adhesion_id;
 		protected $nom;
 		protected $adresse;
 		protected $telephone;
-		const nomTable = 'famille_adherente';
+		const nomTable = 'famille';
 		
 		function __construct() {
 	        $nbParam = func_get_args();
@@ -23,13 +24,13 @@
 	            //	On récupère l'id de la famille.
 	                self::__construct2($nbParam[0]);
 	                break;
-	            case 3:
-	            //	On récupère tous les paramètres de la famille sauf l'id.
-	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2] );
-	                break;
 	            case 4:
+	            //	On récupère tous les paramètres de la famille sauf l'id.
+	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3] );
+	                break;
+	            case 5:
 	            //	On récupère tous les paramètres de la famille.
-	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3] );
+	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4] );
 	                break;
 	            default :
 	            	echo '<br/>Erreur lors de la construction de l\'objet famille. Nombre de paramètres inapproprié.';
@@ -57,8 +58,9 @@
 		/**
 		*
 		*/	
-		function __construct3($nom, $adresse, $telephone)
+		function __construct3($adhesion_id, $nom, $adresse, $telephone)
 		{
+			$this->adhesion_id = $adhesion_id;
 			$this->nom = $nom;
 			$this->adresse = $adresse;
 			$this->telephone = $telephone;
@@ -68,9 +70,10 @@
 		/**
 		*
 		*/	
-		function __construct4($id, $nom, $adresse, $telephone)
+		function __construct4($id, $adhesion_id, $nom, $adresse, $telephone)
 		{
 			$this->id = $id;
+			$this->adhesion_id = $adhesion_id;
 			$this->nom = $nom;
 			$this->adresse = $adresse;
 			$this->telephone = $telephone;
