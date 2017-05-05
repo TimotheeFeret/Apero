@@ -13,10 +13,10 @@
 
 	// ******************** AJOUT ETABLISSEMENT ******************** //
 	// OK
-	/*echo '// ******************** AJOUT ETABLISSEMENT ******************** //';
+	echo '// ******************** AJOUT ETABLISSEMENT ******************** //';
 	echo '</br>// Création d\'un Etablissement avec (nom, telephone).';
 	$etablissement3 = new Etablissement('Lycée Toto', '0000000000');
-	$etablissement3->add();*/
+	$etablissement3->add();
 
 	// ******************** UPDATE ETABLISSEMENT ******************** //
 	/*echo '// ******************** UPDATE ETABLISSEMENT ******************** //';

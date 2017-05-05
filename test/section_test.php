@@ -13,10 +13,10 @@
 
 	// ******************** AJOUT SECTION ******************** //
 	// OK
-	/*echo '// ******************** AJOUT SECTION ******************** //';
+	echo '// ******************** AJOUT SECTION ******************** //';
 	echo '</br>// Création d\'un section avec (nom).';
 	$section3 = new Section('premiereS');
-	$section3->add();*/
+	$section3->add();
 
 	// ******************** UPDATE SECTION ******************** //
 	// OK
