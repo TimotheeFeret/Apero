@@ -40,7 +40,7 @@
 		*/		
 		function __construct1()
 		{
-			// Ce constructeur est notamment utilisé pour faire un get de tous les enfants.
+			// Ce constructeur est notamment utilisé pour faire un get de tous les livres.
 			/*var_dump ('Constructeur 1');*/
 		}
 
