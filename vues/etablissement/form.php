@@ -3,13 +3,13 @@
         <div class="row">
             <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="nom" name="nom" type="text" class="validate" required>
+                <input id="nom" name="nom" type="text" required>
                 <label for="nom">Nom</label>
             </div>
 
             <div class="input-field">
                 <i class="material-icons prefix">phone</i>
-                <input id="telephone" name="telephone" type="text" class="validate" required>
+                <input id="telephone" name="telephone" type="text" required>
                 <label for="telephone">Téléphone</label>
             </div>
 

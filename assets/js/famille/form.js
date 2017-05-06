@@ -15,6 +15,7 @@ $( document ).ready(function() {
     // A la soumission du formulaire
     $(document).submit(function() {
         event.preventDefault();
+        console.log('submit');
 
         $.ajax({
             url: '/apero/controleurs/famille.php',
@@ -151,18 +152,20 @@ $( document ).ready(function() {
      */
     function constructFormEnfant(idEnfant) {
         var div = $('<div>', {id: idEnfant, class: 'tab_content'});
-        var row = bc_row();
 
         // Nom
         var nomFamille = $('#nom').val();
         var input_field_nom = bc_input_field().addClass('col s6');
         input_field_nom.append(bc_icon().text('account_circle'));
-        input_field_nom.append(bc_input_text().attr('name', 'nom#'+idEnfant).val(nomFamille));
+        input_field_nom.append(bc_input_text().attr({name: 'nom#' + idEnfant, id: 'nom#' + idEnfant}).val(nomFamille));
         input_field_nom.append(bc_label().addClass(nomFamille ? 'active' : '').attr('for', 'nom#'+idEnfant).text('Nom'));
 
         // Prénom
         var input_field_prenom = bc_input_field().addClass('col s6');
-        input_field_prenom.append(bc_input_text().attr('name', 'prenom#'+idEnfant).addClass('prenom_enfant'));
+        input_field_prenom.append(bc_input_text().attr({
+            name: 'prenom#' + idEnfant,
+            id: 'prenom#' + idEnfant
+        }).addClass('prenom_enfant'));
         input_field_prenom.append(bc_label().attr('for', 'prenom#'+idEnfant).text('Prénom'));
 
         // Date de naissance
@@ -171,18 +174,30 @@ $( document ).ready(function() {
         input_field_date_naissance.append(bc_input_date().attr({name: 'date_naissance#'+idEnfant, id: 'date_naissance#'+idEnfant}));
         input_field_date_naissance.append(bc_label().attr('for', 'date_naissance#'+idEnfant).text('Date de naissance'));
 
+        // Etablissements
+        var input_field_etablissement = bc_input_field().addClass('col s6');
+        input_field_etablissement.append(bc_icon().text('school'));
+        input_field_etablissement.append(bc_select().attr('name', 'etablissement#' + idEnfant));
+        input_field_etablissement.append(bc_label().attr('for', 'etablissement#' + idEnfant).text('Établissement'));
+
         // Sections
-        var input_field_section = bc_input_field();
-        input_field_section.append(bc_icon().text('class'));
+        var input_field_section = bc_input_field().addClass('col s6');
         input_field_section.append(bc_select().attr('name', 'section#'+idEnfant));
         input_field_section.append(bc_label().attr('for', 'section#'+idEnfant).text('Section'));
 
-        row.append(input_field_nom);
-        row.append(input_field_prenom);
-        div.append(row);
+        div.append(
+            bc_row()
+                .append(input_field_nom)
+                .append(input_field_prenom)
+        );
 
         div.append(input_field_date_naissance);
-        div.append(input_field_section);
+
+        div.append(
+            bc_row()
+                .append(input_field_etablissement)
+                .append(input_field_section)
+        );
 
 
         return div;
@@ -206,6 +221,10 @@ $( document ).ready(function() {
 
             telephone: {
                 phone: true
+            },
+
+            adhesion_id: {
+                required: true
             }
         }
     });

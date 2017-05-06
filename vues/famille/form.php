@@ -37,10 +37,20 @@
                 <input id="telephone" name="telephone" type="text" required>
                 <label for="telephone">Téléphone</label>
             </div>
+
+            <div class="input-field">
+                <i class="material-icons prefix">card_membership</i>
+                <select name="adhesion_id" id="adhesion_id" required>
+                    <option value="" selected>Choose your option</option>
+                    <option value="1">OK</option>
+                </select>
+                <label for="adhesion_id">Status</label>
+            </div>
         </div>
 
         <!--        Liste des enfants-->
-        <span class="new badge large" data-badge-caption="Appuyez sur la touche '+' ou '-' de votre clavier pour gérer les enfants"></span>
+        <span class="new badge lg-badge"
+              data-badge-caption="Appuyez sur la touche '+' ou '-' de votre clavier pour gérer les enfants"></span>
         <h5>Enfants</h5>
         <div id="CardEnfant" class="card">
             <div class="card-tabs ">

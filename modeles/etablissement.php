@@ -10,7 +10,7 @@
 		protected $id;
 		protected $nom;
 		protected $telephone;
-		const nomTable = 'etablissement';
+		protected $nomTable = 'etablissement';
 		
 		function __construct() {
 	        $nbParam = func_get_args();

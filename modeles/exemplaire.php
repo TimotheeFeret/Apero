@@ -15,7 +15,7 @@
 		protected $prix;
 		protected $date_depot;
 		protected $date_achat;
-		const nomTable = 'exemplaire_occasion';
+		protected $nomTable = 'exemplaire_occasion';
 		
 		function __construct() {
 	        $nbParam = func_get_args();
@@ -63,7 +63,7 @@
 		*/
 		function __construct3($livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
-			$this->livre_id = $livre_id
+			$this->livre_id = $livre_id;
 			$this->famille_acheteuse_id = $famille_acheteuse_id;
 			$this->famille_vendeuse_id = $famille_vendeuse_id;
 			$this->etat_id = $etat_id;
@@ -79,7 +79,7 @@
 		function __construct4($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->id = $id;
-			$this->livre_id = $livre_id
+			$this->livre_id = $livre_id;
 			$this->famille_acheteuse_id = $famille_acheteuse_id;
 			$this->famille_vendeuse_id = $famille_vendeuse_id;
 			$this->etat_id = $etat_id;

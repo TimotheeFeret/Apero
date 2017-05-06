@@ -17,7 +17,12 @@
         include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Table.php';
 
         $famille = new Famille();
-        Table::render(['nom' => 'Nom', 'adresse' => 'Adresse', 'telephone' => 'Téléphone'], $famille->get());
+        $famille->setNomTable('v_famille');
+        Table::render(['nom' => 'Nom'
+            , 'telephone' => 'Téléphone'
+            , 'code_postal_ville' => 'Lieu'
+            , 'adhesion_libelle' => 'Status'
+        ], $famille->get());
         ?>
         
         <div class="fixed-action-btn">

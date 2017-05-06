@@ -9,7 +9,7 @@
 	{
 		protected $id;
 		protected $nom;
-		const nomTable = 'section';
+		protected $nomTable = 'section';
 		
 		function __construct() {
 	        $nbParam = func_get_args();

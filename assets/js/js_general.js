@@ -7,7 +7,7 @@ function initSelect() {
     $('select').material_select();
 
     // To fix required select
-    $("select[required]").css({display: "block", height: 0, padding: 0, width: 0, position: 'absolute'});
+    $("select[required]").css({display: 'block', height: 0, padding: 0, width: 0});
 }
 
 function initTabs() {
@@ -45,6 +45,52 @@ $( document ).ready(function() {
     initSelect();
 
     $('.tooltipped').tooltip({delay: 50});
+
+    // Parcours les différents tables
+    $.each($('table'), function (index, val) {
+
+        if ($(val).find('tbody tr').length == 0) {
+            return;
+        }
+
+        var order = [];
+        var lastColumn = $('thead tr th').length - 1;
+
+        // Parcours les headers
+        $.each($(val).find('thead tr th'), function (i, v) {
+            if ($(v).hasClass('no-order')) {
+                order.push(i);
+            }
+        });
+
+        // Initialisation des datatables
+        $(val).DataTable({
+            "oLanguage": {
+                "sUrl": '//cdn.datatables.net/plug-ins/1.10.15/i18n/French.json'
+            },
+
+            "columnDefs": [
+                {orderable: false, targets: order},
+                {"width": "350", "targets": lastColumn}
+            ]
+        });
+    });
+
+
+    // EVENEMENTS DE GESTION (VIEW, EDIT)
+    // Permet d'ouvrir la page de détails d'un élément
+    $('.details').on('click', function () {
+        var id = $(this).closest('tr').attr('data-id');
+        var currentURL = window.location.href.split('/').slice(0, -1).join('/');
+        window.location.href = currentURL + '/show?id=' + id;
+    });
+
+    // Permet d'ouvrir la page de modification d'un élément
+    $('.edit').on('click', function () {
+        var id = $(this).closest('tr').attr('data-id');
+        var currentURL = window.location.href.split('/').slice(0, -1).join('/');
+        window.location.href = currentURL + '/update?id=' + id;
+    });
 });
 
 $.validator.setDefaults({
@@ -56,7 +102,4 @@ $.validator.setDefaults({
             .find("label[for='" + element.attr("id") + "']")
             .attr('data-error', error.text());
     },
-    submitHandler: function (form) {
-        console.log('form ok');
-    }
 });

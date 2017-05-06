@@ -14,7 +14,7 @@
 		protected $ville;
 		protected $adresse;
 		protected $telephone;
-		const nomTable = 'famille';
+		protected $nomTable = 'famille';
 		
 		function __construct() {
 	        $nbParam = func_get_args();
@@ -84,6 +84,60 @@
 			$this->adresse = $adresse;
 			$this->telephone = $telephone;
 			/*var_dump ('Constructeur 4');*/
+		}
+
+		public function getEnfants()
+		{
+			$sql = "SELECT * FROM v_enfant WHERE famille_id=" . $this->id;
+			$conn = DB::connect();
+
+			try {
+				$req = $conn->query($sql);
+
+				if ($req === false)
+					throw new Exception;
+
+			} catch (Exception $e) {
+				return $conn->errorInfo()[2];
+			}
+
+			return $req->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function getExemplairesDeposes()
+		{
+			$sql = "SELECT * FROM v_exemplaire WHERE famille_vendeuse_id=" . $this->id;
+			$conn = DB::connect();
+
+			try {
+				$req = $conn->query($sql);
+
+				if ($req === false)
+					throw new Exception;
+
+			} catch (Exception $e) {
+				return $conn->errorInfo()[2];
+			}
+
+			return $req->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function getExemplairesAchetes()
+		{
+			$sql = "SELECT * FROM v_exemplaire WHERE famille_acheteuse_id=" . $this->id;
+			$conn = DB::connect();
+
+			try {
+				$req = $conn->query($sql);
+
+				if ($req === false)
+					throw new Exception;
+
+			} catch (Exception $e) {
+				return $conn->errorInfo()[2];
+			}
+
+			return $req->fetchAll(PDO::FETCH_ASSOC);
 		}
 
 	}

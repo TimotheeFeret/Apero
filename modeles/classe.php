@@ -10,7 +10,7 @@
 		protected $id;
 		protected $etablissement_id;
 		protected $section_id;
-		const nomTable = 'classe';
+		protected $nomTable = 'classe';
 		
 		function __construct() {
 	        $nbParam = func_get_args();

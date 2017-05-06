@@ -11,18 +11,21 @@
 <main class="container">
     <h1 class="center">Stock</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Livre</th>
-            <th>Famille déposante</th>
-            <th>Prix de vente</th>
-        </tr>
-        </thead>
+    <!--        Récupération & afficharge des données-->
+    <?php
+    include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'modeles/exemplaire.php';
+    include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'assets/php/Table.php';
 
-        <tbody>
-        </tbody>
-    </table>
+    $exemplaire = new Exemplaire();
+    $exemplaire->setNomTable('v_stock');
+    Table::render(['livre_nom' => 'Livre',
+        'famille_nom' => 'Famille déposante',
+        'prix' => 'Prix estimé (€)',
+        'etat' => 'État',
+        'date_depot_format' => 'Date du dépôt'
+    ], $exemplaire->get(),
+        []);
+    ?>
 </main>
 
 <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/footer.php'; ?>

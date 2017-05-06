@@ -8,12 +8,12 @@ main {
   flex: 1 0 auto;
 }
 
-.large {
+.lg-badge {
     font-size: 11pt !important;
 }
 
 label {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 label:after {
@@ -23,4 +23,18 @@ label:after {
 }
 label:not(.active):after {
     transform: translateY(-140%);
+}
+
+/*MATERIAL DESIGN*/
+.md-80 {
+    font-size: 80px;
+}
+
+.text-grey {
+    color: #b0bec5;
+}
+
+/*FIX BUG CSS DATATABLE*/
+nav ul, nav ol {
+    line-height: inherit;
 }

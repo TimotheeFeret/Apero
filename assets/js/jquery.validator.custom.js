@@ -2,7 +2,6 @@
  * Created by jerem on 03/05/2017.
  */
 
-
 $.validator.addMethod('numbers_with_dashes', function (value) {
     return /^\d+(-\d+)*$/.test(value);
 }, 'Veuillez saisir des nombres séparés par des tirets.');

@@ -21,8 +21,10 @@
             'id' => 'ISBN',
             'nom_livre' => 'Nom',
             'annee_usage' => 'Année d\'usage',
-            'prix' => 'Prix'
-        ], $livre->get());
+            'prix' => 'Prix (€)'
+        ],
+            $livre->get(),
+            ['edit', 'delete']);
         ?>
 
         <div class="fixed-action-btn">

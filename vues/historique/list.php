@@ -11,19 +11,23 @@
 <main class="container">
     <h1 class="center">Historique</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Livre</th>
-            <th>Famille déposante</th>
-            <th>Famille acheteuse</th>
-            <th>Prix de vente</th>
-        </tr>
-        </thead>
+    <!--        Récupération & afficharge des données-->
+    <?php
+    include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'modeles/exemplaire.php';
+    include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'assets/php/Table.php';
 
-        <tbody>
-        </tbody>
-    </table>
+    $exemplaire = new Exemplaire();
+    $exemplaire->setNomTable('v_historique');
+    Table::render([
+        'livre_id' => 'Livre',
+        'famille_vendeuse_nom' => 'Famille déposante',
+        'famille_acheteuse_nom' => 'Famille acheteuse',
+        'prix' => 'Prix de vente (€)',
+        'date_depot_format' => 'Date de dépôt',
+        'date_achat_format' => 'Date d\'achat'
+    ], $exemplaire->get(),
+        []);
+    ?>
 </main>
 
 <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/footer.php'; ?>

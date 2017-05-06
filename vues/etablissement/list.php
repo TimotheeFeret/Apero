@@ -17,7 +17,9 @@
         include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Table.php';
 
         $etablissement = new Etablissement();
-        Table::render(['nom' => 'Établissement', 'telephone' => 'Téléphone'], $etablissement->get());
+        Table::render(['nom' => 'Établissement',
+            'telephone' => 'Téléphone'
+        ], $etablissement->get());
         ?>
 
         <div class="fixed-action-btn">

@@ -16,7 +16,7 @@
 
 			foreach ($attributs as $key => $attribut) {
 				// On n'ajoute pas l'id car il va être auto-incrémenté.
-				if($key == 'id')
+				if ($key == 'id' || $key == 'nomTable')
 				{
 					continue;
 				}
@@ -38,7 +38,7 @@
 		public function add()
 		{
 			$reqConstructor = $this->constructRequest();
-			$nomTable = $this::nomTable;
+			$nomTable = $this->nomTable;
 			var_dump("INSERT INTO $nomTable SET $reqConstructor;");
 			// Envoi de la requête vers la base de données.
 			$req = DB::connect()->exec(" INSERT INTO $nomTable SET $reqConstructor; ");
@@ -51,7 +51,7 @@
 			$reqConstructor = $this->constructRequest();
 			// Récupération des attributs de l'objet à modifier.
 			$attributs = get_object_vars ( $this );
-			$nomTable = $this::nomTable;
+			$nomTable = $this->nomTable;
 			$id = $this->id;
 			$req = DB::connect()->exec(" UPDATE $nomTable SET $reqConstructor WHERE id = $id; ");
 		}
@@ -59,22 +59,38 @@
 		public function delete()
 		{
 			$id = $this->id;
-			$nomTable = $this::nomTable;
+			$nomTable = $this->nomTable;
 			$req = DB::connect()->exec(" DELETE FROM $nomTable WHERE id = $id; ");
 		}
 
 		public function get()
 		{
-			$nomTable = $this::nomTable;
+			$nomTable = $this->nomTable;
 	        $params = func_get_args();
 	        $reqConstructor = $params ? "WHERE id IN (".implode(', ', $params).")" : "";
 			$bdd = new PDO('mysql:host=localhost;dbname=apero;charset=utf8', 'root', '');
-			$req = DB::connect()->query(" SELECT * FROM $nomTable $reqConstructor ; ");
+			$conn = DB::connect();
+
+			try {
+				$req = $conn->query(" SELECT * FROM $nomTable $reqConstructor ; ");
+
+				if ($req === false)
+					throw new Exception;
+
+			} catch (Exception $e) {
+				return $conn->errorInfo()[2];
+			}
+
 			/*// VISUALISER LA CONSTRUCTION DE LA REQUETE
 			var_dump($req);*/
 			$donnees = $req->fetchAll(PDO::FETCH_ASSOC);
 			$req->closeCursor(); // Termine le traitement de la requête
 			return $donnees;
+		}
+
+		public function setNomTable($nomTable)
+		{
+			$this->nomTable = $nomTable;
 		}
 	}
 ?>

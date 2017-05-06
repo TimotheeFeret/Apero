@@ -13,7 +13,7 @@
 		protected $nom;
 		protected $prenom;
 		protected $date_naissance;
-		const nomTable = 'enfant';
+		protected $nomTable = 'enfant';
 		
 		function __construct() {
 	        $nbParam = func_get_args();

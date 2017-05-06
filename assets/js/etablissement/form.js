@@ -15,4 +15,13 @@ $(document).ready(function () {
             console.log("success");
         })
     });
+
+    // VALIDATION DE SAISIE
+    $('form').validate({
+        rules: {
+            telephone: {
+                phone: true
+            }
+        }
+    });
 });

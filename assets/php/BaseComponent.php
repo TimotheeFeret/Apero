@@ -16,8 +16,8 @@ class BaseComponent
      * @return string
      */
     public static function listEdit($strTitle, $strBtAdd, $idSuffix) {
-        echo 
-            '<h5>'.$strTitle.' <span class="new badge large" data-badge-caption="Appuyez sur la touche \'+\' ou \'-\' de votre clavier pour gérer la liste"></span></h5>
+        echo
+            '<h5>' . $strTitle . ' <span class="new badge lg-badge" data-badge-caption="Appuyez sur la touche \'+\' ou \'-\' de votre clavier pour gérer la liste"></span></h5>
             <div class="row">
                 <div class="col s12">
                     <div class="card">

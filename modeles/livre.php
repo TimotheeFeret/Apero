@@ -11,7 +11,7 @@
 		protected $nom_livre;
 		protected $prix;
 		protected $annee_usage;
-		const nomTable = 'livre';
+		protected $nomTable = 'livre';
 		
 		function __construct() {
 	        $nbParam = func_get_args();

@@ -12,7 +12,6 @@
 
 <?php
     echo '<link rel="stylesheet" href="'.$domain.'/assets/css/style.css'.'"/>';
-    echo '<link rel="stylesheet" href="'.$domain.'/lib/css/materialize.css'.'"/>';
 
     echo '<script src="'.$domain.'/lib/js/jquery-3.1.1.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/lib/js/materialize.js'.'" type="text/javascript"></script>';
@@ -23,4 +22,12 @@
     echo '<script src="'.$domain.'/lib/js/jquery.validate/localization/messages_fr.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/assets/js/js_general.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/assets/js/jquery.validator.custom.js'.'" type="text/javascript"></script>';
+
+//DataTable
+echo '<link rel="stylesheet" href="' . $domain . '/lib/css/dataTable/material.min.css' . '"/>';
+echo '<link rel="stylesheet" href="' . $domain . '/lib/css/dataTable/dataTables.material.min.css' . '"/>';
+echo '<script src="' . $domain . '/lib/js/dataTable/jquery.dataTables.min.js' . '" type="text/javascript"></script>';
+echo '<script src="' . $domain . '/lib/js/dataTable/dataTables.material.min.js' . '" type="text/javascript"></script>';
+
+echo '<link rel="stylesheet" href="' . $domain . '/lib/css/materialize.css' . '"/>';
 ?>
