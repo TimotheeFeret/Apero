@@ -8,6 +8,7 @@
 	class Livre extends Fonctions
 	{
 		protected $id;
+		protected $isbn;
 		protected $nom_livre;
 		protected $prix;
 		protected $annee_usage;
@@ -22,13 +23,13 @@
 	            case 1:
 	                self::__construct2($nbParam[0]);
 	                break;
-	            case 3:
-	            //	On récupère tous les paramètres du livre sauf l'id.
-	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2] );
-	                break;
 	            case 4:
+	            //	On récupère tous les paramètres du livre sauf l'id.
+	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3] );
+	                break;
+	            case 5:
 	            //	On récupère tous les paramètres du livre.
-	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3] );
+	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4] );
 	                break;
 	            default :
 	            	echo '<br/>Erreur lors de la construction de l\'objet livre. Nombre de paramètres inapproprié.';
@@ -56,8 +57,9 @@
 		/**
 		*
 		*/	
-		function __construct3($nom_livre, $prix, $annee_usage)
+		function __construct3($isbn, $nom_livre, $prix, $annee_usage)
 		{
+			$this->isbn = $isbn;
 			$this->nom_livre = $nom_livre;
 			$this->prix = $prix;
 			$this->annee_usage = $annee_usage;
@@ -67,8 +69,9 @@
 		/**
 		*
 		*/	
-		function __construct4($id, $nom_livre, $prix, $annee_usage)
+		function __construct4($id, $isbn, $nom_livre, $prix, $annee_usage)
 		{
+			$this->isbn = $isbn;
 			$this->id = $id;
 			$this->nom_livre = $nom_livre;
 			$this->prix = $prix;

@@ -16,6 +16,24 @@ $(document).ready(function () {
         })
     });
 
+    /**
+     * Initialisation des selects
+     */
+    addOptionsToSelect($('#section_id'), sections, 'id', 'nom', 'Choisissez des sections');
+    initSelect();
+
+    /**
+     * Initialisation du formulaire
+     */
+    if(data != null) {
+        initForm($('form'), data);
+    }
+
+    $('#telephone').formatter({
+        'pattern': '{{99}} {{99}} {{99}} {{99}} {{99}}',
+        'persistent': true
+    });
+
     // VALIDATION DE SAISIE
     $('form').validate({
         rules: {

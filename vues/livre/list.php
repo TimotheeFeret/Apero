@@ -18,7 +18,7 @@
 
         $livre = new Livre();
         Table::render([
-            'id' => 'ISBN',
+            'isbn' => 'ISBN',
             'nom_livre' => 'Nom',
             'annee_usage' => 'Année d\'usage',
             'prix' => 'Prix (€)'

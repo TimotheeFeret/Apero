@@ -3,8 +3,9 @@
  */
 
 // Initialise les select de la page
-function initSelect() {
-    $('select').material_select();
+function initSelect(select) {
+    select = select ? select : 'select'
+    $(select).material_select();
 
     // To fix required select
     $("select[required]").css({display: 'block', height: 0, padding: 0, width: 0});
@@ -39,6 +40,57 @@ function serializeArray(arrayJquery) {
         data[i++] = datum;
     });
     return JSON.stringify(data);
+}
+
+/**
+ * Ajoute les options à un select
+ * @param select jquery select à initialiser
+ * @param data array options à ajouter
+ * @param keyValue string clé de la valeur de l'option
+ * @param keyLibelle string clé du libelle à afficher
+ * @param defaultOption string message à afficher par défaut
+ * @param extraAttributes array key value permet d'ajouter des attributs supplémentaires aux options
+ */
+function addOptionsToSelect(select, data, keyValue, keyLibelle, defaultOption, extraAttributes) {
+    select.append($('<option>', { value: '', text: defaultOption, disabled: 'disabled', selected: 'selected'}));
+    $.each(data, function (index, val) {
+        var option = $('<option>', { value: val[keyValue], text: val[keyLibelle]});
+
+        $.each(extraAttributes, function (extraIndex, extraVal) {
+            option.attr(extraIndex, val[extraVal]);
+        });
+
+        select.append(option);
+    });
+}
+
+function initForm(form, data) {
+    $.each(form.find('input, select'), function (index, val) {
+        var name = $(val).attr('name');
+        if(name == undefined) return;
+
+        val = $(val);
+
+        if(val.is('input')) {
+            val.val(data[name]);
+
+        } else if(val.is('select')) {
+            // Si c'est un string selectionne l'option
+            if(typeof data[name] == 'string') {
+                val.find('option[value='+data[name]+']').attr('selected', 'selected');
+
+            // Si c'est un objet selectionne les options
+            } else if(typeof data[name] == 'object') {
+                $.each($(data[name]), function (dataindex, dataval) {
+                    var name = val.attr('name');
+                    console.log(name);
+                    val.find('option[value='+dataval[name]+']').attr('selected', 'selected');
+                });
+            }
+
+            initSelect(val);
+        }
+    });
 }
 
 $( document ).ready(function() {

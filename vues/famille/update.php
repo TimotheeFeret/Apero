@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Ajouter une famille</title>
+    <title>Modifier une famille</title>
     <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/head.php'; ?>
 </head>
 
@@ -13,6 +13,7 @@
 
         <?php
         $submit_text = 'Modifier';
+
         include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/famille/form.php';
         ?>
     </main>

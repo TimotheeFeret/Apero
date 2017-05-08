@@ -3,9 +3,15 @@
  */
 
 $( document ).ready(function() {
-    var btnAddExemplaire = $('#BtAddExemplaire');
+    var btnAddExemplaire = $('#BtAddExemplaires');
     var cardExemplaires = $('#ContentExemplaires');
     var nbExemplaires = 0; // Variable globale afin d'avoir un id unique
+
+    /**
+     * Initialisation du formulaire
+     */
+    addOptionsToSelect($('#famille_acheteuse_id'), familles, 'id', 'nom', 'Choissisez une famille');
+    initSelect();
 
     $(document).submit(function() {
         event.preventDefault();
@@ -69,11 +75,12 @@ $( document ).ready(function() {
 
         var row = bc_row();
 
-        // Livre de référence
+        // Exemplaire
         var input_field_livre = bc_input_field().addClass('col s6');
         var icon_livre = bc_icon().text('book');
         var select_livre = bc_select().attr('name', 'livre_id#'+id);
         var label_livre = bc_label().text('Exemplaire');
+        addOptionsToSelect(select_livre, livres, 'id', 'nom_etat', 'Choissisez un livre', {'data-prix': 'prix'});
         input_field_livre
             .append(icon_livre)
             .append(select_livre)

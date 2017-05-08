@@ -29,6 +29,20 @@ $( document ).ready(function() {
     });
 
     /**
+     * Initialisation des selects
+     */
+    addOptionsToSelect($('#adhesion_id'), adhesions, 'id', 'libelle', 'Choisissez un status');
+    initSelect();
+
+    /**
+     * Initialisation du formulaire
+     */
+    if(data != null) {
+        initForm($('form'), data);
+        initEnfants(data['enfants']);
+    }
+
+    /**
      * Sur l'appuie d'une touche au clavier
      */
     $(document).on('keyup', function (e) {
@@ -64,13 +78,20 @@ $( document ).ready(function() {
     });
 
     // FUNCTIONS
-    function addEnfant() {
+    function initEnfants(enfants) {
+        $.each(enfants, function (index, val) {
+            addEnfant(val);
+        });
+    }
+
+    function addEnfant(data) {
         $('li.empty').remove(); // Supprime le tab obligatoire
 
         var id = 'enfant_'+(++nbEnfants);
+        var prenom = data == undefined ? null : data['prenom'];
 
-        tabEnfants.append(constructTabEnfant(id));
-        contentEnfant.append(constructFormEnfant(id));
+        tabEnfants.append(constructTabEnfant(id, prenom));
+        contentEnfant.append(constructFormEnfant(id, data));
 
         refreshBtnSupprimerEnfant();
         initDateNaissance();
@@ -132,15 +153,37 @@ $( document ).ready(function() {
 
             $('ul.tabs').tabs();
         });
+
+        /**
+         * Adapte les classes en fonction de l'établissement selectionné
+         */
+        $('.etablissement').on('change', function () {
+            var idEtablissement = $(this).val();
+            if(idEtablissement == '') return;
+            var selectClasse = $(this).closest('.tab_content').find('select.classe');
+            refreshClasses(idEtablissement, selectClasse);
+        });
+    }
+
+    function refreshClasses(idEtablissement, selectClasse, selectedValue) {
+        selectClasse.empty();
+        addOptionsToSelect(selectClasse, classes[idEtablissement], 'section_id', 'section_nom', 'Choisissez une classe');
+        selectClasse.attr('disabled', false);
+
+        if(selectedValue != undefined) {
+            selectClasse.find('option[value='+selectedValue+']').attr('selected', 'selected');
+        }
+
+        initSelect(selectClasse);
     }
 
     /**
      * Création d'un onglet pour les enfants
      * @returns jQuery Un onglet enfant
      */
-    function constructTabEnfant(idEnfant) {
+    function constructTabEnfant(idEnfant, prenom) {
         var li = $('<li>', { class: 'tab'});
-        var a = $('<a>', { href: "#"+idEnfant, text: 'Inconnu'});
+        var a = $('<a>', { href: "#"+idEnfant, text: (prenom ? prenom : 'Inconnu')});
 
         return li.append(a);
     }
@@ -148,42 +191,56 @@ $( document ).ready(function() {
     /**
      * Création du formulaire pour ajouterun enfant
      * @param idEnfant Suffixe des ids des éléments
+     * @param données de l'enfant (optionnel)
      * @returns jQuery Le formulaire jQuery
      */
-    function constructFormEnfant(idEnfant) {
+    function constructFormEnfant(idEnfant, data) {
         var div = $('<div>', {id: idEnfant, class: 'tab_content'});
 
         // Nom
-        var nomFamille = $('#nom').val();
+        var nom = data == undefined ? $('#nom').val() : data['nom'];
         var input_field_nom = bc_input_field().addClass('col s6');
         input_field_nom.append(bc_icon().text('account_circle'));
-        input_field_nom.append(bc_input_text().attr({name: 'nom#' + idEnfant, id: 'nom#' + idEnfant}).val(nomFamille));
-        input_field_nom.append(bc_label().addClass(nomFamille ? 'active' : '').attr('for', 'nom#'+idEnfant).text('Nom'));
+        input_field_nom.append(bc_input_text().attr({name: 'nom#' + idEnfant, id: 'nom#' + idEnfant}).val(nom));
+        input_field_nom.append(bc_label().addClass(nom ? 'active' : '').attr('for', 'nom#'+idEnfant).text('Nom'));
 
         // Prénom
+        var prenom = data == undefined ? null : data['prenom'];
         var input_field_prenom = bc_input_field().addClass('col s6');
-        input_field_prenom.append(bc_input_text().attr({
+        input_field_prenom.append(bc_input_text().val(prenom).attr({
             name: 'prenom#' + idEnfant,
             id: 'prenom#' + idEnfant
         }).addClass('prenom_enfant'));
         input_field_prenom.append(bc_label().attr('for', 'prenom#'+idEnfant).text('Prénom'));
 
         // Date de naissance
+        var dateNaissance = data == undefined ? null : data['date_naissance'];
         var input_field_date_naissance = bc_input_field();
         input_field_date_naissance.append(bc_icon().text('date_range'));
-        input_field_date_naissance.append(bc_input_date().attr({name: 'date_naissance#'+idEnfant, id: 'date_naissance#'+idEnfant}));
+        input_field_date_naissance.append(bc_input_date().attr({name: 'date_naissance#'+idEnfant, id: 'date_naissance#'+idEnfant, 'data-value': dateNaissance}));
         input_field_date_naissance.append(bc_label().attr('for', 'date_naissance#'+idEnfant).text('Date de naissance'));
 
         // Etablissements
+        var etablissement = data == undefined ? null : data['etablissement_id'];
         var input_field_etablissement = bc_input_field().addClass('col s6');
         input_field_etablissement.append(bc_icon().text('school'));
-        input_field_etablissement.append(bc_select().attr('name', 'etablissement#' + idEnfant));
+        var selectEtablissement = bc_select();
+        addOptionsToSelect(selectEtablissement, etablissements, 'id', 'nom', 'Choissisez un établissement');
+        input_field_etablissement.append(selectEtablissement.attr('name', 'etablissement#' + idEnfant).addClass('etablissement'));
         input_field_etablissement.append(bc_label().attr('for', 'etablissement#' + idEnfant).text('Établissement'));
 
-        // Sections
-        var input_field_section = bc_input_field().addClass('col s6');
-        input_field_section.append(bc_select().attr('name', 'section#'+idEnfant));
-        input_field_section.append(bc_label().attr('for', 'section#'+idEnfant).text('Section'));
+        // Classes
+        var selectClasse = bc_select();
+        var input_field_classe = bc_input_field().addClass('col s6');
+        input_field_classe.append(selectClasse.attr({name: 'classe#'+idEnfant, disabled: 'disabled'}).addClass('classe'));
+        input_field_classe.append(bc_label().attr('for', 'classe#'+idEnfant).text('Classe'));
+
+        if(etablissement != undefined) {
+            selectEtablissement.find('option[value=' + etablissement + ']').attr('selected', 'selected');
+            console.log(data['section_id']);
+            refreshClasses(etablissement, selectClasse, data['section_id']);
+        }
+
 
         div.append(
             bc_row()
@@ -196,7 +253,7 @@ $( document ).ready(function() {
         div.append(
             bc_row()
                 .append(input_field_etablissement)
-                .append(input_field_section)
+                .append(input_field_classe)
         );
 
 
@@ -211,6 +268,14 @@ $( document ).ready(function() {
             format: 'dd/mm/yyyy'
         });
     }
+
+    $('#code_postal').formatter({
+        'pattern': '{{99999}}'
+    });
+
+    $('#telephone').formatter({
+        'pattern': '{{99}} {{99}} {{99}} {{99}} {{99}}',
+    });
 
     // VALIDATION DE SAISIE
     $('form').validate({

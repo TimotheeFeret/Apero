@@ -7,6 +7,12 @@ $( document ).ready(function() {
     var cardExemplaires = $('#ContentExemplaires');
     var nbExemplaires = 0; // Variable globale afin d'avoir un id unique
 
+    /**
+     * Initialisation du formulaire
+     */
+    addOptionsToSelect($('#famille_vendeuse_id'), familles, 'id', 'nom', 'Choissisez une famille');
+    initSelect();
+
     $(document).submit(function() {
         event.preventDefault();
 
@@ -50,6 +56,22 @@ $( document ).ready(function() {
     });
 
     // FUNCTIONS
+    function refreshPrix(row) {
+        var prix = row.find('select.exemplaire').find('option:selected').attr('data-prix');
+        var decote = row.find('select.etat').find('option:selected').attr('data-decote');
+
+        if(prix == undefined || decote == undefined) return;
+
+        var input_prix = row.find('.prix');
+        var prixCalculated = prix * ((100-decote)/100);
+        prixCalculated = prixCalculated.toLocaleString('fr-FR', {minimumFractionDigits: 2});
+        var pad = "00000";
+        prixCalculated = pad.substring(0, pad.length - prixCalculated.length) + prixCalculated;
+        input_prix.val(prixCalculated + ' €');
+
+        Materialize.updateTextFields();
+    }
+
     /**
      * Ajoute un exemplaire
      */
@@ -72,18 +94,31 @@ $( document ).ready(function() {
         // Livre de référence
         var input_field_livre = bc_input_field().addClass('col s6');
         var icon_livre = bc_icon().text('book');
-        var select_livre = bc_select().attr('name', 'livre_id#'+id);
+        var select_livre = bc_select().attr('name', 'livre_id#'+id).addClass('exemplaire');
         var label_livre = bc_label().text('Exemplaire');
+        addOptionsToSelect(select_livre, livres, 'id', 'nom_prix', 'Choissisez un livre', {'data-prix': 'prix'});
         input_field_livre
             .append(icon_livre)
             .append(select_livre)
             .append(label_livre);
         row.append(input_field_livre);
 
+        // Etat
+        var input_field_etat = bc_input_field().addClass('col s3');
+        var icon_etat = bc_icon().text('star_rate');
+        var select_etat = bc_select().attr('name', 'etat_id#'+id).addClass('etat');
+        var label_etat = bc_label().text('État');
+        addOptionsToSelect(select_etat, etats, 'id', 'etat_decote', 'Choissisez un état', {'data-decote': 'decote'});
+        input_field_etat
+            .append(icon_etat)
+            .append(select_etat)
+            .append(label_etat);
+        row.append(input_field_etat);
+
         // Prix
-        var input_field_prix = bc_input_field().addClass('col s5');
+        var input_field_prix = bc_input_field().addClass('col s2');
         var icon_prix = bc_icon().text('euro_symbol');
-        var input_prix = bc_input_text().attr('name', 'prix#'+id);;
+        var input_prix = bc_input_text().attr({'name': 'prix#'+id, 'autocomplete': 'off'}).addClass('prix');
         var label_prix = bc_label().text('Prix');
         input_field_prix
             .append(icon_prix)
@@ -106,8 +141,20 @@ $( document ).ready(function() {
      * Supprime l'exemplaire
      */
     function initEventsExemplaire() {
+        $('.prix').formatter({
+            'pattern': '{{99}},{{99}} €'
+        });
+
         $('.delete_exemplaire').click(function () {
             $(this).closest('.row').remove();
+        });
+
+        $('.exemplaire').on('change', function () {
+            refreshPrix($(this).closest('.row'));
+        });
+
+        $('.etat').on('change', function () {
+            refreshPrix($(this).closest('.row'));
         });
     }
 });

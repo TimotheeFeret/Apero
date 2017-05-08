@@ -72,5 +72,23 @@
 			$this->telephone = $telephone;
 			/*var_dump ('Constructeur 4');*/
 		}
+
+		public function getSections()
+		{
+			$sql = "SELECT * FROM v_classe WHERE etablissement_id=" . $this->id;
+			$conn = DB::connect();
+
+			try {
+				$req = $conn->query($sql);
+
+				if ($req === false)
+					throw new Exception;
+
+			} catch (Exception $e) {
+				return $conn->errorInfo()[2];
+			}
+
+			return $req->fetchAll(PDO::FETCH_ASSOC);
+		}
 	}
 ?>

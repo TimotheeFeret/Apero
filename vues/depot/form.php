@@ -1,5 +1,20 @@
 <?php
-    include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/assets/php/BaseComponent.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/assets/php/BaseComponent.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/famille.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/etat.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/livre.php';
+
+// Données pour alimenter les selects
+$famille = new Famille();
+$familles = $famille->get();
+
+$etat = new Etat();
+$etat->setNomTable('v_etat');
+$etats = $etat->get();
+
+$livre = new Livre();
+$livre->setNomTable('v_livre');
+$livres = $livre->get();
 ?>
 
 <div class="row">
@@ -10,12 +25,7 @@
                 <!--            Famille déposante-->
                 <div class="input-field">
                     <i class="material-icons prefix">people</i>
-                    <select name="famille_vendeuse_id" required>
-                        <option value="" disabled selected>Choisissez une famille</option>
-                        <option value="1">Famille 1</option>
-                        <option value="2">Famille 2</option>
-                        <option value="3">Famille 3</option>
-                    </select>
+                    <select name="famille_vendeuse_id" id="famille_vendeuse_id" required></select>
                     <label>Famille déposante</label>
                 </div>
             </div>
@@ -33,5 +43,10 @@
     </form>
 </div>
 
+<script>
+    var familles = <?php echo json_encode($familles); ?>;
+    var etats = <?php echo json_encode($etats); ?>;
+    var livres = <?php echo json_encode($livres); ?>;
+</script>
 <script type="application/javascript" src="assets/js/base_components.js"></script>
 <script type="application/javascript" src="assets/js/depot/form.js"></script>

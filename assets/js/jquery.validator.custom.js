@@ -7,7 +7,7 @@ $.validator.addMethod('numbers_with_dashes', function (value) {
 }, 'Veuillez saisir des nombres séparés par des tirets.');
 
 $.validator.addMethod('money', function (value) {
-    return /^\d{0,4}([.|,]\d{1,2})??$/.test(value);
+    return /^\d{0,4}([.|,]\d{1,2})(\s€)?$/.test(value);
 }, 'Veuillez saisir un prix valide.');
 
 $.validator.addMethod('year', function (value) {
@@ -19,5 +19,5 @@ $.validator.addMethod('zip_code', function (value) {
 }, 'Veuillez saisir un code postal valide.');
 
 $.validator.addMethod('phone', function (value) {
-    return /^(0|\+33|0033)[1-9][0-9]{8}$/.test(value);
+    return /^(0)[1-9] ([0-9][0-9]\s){3}[0-9][0-9]$/.test(value);
 }, 'Veuillez saisir un numéro de téléhpone valide.');

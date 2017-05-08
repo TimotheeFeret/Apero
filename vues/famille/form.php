@@ -1,4 +1,33 @@
-<?php $emptyTab = "<li class=\"tab empty\"><a href=\"#empty\"></a></li>" ?>
+<?php
+$emptyTab = "<li class=\"tab empty\"><a href=\"#empty\"></a></li>";
+
+// Données pour select
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/etablissement.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/classe.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/adhesion.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Utility.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/famille.php';
+
+// Données pour alimenter les selects
+$etablissement = new Etablissement();
+$etablissements = $etablissement->get();
+
+$adhesion = new Adhesion();
+$adhesions = $adhesion->get();
+
+$classe = new Classe();
+$classe->setNomTable('v_classe');
+$classes = Utility::arrayGroupBySameValue($classe->get(), 'etablissement_id'); // Regroupe les éléments par id d'établissement permttant une manipulation en JS simplifiée
+
+// Données de la famille
+$data = null;
+if(!empty($_GET['id'])) {
+    $famille = new Famille($_GET['id']);
+    $data = $famille->get($_GET['id'])[0];
+    $data['enfants'] = $famille->getEnfants();
+}
+
+?>
 
 <div class="row">
     <form class="col s12">
@@ -13,7 +42,7 @@
                 <div class="col s6">
                     <div class="input-field">
                         <i class="material-icons prefix">location_city</i>
-                        <input id="code_postal" name="code_postal" type="text" required>
+                        <input class="autocomplete" id="code_postal" name="code_postal" type="text" required>
                         <label for="code_postal">Code postal</label>
                     </div>
                 </div>
@@ -40,10 +69,7 @@
 
             <div class="input-field">
                 <i class="material-icons prefix">card_membership</i>
-                <select name="adhesion_id" id="adhesion_id" required>
-                    <option value="" selected>Choose your option</option>
-                    <option value="1">OK</option>
-                </select>
+                <select name="adhesion_id" id="adhesion_id" required></select>
                 <label for="adhesion_id">Status</label>
             </div>
         </div>
@@ -76,6 +102,10 @@
 <script>
     var emptyTab = <?php echo json_encode($emptyTab); ?>;
     var eventPage = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
+    var data = <?php echo json_encode($data); ?>;
+    var etablissements = <?php echo json_encode($etablissements); ?>;
+    var classes = <?php echo json_encode($classes); ?>;
+    var adhesions = <?php echo json_encode($adhesions); ?>;
 </script>
 <script type="application/javascript" src="assets/js/base_components.js"></script>
 <script type="application/javascript" src="assets/js/famille/form.js"></script>
