@@ -39,7 +39,7 @@ $livres = $livre->get();
         ?>
 
         <button class="btn waves-effect waves-light right" type="submit">
-            Valider - Total 34,99 €
+            Valider - Total <span class="total">0 €</span>
         </button>
 
     </form>

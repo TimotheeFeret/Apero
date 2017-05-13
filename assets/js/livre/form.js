@@ -5,6 +5,7 @@
 $(document).ready(function () {
     $(document).submit(function () {
         event.preventDefault();
+
         $.ajax({
                 url: '/apero/controleurs/livre.php',
                 type: 'POST',
@@ -29,7 +30,7 @@ $(document).ready(function () {
     });
 
     $('#prix').formatter({
-        'pattern': '{{99}},{{99}} €'
+        'pattern': '{{99}}.{{99}} €'
     });
 
     $('#annee_usage').formatter({
@@ -39,8 +40,8 @@ $(document).ready(function () {
     // VALIDATION DE SAISIE
     $('form').validate({
         rules: {
-            id: {
-                numbers_with_dashes: true,
+            isbn: {
+                isbn: true,
                 minlength: 5,
             },
 

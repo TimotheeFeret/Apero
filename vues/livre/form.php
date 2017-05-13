@@ -11,7 +11,7 @@ if(!empty($_GET['id'])) {
 
 <div class="row">
 
-    <form id="form" class="col s12" novalidate="novalidate">
+    <form id="form" class="col s12" novalidate="novalidate" autocomplete="off">
         <div class="row">
             <div class="input-field">
                 <i class="material-icons prefix">book</i>

@@ -15,7 +15,6 @@ $( document ).ready(function() {
 
     $(document).submit(function() {
         event.preventDefault();
-        console.log(serializeArray(cardExemplaires.find('>div')));
         $.ajax({
                 url: '/apero/controleurs/famille.php',
             type: 'POST',
@@ -113,26 +112,49 @@ $( document ).ready(function() {
         return row;
     }
 
+    function refreshTotal() {
+        var total = 0;
+        $.each($('.prix'), function (index, val) {
+            var prix = $(val).val();
+
+            if (prix == '') return;
+
+            prix = Number(prix.replace(/[^0-9\.]+/g, "")); // Convert to number
+
+            total += prix;
+        });
+        $('.total').text(total + ' €');
+    }
+
     /**
      * Supprime l'exemplaire
      */
     function initEventsExemplaire() {
         $('.delete_exemplaire').click(function () {
             $(this).closest('.row').remove();
+            refreshTotal();
         });
 
         $('.prix').formatter({
-            'pattern': '{{99}},{{99}} €'
+            'pattern': '{{99}}.{{99}} €'
+        });
+
+        $('.prix').on('keyup', function () {
+            refreshTotal();
         });
 
         $('.exemplaire').on('change', function () {
+            refreshTotal();
             var row = $(this).closest('.row');
             var prix = row.find('select.exemplaire').find('option:selected').attr('data-prix');
 
             if(prix == undefined) return;
 
             var input_prix = row.find('.prix');
-            prix = prix.toLocaleString('fr-FR', {minimumFractionDigits: 2});
+
+            if (input_prix.val() != '') return;
+
+            prix = prix.toLocaleString('en-EN', {minimumFractionDigits: 2});
             var pad = "00000";
             prix = pad.substring(0, pad.length - prix.length) + prix;
             input_prix.val(prix + ' €');

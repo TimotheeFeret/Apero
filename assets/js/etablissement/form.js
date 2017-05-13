@@ -30,8 +30,7 @@ $(document).ready(function () {
     }
 
     $('#telephone').formatter({
-        'pattern': '{{99}} {{99}} {{99}} {{99}} {{99}}',
-        'persistent': true
+        'pattern': '{{99}} {{99}} {{99}} {{99}} {{99}}'
     });
 
     // VALIDATION DE SAISIE
