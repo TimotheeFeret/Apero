@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/livre.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/livre.php';
 
 // Données du livre
 $data = null;

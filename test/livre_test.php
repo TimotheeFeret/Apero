@@ -3,13 +3,13 @@
 
 	// ******************** CREATION LIVRE ******************** //
 	// ok
-	/*echo '// ******************** CREATION LIVRE ******************** //';
+	echo '// ******************** CREATION LIVRE ******************** //';
 	echo '<br/>// Création d\'un Livre sans attribut.';
 	$livre1 = new Livre();
 	var_dump($livre1);
 	echo '// Création d\'un Livre avec (isbn, nom_livre, prix, annee_usage).';
 	$livre2 = new Livre('964-5-7007-8514-1', 'Bartiméus', '20', '2003');
-	var_dump($livre2);*/
+	var_dump($livre2);
 
 	// ******************** AJOUT LIVRE ******************** //
 	// OK

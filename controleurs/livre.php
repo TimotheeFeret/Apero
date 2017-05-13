@@ -1,10 +1,7 @@
 <?php
-
-	// TIM : Ca ne fonctionne pas chez moi avec cette config (require_once $_SERVER...).
-
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/livre.php";
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/fonctions.php";
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "config/connexion_bd.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/livre.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/fonctions.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/config/connexion_bd.php";
 
 	switch ($_POST['event']) {
 		case 'add':
@@ -15,7 +12,16 @@
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$livre = new Livre($data['nom_livre'], $data['prix'], $data['annee_usage']);
+			// Création d'un tableau pour dissocier les données de leur nom.
+			foreach ($data as $param) {
+			    $split = explode('=', $param);
+			    $params[$split[0]] = $split[1];
+			    // NE FONCTIONNE PAS COMPLETEMENT
+			    //$params[$split[0]] = json_decode($split[1]);
+			}
+			// A SUPPRIMER
+			var_dump($params);
+			$livre = new Livre($params['isbn'], $params['nom_livre'], $params['prix'], $params['annee_usage']);
 			// Ajoute le livre ou génère une erreur si l'ajout a échoué.
 			try {
 				$livre->add();
@@ -26,7 +32,6 @@
 			echo json_encode(true);
 			return;
 			break;
-
 		case 'delete':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {

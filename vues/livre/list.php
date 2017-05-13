@@ -13,8 +13,8 @@
 
         <!--        Récupération & afficharge des données-->
         <?php
-        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/livre.php';
-        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Table.php';
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/livre.php';
+        include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/assets/php/Table.php';
 
         $livre = new Livre();
         Table::render([
