@@ -10,7 +10,7 @@ $(document).ready(function () {
                 url: '/apero/controleurs/livre.php',
                 type: 'POST',
                 dataType: 'json',
-                data: {event: eventPage, id: id, data: $('form').serialize()},
+                data: {event: eventPage, id: id, data: serialize($('form'))},
             })
             .done(function () {
                 console.log("success");

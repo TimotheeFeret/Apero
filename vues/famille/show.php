@@ -27,7 +27,11 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
     <span class="new badge <?php echo $colorAdhesion ?>"
           data-badge-caption=<?php echo '"' . $famille['adhesion_libelle'] . '"' ?>></span>
 
-<!--    Information de la famille-->
+    <!--    <div class="row">-->
+    <!--        <a class="waves-effect waves-light btn right"><i class="material-icons left">print</i>Imprimer la facture</a>-->
+    <!--    </div>-->
+
+    <!--    Information de la famille-->
     <h5>Information générales</h5>
     <div class="row">
         <div class="col s12">
@@ -236,7 +240,10 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
             <i class="large material-icons">edit</i>
         </a>
         <ul>
-            <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+            <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="Supprimer la famille"><i
+                        class="material-icons">delete</i></a></li>
+            <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Imprimer la facture"><i
+                        class="material-icons">print</i></a></li>
         </ul>
     </div>
 </main>

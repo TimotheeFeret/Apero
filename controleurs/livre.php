@@ -2,6 +2,7 @@
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/livre.php";
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/fonctions.php";
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "config/connexion_bd.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "assets/php/Utility.php";
 
 	switch ($_POST['event']) {
 		case 'add':
@@ -20,7 +21,6 @@
 			    //$params[$split[0]] = json_decode($split[1]);
 			}
 			// A SUPPRIMER
-			var_dump($params);
 			$livre = new Livre($params['isbn'], $params['nom_livre'], $params['prix'], $params['annee_usage']);
 			// Ajoute le livre ou génère une erreur si l'ajout a échoué.
 			try {

@@ -15,6 +15,19 @@ function initTabs() {
     $('ul.tabs').tabs();
 }
 
+function replaceUndesirableCharatersForDB(text) {
+    console.log(text);
+    text = text.replace('%20%E2%82%AC', ''); // ' €'
+    text = text.replace(' €', '');
+    text = text.replace('€', '');
+    return text;
+}
+
+function serialize(form) {
+    var data = $('form').serialize();
+    return replaceUndesirableCharatersForDB(data);
+}
+
 /**
  * Serialize les données d'un tableau jQuery ; les éléments doivent avoir un name du type : nom_generique#id_element
  * @param arrayJquery Tableau jQuery dans lequel se trouve les donneés à sérializer
@@ -35,7 +48,8 @@ function serializeArray(arrayJquery) {
 
             name = name.split('#')[0];
 
-            datum[name] =  $(valDatum).val();
+            var toAdd = replaceUndesirableCharatersForDB($(valDatum).val());
+            datum[name] = toAdd;
         });
         data[i++] = datum;
     });

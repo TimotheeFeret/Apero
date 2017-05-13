@@ -20,7 +20,11 @@ $( document ).ready(function() {
                 url: '/apero/controleurs/exemplaire.php',
                 type: 'POST',
                 dataType: 'json',
-                data: {event: 'add', data: $('#Informations :input').serialize(),  exemplaires: serializeArray(cardExemplaires.find('>div'))}
+                data: {
+                    event: 'add',
+                    data: serialize($('#Informations :input')),
+                    exemplaires: serializeArray(cardExemplaires.find('>div'))
+                }
             })
             .done(function () {
                 console.log("success");

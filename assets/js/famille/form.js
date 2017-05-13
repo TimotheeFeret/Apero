@@ -21,7 +21,11 @@ $( document ).ready(function() {
             url: '/apero/controleurs/famille.php',
             type: 'POST',
             dataType: 'json',
-            data: {event: eventPage, data: $('#Informations :input').serialize(), enfants: serializeArray($('#Enfants>div'))}
+                data: {
+                    event: eventPage,
+                    data: serialize($('#Informations :input')),
+                    enfants: serializeArray($('#Enfants>div'))
+                }
         })
         .done(function () {
             console.log("success");

@@ -15,13 +15,14 @@ $( document ).ready(function() {
 
     $(document).submit(function() {
         event.preventDefault();
+
         $.ajax({
                 url: '/apero/controleurs/famille.php',
             type: 'POST',
             dataType: 'json',
                 data: {
                     event: 'add',
-                    data: $('#Informations :input').serialize(),
+                    data: serialize($('#Informations :input')),
                     exemplaires: serializeArray(cardExemplaires.find('>div'))
                 }
         })
