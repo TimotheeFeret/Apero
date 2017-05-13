@@ -1,7 +1,7 @@
 <?php
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/livre.php";
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/fonctions.php";
-	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/config/connexion_bd.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/livre.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/fonctions.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "config/connexion_bd.php";
 
 	switch ($_POST['event']) {
 		case 'add':

@@ -27,7 +27,7 @@ function serializeArray(arrayJquery) {
         var datum = {};
 
         // Parcours les informations des données
-        $.each($(valData).find("input[type!='hidden']"), function (indexDatum, valDatum) {
+        $.each($(valData).find("input[type!='hidden'], select[type!='hidden']"), function (indexDatum, valDatum) {
             var name = $(valDatum).attr('name');
 
             if(name == undefined)
@@ -91,6 +91,12 @@ function initForm(form, data) {
             initSelect(val);
         }
     });
+}
+
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
 
 $( document ).ready(function() {

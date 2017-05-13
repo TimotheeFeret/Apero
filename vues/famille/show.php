@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Nom famille</title>
-    <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/head.php'; ?>
-</head>
-
-<body>
-<?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/topbar.php'; ?>
-
 <?php
 include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'modeles/famille.php';
 
@@ -19,6 +9,18 @@ $exemplaireAchetes = $famille->getExemplairesAchetes();
 $famille = $famille->get($_GET['id'])[0];
 $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 'red' : 'green';
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Famille : <?php echo $famille['nom'] ?></title>
+    <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/head.php'; ?>
+</head>
+
+<body>
+<?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/topbar.php'; ?>
+
+
 
 <main class="container">
     <h1 class="center"><?php echo $famille['nom']; ?></h1>
@@ -34,16 +36,21 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
                     <div class="row">
                         <div class="col s12">
                             <i class="material-icons prefix">phone</i>
-                            <span>Téléphone :</span>
-                            <span><?php echo $famille['telephone'] ?></span>
+                            <span class="underline">Téléphone :</span>
+                            <span class="bold"><?php echo $famille['telephone'] ?></span>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col s12">
+                        <div class="col s6">
                             <i class="material-icons prefix">place</i>
-                            <span>Adresse :</span>
-                            <span><?php echo $famille['adresse'] . ', ' . $famille['code_postal'] . ' ' . $famille['ville'] ?></span>
+                            <span class="underline">Adresse :</span>
+                            <span class="bold"><?php echo $famille['adresse'] ?></span>
+                        </div>
+
+                        <div class="col s6">
+                            <i class="material-icons prefix white">place</i>
+                            <span class="bold"><?php echo $famille['code_postal'] . ' ' . $famille['ville'] ?></span>
                         </div>
                     </div>
                 </div>
@@ -89,16 +96,16 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
                         <div class="row">
                             <div class="col s12">
                                 <i class="material-icons prefix">date_range</i>
-                                <span>Date de naissance :</span>
-                                <span>' . $enfant['date_naissance_format'] . ' (' . $ageEnfant . ' ans)' . '</span>
+                                <span class="underline">Date de naissance :</span>
+                                <span class="bold">' . $enfant['date_naissance_format'] . ' (' . $ageEnfant . ' ans)' . '</span>
                             </div>
                         </div>
     
                         <div class="row">
                             <div class="col s12">
                                 <i class="material-icons prefix">class</i>
-                                <span>Classe :</span>
-                                <span>' . $enfant['section_nom'] . ' (' . $enfant['etablissement_nom'] . ')</span>
+                                <span class="underline">Classe :</span>
+                                <span class="bold">' . $enfant['section_nom'] . ' (' . $enfant['etablissement_nom'] . ')</span>
                             </div>
                         </div>
                     </div>
@@ -157,7 +164,7 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
                         if (!empty($exemplaireDepose['date_achat'])) {
                             echo '
                             <div class="col s3">
-                                <span class="new badge" data-badge-caption="Acheté par la famille ' . $exemplaireDepose['famille_acheteuse_nom'] . ' le ' . $exemplaireDepose['date_achat_format'] . '"></span>
+                                <span class="new badge" data-badge-caption="Acheté par ' . $exemplaireDepose['famille_acheteuse_nom'] . ' le ' . $exemplaireDepose['date_achat_format'] . '"></span>
                             </div>
                             ';
                         }
@@ -225,7 +232,7 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
 
 
     <div class="fixed-action-btn">
-        <a href="vues/famille/update.php" class="btn-floating btn-large">
+        <a href="vues/famille/update.php?id=<?php echo $_GET['id'] ?>" class="btn-floating btn-large">
             <i class="large material-icons">edit</i>
         </a>
         <ul>

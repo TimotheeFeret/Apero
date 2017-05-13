@@ -17,6 +17,14 @@ label {
     /*width: 100%;*/
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 label:after {
     transition-property: all !important;
     font-size: 0.8rem;
@@ -38,4 +46,8 @@ label:not(.active):after {
 /*FIX BUG CSS DATATABLE*/
 nav ul, nav ol {
     line-height: inherit;
+}
+
+.white {
+    color: white !important;
 }

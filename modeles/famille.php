@@ -106,7 +106,7 @@
 
 		public function getExemplairesDeposes()
 		{
-			$sql = "SELECT * FROM v_exemplaire WHERE famille_vendeuse_id=" . $this->id;
+			$sql = "SELECT * FROM v_exemplaire WHERE famille_vendeuse_id=" . $this->id . " ORDER BY date_depot DESC";
 			$conn = DB::connect();
 
 			try {
@@ -124,7 +124,7 @@
 
 		public function getExemplairesAchetes()
 		{
-			$sql = "SELECT * FROM v_exemplaire WHERE famille_acheteuse_id=" . $this->id;
+			$sql = "SELECT * FROM v_exemplaire WHERE famille_acheteuse_id=" . $this->id . " ORDER BY date_achat DESC";
 			$conn = DB::connect();
 
 			try {

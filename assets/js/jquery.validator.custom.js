@@ -2,9 +2,9 @@
  * Created by jerem on 03/05/2017.
  */
 
-$.validator.addMethod('numbers_with_dashes', function (value) {
-    return /^\d+(-\d+)*$/.test(value);
-}, 'Veuillez saisir des nombres séparés par des tirets.');
+$.validator.addMethod('isbn', function (value) {
+    return /^[0-9]{3}-[0-9]-[0-9]{4}-[0-9]{4}-[0-9]$/.test(value);
+}, 'Veuillez saisir un ISBN valide.');
 
 $.validator.addMethod('money', function (value) {
     return /^\d{0,4}([.|,]\d{1,2})(\s€)?$/.test(value);

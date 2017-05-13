@@ -64,9 +64,9 @@ $( document ).ready(function() {
 
         var input_prix = row.find('.prix');
         var prixCalculated = prix * ((100-decote)/100);
-        prixCalculated = prixCalculated.toLocaleString('fr-FR', {minimumFractionDigits: 2});
-        var pad = "00000";
-        prixCalculated = pad.substring(0, pad.length - prixCalculated.length) + prixCalculated;
+        prixCalculated = Math.round(prixCalculated * 100) / 100;
+        prixCalculated = prixCalculated.toLocaleString('en-EN', {minimumFractionDigits: 2});
+        prixCalculated = pad(prixCalculated, 5);
         input_prix.val(prixCalculated + ' €');
 
         Materialize.updateTextFields();
@@ -142,7 +142,7 @@ $( document ).ready(function() {
      */
     function initEventsExemplaire() {
         $('.prix').formatter({
-            'pattern': '{{99}},{{99}} €'
+            'pattern': '{{99}}.{{99}} €'
         });
 
         $('.delete_exemplaire').click(function () {

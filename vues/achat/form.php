@@ -6,6 +6,7 @@ include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/livre.php';
 
 // Données pour alimenter les selects
 $famille = new Famille();
+$famille->setNomTable('v_famille');
 $familles = $famille->get();
 
 $etat = new Etat();
@@ -38,7 +39,7 @@ $livres = $livre->get();
         ?>
 
         <button class="btn waves-effect waves-light right" type="submit">
-            Valider - Total 34,99 €
+            Valider - Total <span class="total">0 €</span>
         </button>
 
     </form>
