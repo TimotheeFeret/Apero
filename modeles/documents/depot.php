@@ -167,10 +167,13 @@ While ($num_page <= $nb_page) {
     $sql = 'select nom_livre,prix,etat FROM v_exemplaire where famille_vendeuse_id=' . $var_id_famille . ' order by prix';
     $sql .= ' LIMIT ' . $limit_inf . ',' . $limit_sup;
     $res = mysqli_query($mysqli, $sql) or die ('Erreur SQL : ' . $sql . mysqli_connect_error());
+	$tva = 0;
+	$ht = 0;
+	$ttc =0;
     while ($data = mysqli_fetch_assoc($res)) {
         // id du livre
         $pdf->SetXY(7, $y + 9);
-        $pdf->Cell(140, 5, $data['nom_livre'] . ' (' . $data['etat'] . ' état)', 0, 0, 'L');
+        $pdf->Cell(140, 5, $data['nom_livre'] . ' (État : ' . $data['etat'] . ')', 0, 0, 'L');
         // quantité
         $pdf->SetXY(145, $y + 9);
         $pdf->Cell(13, 5, strrev(wordwrap(strrev(1), 3, ' ', true)), 0, 0, 'R');
@@ -187,6 +190,9 @@ While ($num_page <= $nb_page) {
         $pdf->SetXY(187, $y + 9);
         $pdf->Cell(18, 5, $nombre_format_francais, 0, 0, 'R');
 
+		$ht +=$data['prix'] * 0.8;
+		$tva+=$data['prix'] * 0.2;
+		$ttc+=$data['prix'];
         $pdf->Line(5, $y + 14, 205, $y + 14);
 
         $y += 6;
@@ -225,13 +231,13 @@ While ($num_page <= $nb_page) {
 
             $nombre_format_francais = number_format($data['prix'], 2, ',', ' ');
             //$pdf->SetXY( $x, 227 ); $pdf->Cell( 17, 6, $nombre_format_francais, 0, 0, 'R');
-            $col_ht = $data['prix'] * 0.8;
+            $col_ht = $ht;
 
-            $col_tva = $col_ht - ($col_ht * (1 - ($taux / 100)));
+            $col_tva = $tva;
             $nombre_format_francais = number_format($col_tva, 2, ',', ' ');
             //$pdf->SetXY( $x, 233 ); $pdf->Cell( 17, 6, $nombre_format_francais, 0, 0, 'R');
 
-            $col_ttc = $col_ht + $col_tva;
+            $col_ttc = $ttc;
             $nombre_format_francais = number_format($col_ttc, 2, ',', ' ');
             //$pdf->SetXY( $x, 239 ); $pdf->Cell( 17, 6, $nombre_format_francais, 0, 0, 'R');
 

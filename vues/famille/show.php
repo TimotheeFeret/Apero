@@ -242,12 +242,18 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
         <ul>
             <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="Supprimer la famille"><i
                         class="material-icons">delete</i></a></li>
-            <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Imprimer la facture"><i
+            <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Imprimer la facture" id="BtImprimerFacture"><i
                         class="material-icons">print</i></a></li>
         </ul>
     </div>
 </main>
 
 <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/vues/footer.php'; ?>
+
+<script>
+    var id = <?php echo json_encode($famille['id']); ?>;
+</script>
+
+<script type="application/javascript" src="assets/js/famille/show.js"></script>
 </body>
 </html>
