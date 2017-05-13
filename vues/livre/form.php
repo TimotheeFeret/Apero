@@ -48,7 +48,7 @@ if(!empty($_GET['id'])) {
 
 <script>
     var id = <?php echo json_encode( (empty($_GET['id']) ? null : $_GET['id']) ); ?>;
-    var event = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
+    var eventPage = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
     var data = <?php echo json_encode($data); ?>;
 </script>
 <script type="application/javascript" src="assets/js/livre/form.js"></script>
