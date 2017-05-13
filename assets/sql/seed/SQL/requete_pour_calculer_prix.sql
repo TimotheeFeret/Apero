@@ -1,0 +1,1 @@
+update exemplaire_occasion set prix = (select prix from livre where id = livre_id)*(1-(select decote from etat where id = etat_id)/100);
