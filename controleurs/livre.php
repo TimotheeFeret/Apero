@@ -1,7 +1,8 @@
 <?php
 
 	// TIM : Ca ne fonctionne pas chez moi avec cette config (require_once $_SERVER...).
-
+//var_dump($_SERVER);
+var_dump($_SERVER['CONTEXT_DOCUMENT_ROOT']);
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/livre.php";
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/fonctions.php";
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "config/connexion_bd.php";
