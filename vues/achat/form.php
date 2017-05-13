@@ -6,6 +6,7 @@ include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/livre.php';
 
 // Données pour alimenter les selects
 $famille = new Famille();
+$famille->setNomTable('v_famille');
 $familles = $famille->get();
 
 $etat = new Etat();

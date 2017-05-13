@@ -19,7 +19,7 @@
     $exemplaire = new Exemplaire();
     $exemplaire->setNomTable('v_historique');
     Table::render([
-        'livre_id' => 'Livre',
+        'livre_nom' => 'Livre',
         'famille_vendeuse_nom' => 'Famille déposante',
         'famille_acheteuse_nom' => 'Famille acheteuse',
         'prix' => 'Prix de vente (€)',

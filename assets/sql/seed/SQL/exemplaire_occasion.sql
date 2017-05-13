@@ -1,300 +1,501 @@
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 206, 192, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 133, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 147, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 143, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 209, 147, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 174, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 148, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 191, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 184, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 163, 144, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 133, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 200, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 146, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 204, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 174, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 144, 134, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 128, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 153, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 201, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 172, 150, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 148, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 200, 131, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 148, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 159, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 208, 169, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 140, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 170, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 177, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 210, 193, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 170, 176, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 126, 162, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 185, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 160, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 209, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 141, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 173, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 176, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 132, 183, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 148, 207, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 185, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 135, 136, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 195, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 136, 128, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 133, 159, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 130, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 161, 164, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 145, 155, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 129, 150, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 149, 168, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 165, 183, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 127, 175, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 147, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 190, 134, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 178, 172, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 143, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 175, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 182, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 128, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 151, 128, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 151, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 184, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 157, 188, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 139, 130, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 207, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 188, 130, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 210, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 201, 207, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 211, 141, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 158, 187, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 179, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 186, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 183, 152, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 154, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 159, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 179, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 144, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 153, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 152, 184, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 139, 136, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 136, 202, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 136, 171, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 148, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 154, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 138, 184, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 148, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 170, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 161, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 184, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 135, 188, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 163, 172, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 157, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 147, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 181, 207, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 199, 172, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 164, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 152, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 182, 164, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 189, 162, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 179, 148, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 179, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 155, 184, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 185, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 136, 203, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 161, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 166, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 164, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 196, 165, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 145, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 130, 194, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 138, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 181, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 148, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 211, 207, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 184, 150, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 202, 203, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 206, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 194, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 169, 196, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 188, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 192, 159, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 204, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 192, 164, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 203, 205, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 190, 161, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 194, 189, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 147, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 186, 184, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 184, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 202, 128, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 185, 186, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 130, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 186, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 196, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 189, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 155, 137, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 140, 162, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 129, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 203, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 198, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 172, 167, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 166, 169, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 182, 175, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 199, 176, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 126, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 196, 193, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 194, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 165, 203, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 207, 148, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 167, 159, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 195, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 156, 135, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 148, 180, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 201, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 185, 181, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 190, 129, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 183, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 155, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 203, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 209, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 151, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 140, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 143, 210, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 208, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 172, 139, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 140, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 155, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 134, 135, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 189, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 159, 150, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 144, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 156, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 186, 141, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 168, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 176, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 197, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 145, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 146, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 153, 126, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 183, 182, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 139, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 150, 195, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 133, 182, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 175, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 189, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 142, 147, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 142, 164, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 133, 197, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 204, 150, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 136, 132, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 158, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 155, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 211, 180, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 146, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 180, 173, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 151, 158, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 181, 203, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 194, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 165, 179, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 133, 199, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 191, 134, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 176, 164, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 173, 181, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 192, 194, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 184, 142, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 130, 153, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 129, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 199, 180, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 187, 208, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 168, 211, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 208, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 182, 159, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 187, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 176, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 185, 130, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 147, 163, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 171, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 167, 189, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 171, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 156, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 162, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 203, 133, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 144, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 159, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 188, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 198, 144, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 135, 179, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 151, 175, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 129, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 188, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 180, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 162, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 147, 168, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 134, 174, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 142, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 164, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 202, 156, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 205, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 191, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 168, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 143, 144, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 151, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 199, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 204, 156, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 132, 189, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 153, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 158, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, 178, 163, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 140, 158, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 179, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 144, 199, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 185, 172, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 165, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 161, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 153, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, null, 142, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 179, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 135, 189, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 166, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, 180, 190, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 140, 211, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, null, 176, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 195, 206, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 208, 1, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 204, 178, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 159, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, null, 137, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 133, 199, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, null, 172, 1, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (8, 164, 193, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 165, 211, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (9, 130, 198, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 167, 200, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 137, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 183, 166, 4, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, null, 209, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (4, null, 208, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, null, 189, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 137, 3, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, 157, 203, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, null, 133, 3, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (10, 134, 133, 1, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (11, null, 182, 2, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 197, 201, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 206, 196, 3, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 193, 154, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 129, 209, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, 185, 198, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, null, 169, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (14, 176, 130, 1, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 144, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, 193, 166, 4, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (12, null, 198, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 160, 196, 4, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (7, null, 139, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (3, 155, 147, 2, 4);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 211, 204, 2, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (6, 148, 188, 4, 2);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (13, 178, 143, 2, 1);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (5, null, 154, 3, 3);
-insert into exemplaire_occasion (livre_id, famille_acheteuse_id, famille_vendeuse_id, etat_id, date_depot) values (15, 128, 172, 4, 1);
+INSERT INTO `exemplaire_occasion` (`id`, `livre_id`, `famille_acheteuse_id`, `famille_vendeuse_id`, `etat_id`, `prix`, `date_depot`, `date_achat`) VALUES
+(1301, 3, 134, 180, 4, '8.75', '2017-01-22', NULL),
+(1302, 9, NULL, 166, 4, '8.75', '2017-02-03', NULL),
+(1303, 5, 140, 177, 3, '24.50', '2017-01-30', NULL),
+(1304, 3, NULL, 210, 3, '12.50', '2017-01-30', NULL),
+(1305, 7, 147, 133, 1, '25.50', '2017-01-12', NULL),
+(1306, 12, 179, 197, 3, '10.25', '2017-03-12', NULL),
+(1307, 12, NULL, 183, 3, '10.25', '2017-03-08', NULL),
+(1308, 15, NULL, 164, 1, '14.99', '2017-02-21', NULL),
+(1309, 3, NULL, 149, 4, '8.75', '2017-02-28', NULL),
+(1310, 14, NULL, 163, 1, '20.25', '2017-03-02', NULL),
+(1311, 7, NULL, 176, 4, '11.90', '2017-03-19', NULL),
+(1312, 8, 209, 148, 1, '28.49', '2017-01-23', NULL),
+(1313, 6, NULL, 164, 2, '21.00', '2017-01-27', NULL),
+(1314, 9, 141, 146, 4, '8.75', '2017-03-22', NULL),
+(1315, 12, 189, 187, 2, '12.30', '2017-03-18', NULL),
+(1316, 3, NULL, 132, 4, '8.75', '2017-03-21', NULL),
+(1317, 4, NULL, 185, 4, '14.00', '2017-03-19', NULL),
+(1318, 6, 196, 133, 4, '12.25', '2017-02-23', NULL),
+(1319, 10, 138, 145, 3, '18.00', '2017-03-27', NULL),
+(1320, 5, NULL, 177, 3, '24.50', '2017-03-25', NULL),
+(1321, 14, 209, 187, 4, '9.45', '2017-03-15', NULL),
+(1322, 6, NULL, 146, 3, '17.50', '2017-02-07', NULL),
+(1323, 15, NULL, 191, 1, '14.99', '2017-01-30', NULL),
+(1324, 4, NULL, 145, 4, '14.00', '2017-03-15', NULL),
+(1325, 14, 201, 133, 1, '20.25', '2017-01-05', NULL),
+(1326, 5, NULL, 207, 2, '29.40', '2017-03-16', NULL),
+(1327, 4, NULL, 177, 3, '20.00', '2017-02-19', NULL),
+(1328, 8, 178, 162, 4, '13.30', '2017-03-03', NULL),
+(1329, 10, 156, 151, 4, '12.60', '2017-03-12', NULL),
+(1330, 12, 188, 207, 1, '15.38', '2017-01-18', NULL),
+(1331, 9, 155, 193, 2, '15.00', '2017-03-17', NULL),
+(1332, 8, NULL, 183, 2, '22.79', '2017-02-17', NULL),
+(1333, 13, 174, 126, 2, '25.20', '2017-01-15', NULL),
+(1334, 4, 155, 140, 1, '29.99', '2017-02-05', NULL),
+(1335, 11, 131, 207, 1, '32.25', '2017-03-01', NULL),
+(1336, 3, NULL, 151, 2, '14.99', '2017-02-09', NULL),
+(1337, 11, NULL, 137, 1, '32.25', '2017-02-21', NULL),
+(1338, 4, 157, 192, 2, '23.99', '2017-03-10', NULL),
+(1339, 12, NULL, 130, 3, '10.25', '2017-01-14', NULL),
+(1340, 14, NULL, 156, 1, '20.25', '2017-03-29', NULL),
+(1341, 11, 157, 139, 1, '32.25', '2017-01-11', NULL),
+(1342, 9, NULL, 150, 2, '15.00', '2017-02-06', NULL),
+(1343, 6, 126, 153, 2, '21.00', '2017-02-05', NULL),
+(1344, 15, NULL, 159, 3, '10.00', '2017-03-10', NULL),
+(1345, 13, NULL, 140, 4, '14.70', '2017-03-05', NULL),
+(1346, 4, 210, 173, 2, '23.99', '2017-01-07', NULL),
+(1347, 5, NULL, 176, 3, '24.50', '2017-01-21', NULL),
+(1348, 3, 127, 211, 3, '12.50', '2017-02-13', NULL),
+(1349, 7, 133, 163, 2, '20.40', '2017-02-03', NULL),
+(1350, 6, 142, 174, 2, '21.00', '2017-01-23', NULL),
+(1351, 15, NULL, 143, 1, '14.99', '2017-03-21', NULL),
+(1352, 9, NULL, 144, 2, '15.00', '2017-01-17', NULL),
+(1353, 3, NULL, 184, 1, '18.74', '2017-03-19', NULL),
+(1354, 9, NULL, 149, 2, '15.00', '2017-01-28', NULL),
+(1355, 13, 139, 181, 1, '31.50', '2017-01-18', NULL),
+(1356, 12, 134, 132, 2, '12.30', '2017-02-28', NULL),
+(1357, 8, NULL, 167, 4, '13.30', '2017-01-03', NULL),
+(1358, 9, NULL, 204, 1, '18.75', '2017-03-15', NULL),
+(1359, 7, NULL, 134, 1, '25.50', '2017-01-11', NULL),
+(1360, 3, NULL, 167, 1, '18.74', '2017-03-22', NULL),
+(1361, 10, NULL, 207, 1, '27.00', '2017-02-26', NULL),
+(1362, 8, NULL, 168, 1, '28.49', '2017-01-14', NULL),
+(1363, 6, 196, 138, 3, '17.50', '2017-01-25', NULL),
+(1364, 6, 158, 152, 4, '12.25', '2017-02-08', NULL),
+(1365, 11, NULL, 184, 4, '15.05', '2017-01-25', NULL),
+(1366, 3, NULL, 142, 3, '12.50', '2017-02-27', NULL),
+(1367, 4, 168, 153, 2, '23.99', '2017-03-08', NULL),
+(1368, 7, NULL, 158, 3, '17.00', '2017-01-18', NULL),
+(1369, 12, NULL, 164, 2, '12.30', '2017-01-18', NULL),
+(1370, 12, NULL, 180, 2, '12.30', '2017-01-09', NULL),
+(1371, 9, 165, 148, 1, '18.75', '2017-02-10', NULL),
+(1372, 4, NULL, 193, 3, '20.00', '2017-03-04', NULL),
+(1373, 11, 174, 206, 3, '21.50', '2017-01-12', NULL),
+(1374, 7, NULL, 179, 1, '25.50', '2017-01-19', NULL),
+(1375, 8, NULL, 150, 1, '28.49', '2017-01-13', NULL),
+(1376, 15, 205, 165, 2, '11.99', '2017-03-16', NULL),
+(1377, 7, 152, 127, 3, '17.00', '2017-02-26', NULL),
+(1378, 14, NULL, 147, 2, '16.20', '2017-01-19', NULL),
+(1379, 15, NULL, 127, 4, '7.00', '2017-02-27', NULL),
+(1380, 11, NULL, 186, 1, '32.25', '2017-03-05', NULL),
+(1381, 3, NULL, 174, 3, '12.50', '2017-03-30', NULL),
+(1382, 6, NULL, 155, 4, '12.25', '2017-01-19', NULL),
+(1383, 3, NULL, 196, 2, '14.99', '2017-01-23', NULL),
+(1384, 7, 191, 137, 3, '17.00', '2017-03-24', NULL),
+(1385, 6, 165, 133, 1, '26.25', '2017-01-24', NULL),
+(1386, 10, NULL, 159, 2, '21.60', '2017-03-26', NULL),
+(1387, 3, NULL, 136, 1, '18.74', '2017-01-08', NULL),
+(1388, 6, 211, 157, 4, '12.25', '2017-01-17', NULL),
+(1389, 3, 163, 146, 1, '18.74', '2017-02-17', NULL),
+(1390, 5, NULL, 180, 3, '24.50', '2017-01-15', NULL),
+(1391, 6, 161, 179, 3, '17.50', '2017-01-13', NULL),
+(1392, 10, NULL, 178, 1, '27.00', '2017-03-01', NULL),
+(1393, 7, 179, 178, 2, '20.40', '2017-03-22', NULL),
+(1394, 10, NULL, 187, 4, '12.60', '2017-01-15', NULL),
+(1395, 10, NULL, 153, 4, '12.60', '2017-02-28', NULL),
+(1396, 12, NULL, 165, 2, '12.30', '2017-02-16', NULL),
+(1397, 5, 168, 201, 1, '36.75', '2017-01-13', NULL),
+(1398, 8, 148, 138, 1, '28.49', '2017-01-31', NULL),
+(1399, 11, NULL, 203, 1, '32.25', '2017-03-26', NULL),
+(1400, 3, 149, 171, 1, '18.74', '2017-03-04', NULL),
+(1401, 3, 184, 184, 3, '12.50', '2017-01-05', NULL),
+(1402, 8, 130, 149, 2, '22.79', '2017-03-16', NULL),
+(1403, 15, 130, 176, 1, '14.99', '2017-03-07', NULL),
+(1404, 10, NULL, 153, 1, '27.00', '2017-02-01', NULL),
+(1405, 11, NULL, 168, 3, '21.50', '2017-02-06', NULL),
+(1406, 4, 167, 164, 3, '20.00', '2017-01-28', NULL),
+(1407, 9, 187, 131, 4, '8.75', '2017-01-21', NULL),
+(1408, 14, 162, 159, 1, '20.25', '2017-02-20', NULL),
+(1409, 4, NULL, 191, 3, '20.00', '2017-03-25', NULL),
+(1410, 3, NULL, 201, 3, '12.50', '2017-02-16', NULL),
+(1411, 8, NULL, 193, 1, '28.49', '2017-02-24', NULL),
+(1412, 9, NULL, 177, 3, '12.50', '2017-01-21', NULL),
+(1413, 3, NULL, 194, 4, '8.75', '2017-03-26', NULL),
+(1414, 3, NULL, 127, 4, '8.75', '2017-03-23', NULL),
+(1415, 12, 196, 146, 1, '15.38', '2017-01-18', NULL),
+(1416, 9, 129, 174, 4, '8.75', '2017-02-21', NULL),
+(1417, 15, 152, 158, 4, '7.00', '2017-01-28', NULL),
+(1418, 3, 153, 195, 4, '8.75', '2017-01-13', NULL),
+(1419, 12, 160, 172, 2, '12.30', '2017-03-13', NULL),
+(1420, 3, 126, 160, 3, '12.50', '2017-03-30', NULL),
+(1421, 10, NULL, 134, 4, '12.60', '2017-01-23', NULL),
+(1422, 4, 175, 201, 1, '29.99', '2017-03-12', NULL),
+(1423, 4, 201, 140, 4, '14.00', '2017-01-31', NULL),
+(1424, 14, NULL, 148, 1, '20.25', '2017-01-24', NULL),
+(1425, 3, 194, 188, 1, '18.74', '2017-01-17', NULL),
+(1426, 4, 133, 177, 1, '29.99', '2017-03-25', NULL),
+(1427, 15, NULL, 157, 1, '14.99', '2017-02-19', NULL),
+(1428, 4, NULL, 177, 2, '23.99', '2017-02-15', NULL),
+(1429, 12, 208, 192, 4, '7.18', '2017-01-17', NULL),
+(1430, 15, NULL, 176, 3, '10.00', '2017-03-02', NULL),
+(1431, 14, NULL, 175, 2, '16.20', '2017-03-17', NULL),
+(1432, 9, NULL, 129, 1, '18.75', '2017-01-20', NULL),
+(1433, 9, NULL, 165, 2, '15.00', '2017-03-16', NULL),
+(1434, 12, NULL, 138, 2, '12.30', '2017-01-27', NULL),
+(1435, 5, 185, 187, 1, '36.75', '2017-02-11', NULL),
+(1436, 3, 135, 168, 1, '18.74', '2017-02-19', NULL),
+(1437, 6, NULL, 153, 3, '17.50', '2017-01-12', NULL),
+(1438, 9, 159, 197, 1, '18.75', '2017-01-01', NULL),
+(1439, 15, NULL, 194, 4, '7.00', '2017-02-17', NULL),
+(1440, 4, NULL, 186, 3, '20.00', '2017-03-19', NULL),
+(1441, 14, 169, 167, 3, '13.50', '2017-02-20', NULL),
+(1442, 6, 129, 168, 4, '12.25', '2017-02-03', NULL),
+(1443, 13, NULL, 134, 2, '25.20', '2017-02-13', NULL),
+(1444, 3, 161, 194, 2, '14.99', '2017-02-06', NULL),
+(1445, 3, 191, 153, 1, '18.74', '2017-03-29', NULL),
+(1446, 7, NULL, 170, 4, '11.90', '2017-02-18', NULL),
+(1447, 12, NULL, 159, 2, '12.30', '2017-01-10', NULL),
+(1448, 8, 144, 193, 1, '28.49', '2017-01-29', NULL),
+(1449, 14, 164, 147, 3, '13.50', '2017-03-04', NULL),
+(1450, 14, NULL, 142, 4, '9.45', '2017-01-21', NULL),
+(1451, 6, NULL, 172, 3, '17.50', '2017-01-11', NULL),
+(1452, 14, NULL, 176, 3, '13.50', '2017-01-21', NULL),
+(1453, 12, 199, 150, 1, '15.38', '2017-02-05', NULL),
+(1454, 11, 146, 167, 4, '15.05', '2017-01-08', NULL),
+(1455, 13, NULL, 202, 1, '31.50', '2017-03-19', NULL),
+(1456, 8, 202, 168, 3, '19.00', '2017-03-24', NULL),
+(1457, 9, 148, 177, 4, '8.75', '2017-01-28', NULL),
+(1458, 5, 150, 200, 1, '36.75', '2017-01-31', NULL),
+(1459, 12, 196, 160, 1, '15.38', '2017-02-15', NULL),
+(1460, 9, NULL, 192, 3, '12.50', '2017-02-07', NULL),
+(1461, 12, 165, 160, 4, '7.18', '2017-01-23', NULL),
+(1462, 9, 145, 143, 2, '15.00', '2017-03-10', NULL),
+(1463, 15, 139, 182, 1, '14.99', '2017-03-07', NULL),
+(1464, 9, 168, 143, 4, '8.75', '2017-01-29', NULL),
+(1465, 14, 152, 184, 1, '20.25', '2017-01-06', NULL),
+(1466, 11, NULL, 191, 4, '15.05', '2017-02-17', NULL),
+(1467, 12, NULL, 151, 4, '7.18', '2017-03-30', NULL),
+(1468, 12, NULL, 207, 1, '15.38', '2017-01-07', NULL),
+(1469, 8, 164, 179, 2, '22.79', '2017-03-18', NULL),
+(1470, 14, 195, 146, 3, '13.50', '2017-02-05', NULL),
+(1471, 12, NULL, 207, 1, '15.38', '2017-03-29', NULL),
+(1472, 15, NULL, 163, 2, '11.99', '2017-01-15', NULL),
+(1473, 8, NULL, 185, 1, '28.49', '2017-03-07', NULL),
+(1474, 9, NULL, 198, 1, '18.75', '2017-03-03', NULL),
+(1475, 3, NULL, 152, 4, '8.75', '2017-03-10', NULL),
+(1476, 13, NULL, 153, 2, '25.20', '2017-01-28', NULL),
+(1477, 7, NULL, 141, 3, '17.00', '2017-01-30', NULL),
+(1478, 12, NULL, 205, 3, '10.25', '2017-02-28', NULL),
+(1479, 8, NULL, 168, 2, '22.79', '2017-01-31', NULL),
+(1480, 11, 152, 157, 4, '15.05', '2017-03-24', NULL),
+(1481, 7, NULL, 157, 4, '11.90', '2017-02-09', NULL),
+(1482, 9, NULL, 199, 2, '15.00', '2017-02-28', NULL),
+(1483, 14, 190, 203, 1, '20.25', '2017-01-23', NULL),
+(1484, 14, NULL, 174, 2, '16.20', '2017-03-01', NULL),
+(1485, 10, 141, 137, 3, '18.00', '2017-02-27', NULL),
+(1486, 8, NULL, 175, 1, '28.49', '2017-01-18', NULL),
+(1487, 4, NULL, 185, 2, '23.99', '2017-02-16', NULL),
+(1488, 3, 189, 188, 4, '8.75', '2017-02-25', NULL),
+(1489, 10, 147, 135, 2, '21.60', '2017-02-26', NULL),
+(1490, 14, NULL, 147, 3, '13.50', '2017-01-23', NULL),
+(1491, 10, 198, 208, 3, '18.00', '2017-01-20', NULL),
+(1492, 10, NULL, 162, 1, '27.00', '2017-02-11', NULL),
+(1493, 10, NULL, 167, 4, '12.60', '2017-01-07', NULL),
+(1494, 4, NULL, 177, 2, '23.99', '2017-02-11', NULL),
+(1495, 8, NULL, 195, 1, '28.49', '2017-01-21', NULL),
+(1496, 6, 141, 162, 2, '21.00', '2017-03-22', NULL),
+(1497, 3, NULL, 194, 4, '8.75', '2017-02-04', NULL),
+(1498, 9, 171, 130, 3, '12.50', '2017-01-02', NULL),
+(1499, 15, NULL, 134, 4, '7.00', '2017-02-27', NULL),
+(1500, 3, NULL, 177, 3, '12.50', '2017-01-09', NULL),
+(1501, 9, 206, 163, 3, '12.50', '2017-03-19', NULL),
+(1502, 3, NULL, 191, 3, '12.50', '2017-03-25', NULL),
+(1503, 10, NULL, 187, 4, '12.60', '2017-01-04', NULL),
+(1504, 6, 162, 160, 4, '12.25', '2017-02-05', NULL),
+(1505, 7, NULL, 128, 2, '20.40', '2017-01-16', NULL),
+(1506, 9, NULL, 142, 1, '18.75', '2017-01-27', NULL),
+(1507, 9, NULL, 177, 4, '8.75', '2017-01-17', NULL),
+(1508, 14, 150, 192, 4, '9.45', '2017-01-19', NULL),
+(1509, 12, 153, 133, 3, '10.25', '2017-02-24', NULL),
+(1510, 14, 182, 136, 2, '16.20', '2017-03-03', NULL),
+(1511, 15, 210, 207, 1, '14.99', '2017-02-27', NULL),
+(1512, 9, NULL, 126, 1, '18.75', '2017-01-07', NULL),
+(1513, 4, NULL, 157, 4, '14.00', '2017-02-26', NULL),
+(1514, 7, NULL, 138, 4, '11.90', '2017-02-16', NULL),
+(1515, 6, 147, 146, 1, '26.25', '2017-02-04', NULL),
+(1516, 12, NULL, 170, 1, '15.38', '2017-03-29', NULL),
+(1517, 7, NULL, 165, 3, '17.00', '2017-02-24', NULL),
+(1518, 8, 132, 163, 4, '13.30', '2017-01-08', NULL),
+(1519, 5, 153, 180, 4, '17.15', '2017-01-21', NULL),
+(1520, 7, 188, 193, 2, '20.40', '2017-01-05', NULL),
+(1521, 9, NULL, 153, 1, '18.75', '2017-03-08', NULL),
+(1522, 3, 148, 206, 1, '18.74', '2017-03-13', NULL),
+(1523, 3, 205, 141, 1, '18.74', '2017-03-10', NULL),
+(1524, 5, NULL, 199, 1, '36.75', '2017-03-04', NULL),
+(1525, 10, 132, 130, 4, '12.60', '2017-01-22', NULL),
+(1526, 15, NULL, 192, 1, '14.99', '2017-01-16', NULL),
+(1527, 12, 153, 166, 2, '12.30', '2017-01-13', NULL),
+(1528, 15, 168, 126, 2, '11.99', '2017-02-23', NULL),
+(1529, 15, NULL, 210, 2, '11.99', '2017-01-22', NULL),
+(1530, 13, 128, 162, 2, '25.20', '2017-01-14', NULL),
+(1531, 15, NULL, 184, 3, '10.00', '2017-02-06', NULL),
+(1532, 7, 159, 138, 3, '17.00', '2017-02-06', NULL),
+(1533, 11, NULL, 168, 2, '25.80', '2017-03-26', NULL),
+(1534, 8, 182, 185, 1, '28.49', '2017-02-25', NULL),
+(1535, 3, NULL, 194, 2, '14.99', '2017-01-25', NULL),
+(1536, 14, 129, 155, 1, '20.25', '2017-03-26', NULL),
+(1537, 3, 152, 134, 3, '12.50', '2017-01-10', NULL),
+(1538, 3, 142, 151, 3, '12.50', '2017-02-20', NULL),
+(1539, 14, NULL, 189, 2, '16.20', '2017-03-18', NULL),
+(1540, 12, NULL, 172, 2, '12.30', '2017-01-31', NULL),
+(1541, 5, NULL, 127, 4, '17.15', '2017-03-17', NULL),
+(1542, 7, NULL, 187, 4, '11.90', '2017-02-27', NULL),
+(1543, 3, 206, 200, 3, '12.50', '2017-02-09', NULL),
+(1544, 6, 172, 198, 2, '21.00', '2017-02-15', NULL),
+(1545, 15, NULL, 203, 3, '10.00', '2017-02-21', NULL),
+(1546, 13, NULL, 194, 4, '14.70', '2017-01-05', NULL),
+(1547, 14, NULL, 202, 4, '9.45', '2017-03-12', NULL),
+(1548, 10, 141, 205, 1, '27.00', '2017-01-08', NULL),
+(1549, 14, 133, 140, 4, '9.45', '2017-03-21', NULL),
+(1550, 4, 158, 129, 2, '23.99', '2017-02-11', NULL),
+(1551, 14, 210, 127, 1, '20.25', '2017-01-29', NULL),
+(1552, 10, 191, 177, 2, '21.60', '2017-02-02', NULL),
+(1553, 13, 130, 140, 3, '21.00', '2017-02-20', NULL),
+(1554, 11, 204, 195, 3, '21.50', '2017-01-26', NULL),
+(1555, 14, NULL, 189, 3, '13.50', '2017-03-29', NULL),
+(1556, 14, NULL, 144, 1, '20.25', '2017-01-26', NULL),
+(1557, 8, NULL, 206, 1, '28.49', '2017-03-11', NULL),
+(1558, 6, 198, 197, 4, '12.25', '2017-03-13', NULL),
+(1559, 4, 154, 167, 2, '23.99', '2017-01-19', NULL),
+(1560, 14, 157, 136, 2, '16.20', '2017-03-11', NULL),
+(1561, 12, NULL, 148, 3, '10.25', '2017-03-10', NULL),
+(1562, 12, NULL, 179, 1, '15.38', '2017-01-10', NULL),
+(1563, 6, NULL, 126, 4, '12.25', '2017-03-15', NULL),
+(1564, 3, NULL, 207, 4, '8.75', '2017-03-07', NULL),
+(1565, 9, NULL, 145, 4, '8.75', '2017-03-22', NULL),
+(1566, 8, 188, 145, 3, '19.00', '2017-03-22', NULL),
+(1567, 7, 199, 145, 3, '17.00', '2017-03-05', NULL),
+(1568, 6, 174, 168, 1, '26.25', '2017-03-04', NULL),
+(1569, 6, 150, 170, 1, '26.25', '2017-02-04', NULL),
+(1570, 4, NULL, 204, 4, '14.00', '2017-02-15', NULL),
+(1571, 3, 137, 130, 1, '18.74', '2017-02-09', NULL),
+(1572, 15, NULL, 199, 3, '10.00', '2017-03-19', NULL),
+(1573, 9, 135, 152, 4, '8.75', '2017-03-09', NULL),
+(1574, 12, 169, 161, 3, '10.25', '2017-02-10', NULL),
+(1575, 8, 177, 186, 2, '22.79', '2017-02-17', NULL),
+(1576, 6, NULL, 159, 4, '12.25', '2017-03-09', NULL),
+(1577, 3, NULL, 211, 2, '14.99', '2017-03-25', NULL),
+(1578, 3, 203, 133, 4, '8.75', '2017-01-25', NULL),
+(1579, 6, 166, 156, 3, '17.50', '2017-03-22', NULL),
+(1580, 14, NULL, 134, 2, '16.20', '2017-03-19', NULL),
+(1581, 5, 211, 165, 1, '36.75', '2017-02-13', NULL),
+(1582, 9, NULL, 147, 3, '12.50', '2017-01-05', NULL),
+(1583, 15, NULL, 148, 2, '11.99', '2017-03-19', NULL),
+(1584, 11, NULL, 136, 2, '25.80', '2017-02-07', NULL),
+(1585, 9, 168, 164, 1, '18.75', '2017-03-10', NULL),
+(1586, 8, 210, 166, 1, '28.49', '2017-02-25', NULL),
+(1587, 5, 173, 126, 1, '36.75', '2017-01-01', NULL),
+(1588, 8, NULL, 202, 1, '28.49', '2017-01-21', NULL),
+(1589, 12, NULL, 199, 2, '12.30', '2017-02-14', NULL),
+(1590, 12, NULL, 187, 3, '10.25', '2017-01-24', NULL),
+(1591, 10, NULL, 160, 3, '18.00', '2017-02-20', NULL),
+(1592, 3, NULL, 140, 1, '18.74', '2017-01-06', NULL),
+(1593, 14, 154, 198, 1, '20.25', '2017-01-25', NULL),
+(1594, 5, 183, 147, 1, '36.75', '2017-01-31', NULL),
+(1595, 3, NULL, 170, 2, '14.99', '2017-01-27', NULL),
+(1596, 3, 178, 128, 3, '12.50', '2017-02-23', NULL),
+(1597, 14, NULL, 152, 1, '20.25', '2017-02-05', NULL),
+(1598, 10, 161, 210, 3, '18.00', '2017-01-23', NULL),
+(1599, 10, 146, 134, 4, '12.60', '2017-01-28', NULL),
+(1600, 9, 182, 189, 4, '8.75', '2017-03-30', NULL),
+(1601, 6, NULL, 169, 1, '26.25', '2017-01-05', NULL),
+(1602, 15, NULL, 192, 3, '10.00', '2017-03-02', NULL),
+(1603, 14, NULL, 179, 3, '13.50', '2017-01-23', NULL),
+(1604, 8, NULL, 144, 4, '13.30', '2017-01-13', NULL),
+(1605, 13, NULL, 191, 2, '25.20', '2017-01-02', NULL),
+(1606, 5, NULL, 146, 1, '36.75', '2017-02-13', NULL),
+(1607, 8, 149, 201, 1, '28.49', '2017-03-03', NULL),
+(1608, 12, 199, 143, 1, '15.38', '2017-03-12', NULL),
+(1609, 10, NULL, 206, 1, '27.00', '2017-01-07', NULL),
+(1610, 12, NULL, 128, 3, '10.25', '2017-01-30', NULL),
+(1611, 6, NULL, 181, 1, '26.25', '2017-02-27', NULL),
+(1612, 9, NULL, 162, 4, '8.75', '2017-03-01', NULL),
+(1613, 6, NULL, 128, 4, '12.25', '2017-03-04', NULL),
+(1614, 12, NULL, 197, 2, '12.30', '2017-01-26', NULL),
+(1615, 3, NULL, 175, 1, '18.74', '2017-02-08', NULL),
+(1616, 4, NULL, 208, 2, '23.99', '2017-01-22', NULL),
+(1617, 8, 196, 187, 2, '22.79', '2017-02-06', NULL),
+(1618, 3, 187, 173, 3, '12.50', '2017-03-24', NULL),
+(1619, 9, NULL, 129, 1, '18.75', '2017-03-14', NULL),
+(1620, 3, NULL, 163, 2, '14.99', '2017-03-16', NULL),
+(1621, 14, 145, 173, 2, '16.20', '2017-02-25', NULL),
+(1622, 11, 199, 207, 1, '32.25', '2017-02-17', NULL),
+(1623, 4, 197, 168, 3, '20.00', '2017-03-28', NULL),
+(1624, 4, NULL, 144, 2, '23.99', '2017-02-09', NULL),
+(1625, 13, 133, 206, 3, '21.00', '2017-03-23', NULL),
+(1626, 7, NULL, 164, 3, '17.00', '2017-03-17', NULL),
+(1627, 5, NULL, 187, 2, '29.40', '2017-02-09', NULL),
+(1628, 15, NULL, 132, 3, '10.00', '2017-02-05', NULL),
+(1629, 12, NULL, 209, 4, '7.18', '2017-03-30', NULL),
+(1630, 6, 136, 205, 3, '17.50', '2017-01-19', NULL),
+(1631, 8, 211, 208, 4, '13.30', '2017-03-06', NULL),
+(1632, 15, 200, 190, 3, '10.00', '2017-02-19', NULL),
+(1633, 9, 164, 157, 1, '18.75', '2017-03-07', NULL),
+(1634, 4, 177, 169, 3, '20.00', '2017-01-23', NULL),
+(1635, 5, NULL, 170, 2, '29.40', '2017-01-14', NULL),
+(1636, 10, 167, 156, 2, '21.60', '2017-01-13', NULL),
+(1637, 15, 146, 201, 4, '7.00', '2017-02-01', NULL),
+(1638, 14, NULL, 182, 2, '16.20', '2017-01-04', NULL),
+(1639, 10, 175, 140, 1, '27.00', '2017-01-08', NULL),
+(1640, 12, 157, 144, 4, '7.18', '2017-01-08', NULL),
+(1641, 13, NULL, 175, 4, '14.70', '2017-01-16', NULL),
+(1642, 14, NULL, 182, 3, '13.50', '2017-03-01', NULL),
+(1643, 4, 137, 126, 4, '14.00', '2017-03-16', NULL),
+(1644, 13, 186, 166, 1, '31.50', '2017-03-02', NULL),
+(1645, 15, NULL, 174, 1, '14.99', '2017-02-25', NULL),
+(1646, 11, NULL, 209, 4, '15.05', '2017-03-22', NULL),
+(1647, 13, NULL, 130, 4, '14.70', '2017-01-22', NULL),
+(1648, 11, NULL, 200, 3, '21.50', '2017-03-29', NULL),
+(1649, 3, 144, 158, 1, '18.74', '2017-01-16', NULL),
+(1650, 8, NULL, 129, 3, '19.00', '2017-02-01', NULL),
+(1651, 15, 199, 174, 2, '11.99', '2017-02-10', NULL),
+(1652, 8, 206, 197, 1, '28.49', '2017-02-28', NULL),
+(1653, 4, 153, 198, 2, '23.99', '2017-01-19', NULL),
+(1654, 4, 175, 179, 1, '29.99', '2017-02-23', NULL),
+(1655, 5, NULL, 128, 2, '29.40', '2017-02-05', NULL),
+(1656, 5, 172, 207, 3, '24.50', '2017-03-08', NULL),
+(1657, 6, NULL, 126, 2, '21.00', '2017-02-26', NULL),
+(1658, 12, 138, 192, 1, '15.38', '2017-01-21', NULL),
+(1659, 11, 133, 126, 4, '15.05', '2017-02-28', NULL),
+(1660, 9, 173, 150, 4, '8.75', '2017-01-30', NULL),
+(1661, 6, NULL, 182, 2, '21.00', '2017-01-22', NULL),
+(1662, 10, 129, 197, 2, '21.60', '2017-01-14', NULL),
+(1663, 15, 197, 174, 4, '7.00', '2017-01-26', NULL),
+(1664, 3, 159, 148, 2, '14.99', '2017-02-20', NULL),
+(1665, 10, 189, 160, 1, '27.00', '2017-02-01', NULL),
+(1666, 15, 168, 156, 3, '10.00', '2017-02-23', NULL),
+(1667, 7, NULL, 127, 2, '20.40', '2017-02-08', NULL),
+(1668, 15, 154, 205, 1, '14.99', '2017-02-09', NULL),
+(1669, 4, 127, 136, 4, '14.00', '2017-03-24', NULL),
+(1670, 14, 134, 139, 3, '13.50', '2017-03-02', NULL),
+(1671, 8, 146, 211, 3, '19.00', '2017-01-24', NULL),
+(1672, 8, NULL, 130, 2, '22.79', '2017-01-06', NULL),
+(1673, 5, NULL, 170, 4, '17.15', '2017-01-24', NULL),
+(1674, 6, NULL, 199, 1, '26.25', '2017-02-17', NULL),
+(1675, 9, NULL, 148, 4, '8.75', '2017-01-25', NULL),
+(1676, 12, 194, 138, 3, '10.25', '2017-02-18', NULL),
+(1677, 10, 186, 129, 3, '18.00', '2017-02-14', NULL),
+(1678, 11, 192, 152, 3, '21.50', '2017-02-06', NULL),
+(1679, 13, 141, 135, 3, '21.00', '2017-01-31', NULL),
+(1680, 12, NULL, 192, 2, '12.30', '2017-02-10', NULL),
+(1681, 6, 128, 144, 2, '21.00', '2017-03-01', NULL),
+(1682, 13, 139, 150, 2, '25.20', '2017-01-29', NULL),
+(1683, 15, 182, 140, 2, '11.99', '2017-02-10', NULL),
+(1684, 14, 201, 155, 3, '13.50', '2017-03-27', NULL),
+(1685, 13, NULL, 147, 3, '21.00', '2017-03-09', NULL),
+(1686, 12, NULL, 164, 2, '12.30', '2017-01-08', NULL),
+(1687, 8, 175, 184, 4, '13.30', '2017-02-19', NULL),
+(1688, 8, NULL, 168, 1, '28.49', '2017-02-11', NULL),
+(1689, 13, 196, 179, 4, '14.70', '2017-03-12', NULL),
+(1690, 9, NULL, 181, 3, '12.50', '2017-03-02', NULL),
+(1691, 12, 188, 151, 2, '12.30', '2017-02-28', NULL),
+(1692, 12, NULL, 199, 3, '10.25', '2017-03-23', NULL),
+(1693, 15, 188, 132, 2, '11.99', '2017-01-21', NULL),
+(1694, 14, 203, 167, 4, '9.45', '2017-01-15', NULL),
+(1695, 7, NULL, 133, 3, '17.00', '2017-01-03', NULL),
+(1696, 11, NULL, 171, 4, '15.05', '2017-01-27', NULL),
+(1697, 10, NULL, 185, 2, '21.60', '2017-03-04', NULL),
+(1698, 15, 174, 182, 1, '14.99', '2017-03-13', NULL),
+(1699, 13, 163, 203, 3, '21.00', '2017-02-20', NULL),
+(1700, 5, 207, 158, 1, '36.75', '2017-02-02', NULL),
+(1701, 12, 149, 133, 3, '10.25', '2017-01-07', NULL),
+(1702, 11, NULL, 153, 3, '21.50', '2017-01-06', NULL),
+(1703, 8, NULL, 162, 3, '19.00', '2017-02-01', NULL),
+(1704, 7, NULL, 140, 1, '25.50', '2017-03-17', NULL),
+(1705, 9, NULL, 176, 4, '8.75', '2017-02-28', NULL),
+(1706, 7, NULL, 151, 4, '11.90', '2017-03-03', NULL),
+(1707, 8, NULL, 144, 2, '22.79', '2017-03-23', NULL),
+(1708, 6, 164, 150, 1, '26.25', '2017-02-17', NULL),
+(1709, 9, 179, 179, 1, '18.75', '2017-02-12', NULL),
+(1710, 4, NULL, 143, 4, '14.00', '2017-02-01', NULL),
+(1711, 3, NULL, 148, 2, '14.99', '2017-01-11', NULL),
+(1712, 4, 208, 178, 3, '20.00', '2017-03-12', NULL),
+(1713, 9, NULL, 135, 4, '8.75', '2017-01-05', NULL),
+(1714, 3, NULL, 171, 3, '12.50', '2017-03-14', NULL),
+(1715, 15, 158, 134, 1, '14.99', '2017-03-05', NULL),
+(1716, 11, NULL, 175, 3, '21.50', '2017-03-10', NULL),
+(1717, 7, NULL, 177, 2, '20.40', '2017-01-30', NULL),
+(1718, 12, 134, 203, 2, '12.30', '2017-02-09', NULL),
+(1719, 4, 162, 154, 4, '14.00', '2017-02-11', NULL),
+(1720, 15, NULL, 191, 3, '10.00', '2017-01-10', NULL),
+(1721, 9, NULL, 150, 2, '15.00', '2017-01-31', NULL),
+(1722, 5, NULL, 139, 4, '17.15', '2017-03-17', NULL),
+(1723, 11, NULL, 126, 3, '21.50', '2017-01-16', NULL),
+(1724, 11, NULL, 177, 1, '32.25', '2017-03-28', NULL),
+(1725, 15, NULL, 190, 2, '11.99', '2017-01-03', NULL),
+(1726, 3, NULL, 175, 4, '8.75', '2017-02-02', NULL),
+(1727, 13, NULL, 209, 1, '31.50', '2017-03-18', NULL),
+(1728, 9, 133, 197, 3, '12.50', '2017-02-04', NULL),
+(1729, 15, NULL, 129, 1, '14.99', '2017-02-18', NULL),
+(1730, 4, NULL, 161, 3, '20.00', '2017-03-13', NULL),
+(1731, 7, 162, 208, 3, '17.00', '2017-03-28', NULL),
+(1732, 4, 169, 189, 2, '23.99', '2017-03-11', NULL),
+(1733, 8, 133, 179, 4, '13.30', '2017-01-24', NULL),
+(1734, 3, NULL, 206, 2, '14.99', '2017-03-13', NULL),
+(1735, 7, 169, 143, 4, '11.90', '2017-03-14', NULL),
+(1736, 10, NULL, 139, 2, '21.60', '2017-01-20', NULL),
+(1737, 12, 132, 145, 3, '10.25', '2017-01-15', NULL),
+(1738, 14, NULL, 173, 4, '9.45', '2017-01-26', NULL),
+(1739, 11, NULL, 180, 4, '15.05', '2017-02-26', NULL),
+(1740, 11, NULL, 211, 4, '15.05', '2017-03-30', NULL),
+(1741, 8, NULL, 174, 1, '28.49', '2017-02-01', NULL),
+(1742, 15, NULL, 178, 3, '10.00', '2017-02-11', NULL),
+(1743, 8, 173, 189, 1, '28.49', '2017-01-29', NULL),
+(1744, 6, NULL, 145, 1, '26.25', '2017-01-13', NULL),
+(1745, 8, NULL, 137, 2, '22.79', '2017-02-09', NULL),
+(1746, 3, 168, 179, 2, '14.99', '2017-02-03', NULL),
+(1747, 10, NULL, 154, 1, '27.00', '2017-02-27', NULL),
+(1748, 9, NULL, 138, 2, '15.00', '2017-02-26', NULL),
+(1749, 5, 163, 205, 1, '36.75', '2017-03-26', NULL),
+(1750, 4, 134, 135, 4, '14.00', '2017-02-05', NULL),
+(1751, 13, NULL, 149, 2, '25.20', '2017-01-14', NULL),
+(1752, 13, 194, 126, 3, '21.00', '2017-01-25', NULL),
+(1753, 4, 132, 165, 3, '20.00', '2017-01-16', NULL),
+(1754, 3, NULL, 209, 2, '14.99', '2017-02-06', NULL),
+(1755, 9, NULL, 168, 1, '18.75', '2017-03-30', NULL),
+(1756, 11, NULL, 203, 4, '15.05', '2017-02-21', NULL),
+(1757, 7, 205, 211, 4, '11.90', '2017-03-08', NULL),
+(1758, 6, NULL, 183, 4, '12.25', '2017-02-16', NULL),
+(1759, 11, 201, 173, 3, '21.50', '2017-01-14', NULL),
+(1760, 4, NULL, 208, 3, '20.00', '2017-02-06', NULL),
+(1761, 7, NULL, 176, 1, '25.50', '2017-01-23', NULL),
+(1762, 13, 147, 197, 4, '14.70', '2017-01-17', NULL),
+(1763, 11, 184, 140, 4, '15.05', '2017-03-02', NULL),
+(1764, 6, 152, 207, 4, '12.25', '2017-03-24', NULL),
+(1765, 5, NULL, 204, 2, '29.40', '2017-02-01', NULL),
+(1766, 9, 127, 183, 2, '15.00', '2017-03-20', NULL),
+(1767, 6, 182, 195, 2, '21.00', '2017-02-13', NULL),
+(1768, 9, NULL, 188, 1, '18.75', '2017-03-05', NULL),
+(1769, 9, 203, 199, 1, '18.75', '2017-03-25', NULL),
+(1770, 9, 135, 143, 3, '12.50', '2017-03-08', NULL),
+(1771, 11, NULL, 144, 4, '15.05', '2017-02-11', NULL),
+(1772, 3, NULL, 165, 4, '8.75', '2017-03-03', NULL),
+(1773, 6, NULL, 161, 4, '12.25', '2017-01-05', NULL),
+(1774, 15, 184, 188, 4, '7.00', '2017-01-16', NULL),
+(1775, 8, 160, 185, 2, '22.79', '2017-01-03', NULL),
+(1776, 12, NULL, 174, 2, '12.30', '2017-02-18', NULL),
+(1777, 14, NULL, 131, 3, '13.50', '2017-01-11', NULL),
+(1778, 15, 133, 209, 1, '14.99', '2017-02-18', NULL),
+(1779, 4, 133, 135, 3, '20.00', '2017-01-31', NULL),
+(1780, 8, 181, 195, 3, '19.00', '2017-02-01', NULL),
+(1781, 14, 151, 182, 4, '9.45', '2017-03-12', NULL),
+(1782, 7, 193, 136, 2, '20.40', '2017-01-27', NULL),
+(1783, 5, NULL, 137, 4, '17.15', '2017-03-15', NULL),
+(1784, 6, NULL, 206, 1, '26.25', '2017-02-20', NULL),
+(1785, 4, NULL, 186, 2, '23.99', '2017-01-26', NULL),
+(1786, 5, NULL, 141, 2, '29.40', '2017-02-02', NULL),
+(1787, 13, NULL, 148, 2, '25.20', '2017-02-07', NULL),
+(1788, 3, 201, 164, 1, '18.74', '2017-02-20', NULL),
+(1789, 6, 126, 159, 2, '21.00', '2017-01-31', NULL),
+(1790, 3, 198, 131, 1, '18.74', '2017-01-14', NULL),
+(1791, 13, NULL, 165, 4, '14.70', '2017-03-22', NULL),
+(1792, 12, NULL, 129, 4, '7.18', '2017-01-17', NULL),
+(1793, 5, NULL, 158, 1, '36.75', '2017-03-19', NULL),
+(1794, 4, 143, 211, 3, '20.00', '2017-03-23', NULL),
+(1795, 8, NULL, 170, 4, '13.30', '2017-02-13', NULL),
+(1796, 15, NULL, 148, 2, '11.99', '2017-03-16', NULL),
+(1797, 8, 209, 132, 1, '28.49', '2017-03-05', NULL),
+(1798, 7, 191, 130, 4, '11.90', '2017-01-27', NULL),
+(1799, 9, NULL, 166, 2, '15.00', '2017-01-25', NULL),
+(1800, 5, NULL, 154, 2, '29.40', '2017-01-21', NULL);
