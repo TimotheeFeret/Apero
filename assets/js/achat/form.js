@@ -17,10 +17,14 @@ $( document ).ready(function() {
         event.preventDefault();
         
         $.ajax({
-            url: '/apero/test/test.php',
+                url: '/apero/controleurs/famille.php',
             type: 'POST',
             dataType: 'json',
-            data: {event: 'update', data: $('#Informations :input').serialize(),  'exemplaires': serializeArray(cardExemplaires.find('>div'))}
+                data: {
+                    event: eventPage,
+                    data: $('#Informations :input').serialize(),
+                    'exemplaires': serializeArray(cardExemplaires.find('>div'))
+                }
         })
         .done(function () {
             console.log("success");

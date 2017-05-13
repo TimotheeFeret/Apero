@@ -3,9 +3,9 @@
 	require_once "../modeles/fonctions.php";
 	require_once "../config/connexion_bd.php";*/
 
-	require_once "/Apero/modeles/livre.php";
-	require_once "/Apero/modeles/fonctions.php";
-	require_once "/Apero/config/connexion_bd.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/livre.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "modeles/fonctions.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "config/connexion_bd.php";
 
 	/*require_once(./modeles/livre.php);
 	require_once(./modeles/fonctions.php);
