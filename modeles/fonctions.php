@@ -37,15 +37,16 @@
 		{
 			$reqConstructor = $this->constructRequest();
 			$nomTable = $this->nomTable;
-//			var_dump("INSERT INTO $nomTable SET $reqConstructor;");
+
 			// Envoi de la requête vers la base de données.
 			$conn = DB::connect();
 
 			$req = $conn->exec(" INSERT INTO $nomTable SET $reqConstructor; ");
-//			var_dump($req);
 
 			if ($req === false)
 				throw new Exception($conn->errorInfo()[2]);
+
+			return $conn->lastInsertId();
 		}
 
 		public function update()
@@ -66,7 +67,11 @@
 		{
 			$id = $this->id;
 			$nomTable = $this->nomTable;
-			$req = DB::connect()->exec(" DELETE FROM $nomTable WHERE id = $id; ");
+			$conn = DB::connect();
+			$req = $conn->exec(" DELETE FROM $nomTable WHERE id = $id; ");
+
+			if ($req === false)
+				throw new Exception($conn->errorInfo()[2]);
 		}
 
 		public function get()

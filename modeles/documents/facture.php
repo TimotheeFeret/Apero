@@ -62,7 +62,7 @@ While ($num_page <= $nb_page) {
     $pdf->Cell(85, 8, $num_fact, 0, 0, 'C');
 
     // nom du fichier final
-    $nom_file = "facture_" . $annee . '-' . str_pad($row[1], 4, '0', STR_PAD_LEFT) . ".pdf";
+    $nom_file = "facture_" . date('Y-m-d_H-i-s') . ".pdf";
 
     // date facture
     $champ_date = date_create($row[1]);
@@ -77,7 +77,7 @@ While ($num_page <= $nb_page) {
     // observations
     $pdf->SetFont("Arial", "BU", 10);
     $pdf->SetXY(5, 75);
-    $pdf->Cell($pdf->GetStringWidth("Observations"), 0, "Observations :", 0, "L");
+    $pdf->Cell($pdf->GetStringWidth("Observations :"), 0, "Observations :", 0, "L");
     //$pdf->SetFont( "Arial", "", 10 ); $pdf->SetXY( 5, 78 ) ; $pdf->MultiCell(190, 4, $row[4], 0, "L");
 
     // adr fact du client
@@ -326,9 +326,15 @@ While ($num_page <= $nb_page) {
     $limit_inf += 18;
     $limit_sup += 18;
 }
-$dest = 'documents/factures/'.$nom_file;
-$pdf->Output("F", $_SERVER['CONTEXT_DOCUMENT_ROOT'].$dest);
 
-echo json_encode('/apero/'.$dest);
+$dir = 'documents/facture';
+if (!file_exists($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir)) {
+    mkdir($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir, 0777, true);
+}
+
+$dest = $dir . '/' . $nom_file;
+$pdf->Output("F", $_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dest);
+
+echo json_encode('/apero/' . $dest);
 
 ?>

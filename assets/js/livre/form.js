@@ -13,11 +13,7 @@ $(document).ready(function () {
                 data: {event: eventPage, id: id, data: serialize($('form'))},
             })
             .done(function (data) {
-                if (data.error != undefined) {
-                    Materialize.toast(data.error, 5000, 'red');
-                } else {
-                    window.location.replace(document.referrer)
-                }
+                responseAjax(data)
             })
     });
 

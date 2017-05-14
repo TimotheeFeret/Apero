@@ -12,7 +12,22 @@ $sections = $section->get();
 $data = null;
 if(!empty($_GET['id'])) {
     $etablissement = new Etablissement($_GET['id']);
-    $data = $etablissement->get($_GET['id'])[0];
+    $data = $etablissement->get($_GET['id']);
+    if (empty($data[0])) {
+        die('
+        <div class="row center-align text-grey" style="margin-top: 100px;">
+            <div class="col s12">
+                <i class="material-icons md-80">highlight_off</i>
+            </div>
+            
+            <div class="col s12">
+                <h1>Établissement inexistant</h1>
+            </div>
+        </div>');
+    } else {
+        $data = $data[0];
+    }
+
     $data['section_id'] = $etablissement->getSections();
 }
 ?>
@@ -34,7 +49,7 @@ if(!empty($_GET['id'])) {
 
             <div class="input-field">
                 <i class="material-icons prefix">people</i>
-                <select name="section_id" id="section_id" required multiple></select>
+                <select name="section_id[]" id="section_id" required multiple></select>
                 <label for="section_id">Sections</label>
             </div>
         </div>

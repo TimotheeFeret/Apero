@@ -5,7 +5,21 @@ include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/livre.php';
 $data = null;
 if(!empty($_GET['id'])) {
     $livre = new Livre($_GET['id']);
-    $data = $livre->get($_GET['id'])[0];
+    $data = $livre->get($_GET['id']);
+    if (empty($data[0])) {
+        die('
+        <div class="row center-align text-grey" style="margin-top: 100px;">
+            <div class="col s12">
+                <i class="material-icons md-80">highlight_off</i>
+            </div>
+            
+            <div class="col s12">
+                <h1>Livre inexistant</h1>
+            </div>
+        </div>');
+    } else {
+        $data = $data[0];
+    }
 }
 ?>
 

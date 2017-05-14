@@ -37,6 +37,7 @@
 				echo json_encode(array('error' => $e->getMessage()));
 				return;
 			}
+			echo json_encode(true);
 			break;
 
 		case 'update':

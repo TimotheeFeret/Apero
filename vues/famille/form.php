@@ -23,14 +23,28 @@ $classes = Utility::arrayGroupBySameValue($classe->get(), 'etablissement_id'); /
 $data = null;
 if(!empty($_GET['id'])) {
     $famille = new Famille($_GET['id']);
-    $data = $famille->get($_GET['id'])[0];
+    $data = $famille->get($_GET['id']);
+    if (empty($data[0])) {
+        die('
+        <div class="row center-align text-grey" style="margin-top: 100px;">
+            <div class="col s12">
+                <i class="material-icons md-80">highlight_off</i>
+            </div>
+            
+            <div class="col s12">
+                <h1>Famille inexistante</h1>
+            </div>
+        </div>');
+    } else {
+        $data = $data[0];
+    }
     $data['enfants'] = $famille->getEnfants();
 }
 
 ?>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" autocomplete="off">
         <div class="row" id="Informations">
             <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>

@@ -51,14 +51,3 @@ nav ul, nav ol {
 .white {
     color: white !important;
 }
-
-/*TOASTR COMPONENT*/
-#toast-container {
-    top: auto !important;
-    right: auto !important;
-    bottom: 10%;
-    left: 45%;
-}
-
-.btn-img {
-}

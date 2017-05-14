@@ -14,14 +14,15 @@ mysqli_select_db($mysqli, "apero") or die('Erreur de connection à la BDD : ' . m
 //	mysqli_query($mysqli, "SET NAMES UTF8");
 
 
-$var_id_famille = 126;
+$var_id_famille = $_POST['id'];
 
 // on sup les 2 cm en bas
 $pdf->SetAutoPagebreak(False);
 $pdf->SetMargins(0, 0, 0);
 
 // nb de page pour le multi-page : 18 lignes
-$sql = 'SELECT COUNT(id) FROM exemplaire_occasion WHERE famille_vendeuse_id=' . $var_id_famille;
+$sqlMaxDateDepot = 'SELECT max(date_depot) FROM exemplaire_occasion WHERE famille_vendeuse_id = ' . $var_id_famille;
+$sql = 'SELECT COUNT(id) FROM exemplaire_occasion WHERE famille_vendeuse_id=' . $var_id_famille . ' AND date_depot=(' . $sqlMaxDateDepot . ')';
 $result = mysqli_query($mysqli, $sql) or die ('Erreur SQL : ' . $sql . mysqli_connect_error());
 $row_client = mysqli_fetch_row($result);
 mysqli_free_result($result);
@@ -47,7 +48,7 @@ While ($num_page <= $nb_page) {
     $pdf->Cell(160, 8, $num_page . '/' . $nb_page, 0, 0, 'C');
 
     // n° facture, date echeance et reglement et obs
-    $select = 'select livre_id,date_depot,famille_vendeuse_id,sum(round(prix,2))prix FROM exemplaire_occasion where famille_vendeuse_id=' . $var_id_famille;
+    $select = 'select livre_id,date_depot,famille_vendeuse_id,sum(round(prix,2))prix FROM exemplaire_occasion where famille_vendeuse_id=' . $var_id_famille . ' AND date_depot=(' . $sqlMaxDateDepot . ')';
     $result = mysqli_query($mysqli, $select) or die ('Erreur SQL : ' . $select . mysqli_connect_error());
     $row = mysqli_fetch_row($result);
     mysqli_free_result($result);
@@ -63,7 +64,7 @@ While ($num_page <= $nb_page) {
     $pdf->Cell(85, 8, $num_fact, 0, 0, 'C');
 
     // nom du fichier final
-    $nom_file = "bon_depot_" . $annee . '-' . str_pad($row[1], 4, '0', STR_PAD_LEFT) . ".pdf";
+    $nom_file = "bon_depot_" . date('Y-m-d_H-i-s') . ".pdf";
 
     // date facture
     $champ_date = date_create($row[1]);
@@ -93,7 +94,7 @@ While ($num_page <= $nb_page) {
     // observations
     $pdf->SetFont("Arial", "BU", 10);
     $pdf->SetXY(5, 75);
-    $pdf->Cell($pdf->GetStringWidth("Observations"), 0, "Observations", 0, "L");
+    $pdf->Cell($pdf->GetStringWidth("Observations :"), 0, "Observations :", 0, "L");
     //$pdf->SetFont( "Arial", "", 10 ); $pdf->SetXY( 5, 78 ) ; $pdf->MultiCell(190, 4, $row[4], 0, "L");
 
     // adr fact du client
@@ -127,7 +128,7 @@ While ($num_page <= $nb_page) {
     }
     if ($row_client[4]) {
         $pdf->SetXY($x, $y);
-        $pdf->Cell(100, 8, 'N° Téléphone : ' . $row_client[4], 0, 0, '');
+        $pdf->Cell(100, 8, $row_client[4], 0, 0, '');
     }
 
     // ***********************
@@ -163,8 +164,8 @@ While ($num_page <= $nb_page) {
     // les articles
     $pdf->SetFont('Arial', '', 8);
     $y = 97;
-    // 1ere page = LIMIT 0,18 ;  2eme page = LIMIT 18,36 etc...
-    $sql = 'select nom_livre,prix,etat FROM v_exemplaire where famille_vendeuse_id=' . $var_id_famille . ' order by prix';
+    // 1ere page = LIMIT 0,18 ;  2eme page = LIMIT 18,36 etc..
+    $sql = 'select nom_livre,prix,etat FROM v_exemplaire where famille_vendeuse_id=' . $var_id_famille . ' AND date_depot=(' . $sqlMaxDateDepot . ')' . ' order by prix';
     $sql .= ' LIMIT ' . $limit_inf . ',' . $limit_sup;
     $res = mysqli_query($mysqli, $sql) or die ('Erreur SQL : ' . $sql . mysqli_connect_error());
 	$tva = 0;
@@ -223,7 +224,7 @@ While ($num_page <= $nb_page) {
         $tot_tva = 0;
         $tot_ttc = 0;
         $x = 130;
-        $sql = 'select sum( round(prix,2))prix FROM exemplaire_occasion where famille_vendeuse_id=' . $var_id_famille;
+        $sql = 'select sum( round(prix,2))prix FROM exemplaire_occasion where famille_vendeuse_id=' . $var_id_famille . ' AND date_depot=(' . $sqlMaxDateDepot . ')';
         $res = mysqli_query($mysqli, $sql) or die ('Erreur SQL : ' . $sql . mysqli_connect_error());
         while ($data = mysqli_fetch_assoc($res)) {
             //$pdf->SetXY( $x, 221 ); $pdf->Cell( 17, 6,'20 %', 0, 0, 'C');
@@ -298,5 +299,12 @@ While ($num_page <= $nb_page) {
     $limit_sup += 18;
 }
 
-$pdf->Output("I", $nom_file);
+$dir = 'documents/depot';
+if (!file_exists($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir)) {
+    mkdir($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir, 0777, true);
+}
+$dest = $dir . '/' . $nom_file;
+$pdf->Output("F", $_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dest);
+
+echo json_encode('/apero/' . $dest);
 ?>

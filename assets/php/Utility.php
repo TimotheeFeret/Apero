@@ -21,4 +21,16 @@ class Utility
         }
         return $return;
     }
+
+    public static function extractDataWithKey($array, $key)
+    {
+        $return = [];
+
+        foreach ($array as $item) {
+            if (empty($item[$key])) continue;
+            $return[] = $item[$key];
+        }
+
+        return $return;
+    }
 }

@@ -14,10 +14,11 @@
 			parse_str($_POST['data'], $famille_vendeuse_id);
 			$famille_vendeuse_id = $famille_vendeuse_id['famille_vendeuse_id'];
 			$exemplaires = json_decode($_POST['exemplaires'], true);
+			$date_depot = date("Y-m-d H:i:s");
 			foreach ($exemplaires as $key => $exemplaire) {
 				// Instanciation d'un nouvel exemplaire.
 				$exemplaire = new Exemplaire($exemplaire['livre_id'], null, $famille_vendeuse_id, $exemplaire['etat_id'],
-					$exemplaire['prix'], date("Y-m-d"), null);
+					$exemplaire['prix'], $date_depot, null);
 				// Ajoute l'exemplaire ou génère une erreur si l'ajout a échoué.
 				try {
 					$exemplaire->add();
@@ -60,7 +61,7 @@
 			// Boucle sur la liste des exemplaires achetés par la famille.
 			foreach ($exemplaires as $key => $exemplaireItem) {
 				// Instanciation d'un nouvel exemplaire.
-				$exemplaire = new Exemplaire($exemplaireItem['livre_id'], $famille_acheteuse_id);
+				$exemplaire = new Exemplaire($exemplaireItem['livre_id'], $famille_acheteuse_id, date('Y-m-d H:i:s'));
 				// Ajoute l'exemplaire ou génère une erreur si l'ajout a échoué.
 				try {
 					$exemplaire->update();

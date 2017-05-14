@@ -19,7 +19,7 @@ $livres = $livre->get();
 ?>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" autocomplete="off">
         
         <div id="Informations">
             <div class="row">

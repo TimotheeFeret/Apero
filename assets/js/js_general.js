@@ -88,15 +88,17 @@ function initForm(form, data) {
             val.val(data[name]);
 
         } else if(val.is('select')) {
+            var nameForData = name.replace('[]', '');
+
             // Si c'est un string selectionne l'option
             if(typeof data[name] == 'string') {
                 val.find('option[value='+data[name]+']').attr('selected', 'selected');
 
             // Si c'est un objet selectionne les options
-            } else if(typeof data[name] == 'object') {
-                $.each($(data[name]), function (dataindex, dataval) {
+            } else if (typeof data[nameForData] == 'object') {
+                $.each($(data[nameForData]), function (dataindex, dataval) {
                     var name = val.attr('name');
-                    val.find('option[value='+dataval[name]+']').attr('selected', 'selected');
+                    val.find('option[value=' + dataval[nameForData] + ']').attr('selected', 'selected');
                 });
             }
 
@@ -109,6 +111,14 @@ function pad(n, width, z) {
     z = z || '0';
     n = n + '';
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function responseAjax(data) {
+    if (data.error != undefined) {
+        Materialize.toast(data.error, 5000, 'red');
+    } else {
+        window.location.replace(document.referrer)
+    }
 }
 
 $( document ).ready(function() {
@@ -124,7 +134,7 @@ $( document ).ready(function() {
         }
 
         var order = [];
-        var lastColumn = $('thead tr th').length - 1;
+        var lastColumn = $('thead tr th').last().text() == '' ? $('thead tr th').length - 1 : ''; // Permet de récupèrer l'index des boutons si le header est vide
 
         // Parcours les headers
         $.each($(val).find('thead tr th'), function (i, v) {
@@ -144,6 +154,29 @@ $( document ).ready(function() {
                 {"width": "350", "targets": lastColumn}
             ]
         });
+
+        $.fn.dataTable.moment('DD/MM/YYYY');
+    });
+
+    // Sur le clic du bouton 'delete'
+    $('.delete').on('click', function () {
+        var id = $(this).closest('tr').attr('data-id');
+        var element = (window.location.href).split('/');
+        element = element[element.length - 2];
+
+        $.ajax({
+                url: '/apero/controleurs/' + element + '.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {event: 'delete', id: id}
+            })
+            .done(function (data) {
+                if (data.error != undefined) {
+                    Materialize.toast(data.error, 5000, 'red');
+                } else {
+                    location.reload();
+                }
+            })
     });
 
 
