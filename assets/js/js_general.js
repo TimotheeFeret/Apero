@@ -158,6 +158,27 @@ $( document ).ready(function() {
         $.fn.dataTable.moment('DD/MM/YYYY');
     });
 
+    // Sur le clic du bouton 'delete'
+    $('.delete').on('click', function () {
+        var id = $(this).closest('tr').attr('data-id');
+        var element = (window.location.href).split('/');
+        element = element[element.length - 2];
+
+        $.ajax({
+                url: '/apero/controleurs/' + element + '.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {event: 'delete', id: id}
+            })
+            .done(function (data) {
+                if (data.error != undefined) {
+                    Materialize.toast(data.error, 5000, 'red');
+                } else {
+                    location.reload();
+                }
+            });
+    })
+
 
     // EVENEMENTS DE GESTION (VIEW, EDIT)
     // Permet d'ouvrir la page de détails d'un élément
