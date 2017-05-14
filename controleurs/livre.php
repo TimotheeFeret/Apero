@@ -56,7 +56,6 @@
 			    $split = explode('=', $param);
 			    $params[$split[0]] = $split[1];
 			}
-			var_dump($params);
 			$livre = new Livre($_POST['id'], $params['isbn'], $params['nom_livre'], $params['prix'], $params['annee_usage']);
 			// Faire un nouveau constructeur avec l'id et les data
 			try {
