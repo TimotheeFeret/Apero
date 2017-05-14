@@ -42,20 +42,15 @@
 			break;
 
 		case 'update':
-
-			// Récupère les données et les stocke dans un tableau.
-			parse_str($_POST['data'], $data);
-			var_dump($_POST['id']);
-			var_dump($data);
-			// Vérifie que l'id est renseigné.
-			if( !isset($_POST['id']) ) {
-				echo json_encode(array('error' => "L'id n'est pas renseigné"));
-				return;
-			}
+			// Vérifie que les données de la famille sont renseignées.
 			if( !isset($_POST['data']) ) {
 				echo json_encode(array('error' => 'Toutes les données ne sont pas renseignées'));
 				return;
 			}
+			// Récupère les données et les stocke dans un tableau.
+			parse_str($_POST['data'], $data);
+			var_dump($_POST['id']);
+			var_dump($data);
 			$data = explode('&', $_POST['data']);
 			$famille = new Famille($_POST['id'], $data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
 				$data['telephone']);
