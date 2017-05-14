@@ -6,7 +6,7 @@
 	switch ($_POST['event']) {
 		case 'add':
 			// Vérifie que les données sont renseignées.
-			if( !isset($_POST['data']) ) {
+			if( !isset($_POST['data']) && !isset($_POST['exemplaires']) ) {
 				echo json_encode(array('error' => 'Toutes les données ne sont pas renseignées'));
 				return;
 			}
@@ -47,25 +47,30 @@
 			break;
 
 		case 'update':
-			// Vérifie que l'id est renseigné.
-			if( !isset($_POST['id']) ) {
-				echo json_encode(array('error' => "L'id nest pas renseigné"));
-				return;
-			}
-			if( !isset($_POST['data']) ) {
+			// Vérifie que les données sont renseignées.
+			if( !isset($_POST['data']) && !isset($_POST['exemplaires']) ) {
 				echo json_encode(array('error' => 'Toutes les données ne sont pas renseignées'));
 				return;
 			}
-			$data = explode('&', $_POST['data']);
-			$exemplaire = new Exemplaire($_POST['id'], $data['livre_id'], $data['famille_acheteuse_id'], $data['famille_vendeuse_id'],
-				$data['etat_id'], $data['prix'], $data['date_depot'], $data['date_achat']);
-			// Faire un nouveau constructeur avec l'id et les data
-			try {
-				$exemplaire->update();
-			} catch (Exception $e) {
-				echo json_encode(array('error' => $e->getMessage()));
-				return;
+			// Récupère les données et les stocke dans un tableau.
+			parse_str($_POST['data'], $famille_acheteuse_id);
+			$famille_acheteuse_id = $famille_acheteuse_id['famille_acheteuse_id'];
+			// Stockage dans un tableau des attributs des exemplaires.
+			$exemplaires = json_decode($_POST['exemplaires'], true);
+			// Boucle sur la liste des exemplaires achetés par la famille.
+			foreach ($exemplaires as $key => $exemplaireItem) {
+				// Instanciation d'un nouvel exemplaire.
+				$exemplaire = new Exemplaire($exemplaireItem['livre_id'], $famille_acheteuse_id);
+				// Ajoute l'exemplaire ou génère une erreur si l'ajout a échoué.
+				try {
+					$exemplaire->update();
+				} catch (Exception $e) {
+					echo json_encode(array('error' => $e->getMessage()));
+					return;
+				}
 			}
+			echo json_encode(true);
+			return;
 			break;
 
 		case 'get':

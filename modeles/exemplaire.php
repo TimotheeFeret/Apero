@@ -27,13 +27,17 @@
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
 	                self::__construct2($nbParam[0]);
 	                break;
+	            case 2:
+	            //	On récupère l'id et la famille acheteuse.
+	                self::__construct3($nbParam[0], $nbParam[1]);
+	                break;
 	            case 7:
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
-	                self::__construct3( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6] );
+	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6] );
 	                break;
 	            case 8:
 	            //	On récupère tous les paramètres de l'exemplaire.
-	                self::__construct4( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6], $nbParam[7] );
+	                self::__construct5( $nbParam[0], $nbParam[1], $nbParam[2], $nbParam[3], $nbParam[4], $nbParam[5], $nbParam[6], $nbParam[7] );
 	                break;
 	            default :
 	            	echo '<br/>Erreur lors de la construction de l\'objet exemplaire. Nombre de paramètres inapproprié.';
@@ -60,8 +64,18 @@
 
 		/**
 		*
+		 */
+		function __construct3($id, $famille_acheteuse_id)
+		{
+			$this->id = $id;
+			$this->famille_acheteuse_id = $famille_acheteuse_id;
+			/*var_dump ('Constructeur 2');*/
+		}
+
+		/**
+		*
 		*/
-		function __construct3($livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
+		function __construct4($livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->livre_id = $livre_id;
 			$this->famille_acheteuse_id = $famille_acheteuse_id;
@@ -76,7 +90,7 @@
 		/**
 		*
 		 */
-		function __construct4($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
+		function __construct5($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->id = $id;
 			$this->livre_id = $livre_id;

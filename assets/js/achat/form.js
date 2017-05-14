@@ -21,7 +21,7 @@ $( document ).ready(function() {
             type: 'POST',
             dataType: 'json',
                 data: {
-                    event: 'add',
+                    event: 'update',
                     data: serialize($('#Informations :input')),
                     exemplaires: serializeArray(cardExemplaires.find('>div'))
                 }
