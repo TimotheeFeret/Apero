@@ -26,8 +26,8 @@ $( document ).ready(function() {
                     exemplaires: serializeArray(cardExemplaires.find('>div'))
                 }
             })
-            .done(function () {
-                console.log("success");
+            .done(function (data) {
+                window.open(data, '_blank');
             });
 
     });
