@@ -47,9 +47,17 @@
 				echo json_encode(array('error' => 'Toutes les données ne sont pas renseignées'));
 				return;
 			}
+			var_dump($_POST['data']);
 			// Récupère les données et les stocke dans un tableau.
-			parse_str($_POST['data'], $id, $famille, $enfants);
-			$data = explode('&', $_POST['data']);
+
+			parse_str($_POST['data']['id'], $famille_id);
+			parse_str($_POST['data']['famille'], $famille_data);
+			parse_str($_POST['data']['enfants'], $famille_enfants);
+
+			var_dump($famille_id);
+			var_dump($famille_data);
+			var_dump($famille_enfants);
+
 			$famille = new Famille($_POST['id'], $data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
 				$data['telephone']);
 			// Faire un nouveau constructeur avec l'id et les data
@@ -59,6 +67,8 @@
 				echo json_encode(array('error' => $e->getMessage()));
 				return;
 			}
+			echo json_encode(true);
+			return;
 			break;
 
 		case 'get':
