@@ -2,11 +2,11 @@
 $emptyTab = "<li class=\"tab empty\"><a href=\"#empty\"></a></li>";
 
 // Données pour select
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/etablissement.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/classe.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/adhesion.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/assets/php/Utility.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/famille.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/modeles/etablissement.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/modeles/classe.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/modeles/adhesion.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/assets/php/Utility.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/modeles/famille.php';
 
 // Données pour alimenter les selects
 $etablissement = new Etablissement();
@@ -100,6 +100,7 @@ if(!empty($_GET['id'])) {
 </div>
 
 <script>
+    var id = <?php echo json_encode((empty($_GET['id']) ? null : $_GET['id'])); ?>;
     var emptyTab = <?php echo json_encode($emptyTab); ?>;
     var eventPage = <?php echo json_encode(pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME)); ?>;
     var data = <?php echo json_encode($data); ?>;

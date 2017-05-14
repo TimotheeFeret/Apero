@@ -12,8 +12,12 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: {event: eventPage, id: id, data: serialize($('form'))},
             })
-            .done(function () {
-                console.log("success");
+            .done(function (data) {
+                if (data.error != undefined) {
+                    Materialize.toast(data.error, 5000, 'red');
+                } else {
+                    window.loca
+                }
             })
     });
 

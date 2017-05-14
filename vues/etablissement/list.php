@@ -18,8 +18,9 @@
 
         $etablissement = new Etablissement();
         Table::render(['nom' => 'Établissement',
-            'telephone' => 'Téléphone'
-        ], $etablissement->get());
+            'telephone' => 'Téléphone',
+        ], $etablissement->get(),
+            ['edit', 'delete']);
         ?>
 
         <div class="fixed-action-btn">

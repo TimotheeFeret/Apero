@@ -20,6 +20,7 @@
     echo '<script src="'.$domain.'/lib/js/jquery.formatter.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/lib/js/jquery.validate/jquery.validate.min.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/lib/js/jquery.validate/localization/messages_fr.min.js'.'" type="text/javascript"></script>';
+echo '<script src="' . $domain . '/lib/js/toastr.min.js' . '" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/assets/js/js_general.js'.'" type="text/javascript"></script>';
     echo '<script src="'.$domain.'/assets/js/jquery.validator.custom.js'.'" type="text/javascript"></script>';
 
@@ -30,4 +31,5 @@ echo '<script src="' . $domain . '/lib/js/dataTable/jquery.dataTables.min.js' . 
 echo '<script src="' . $domain . '/lib/js/dataTable/dataTables.material.min.js' . '" type="text/javascript"></script>';
 
 echo '<link rel="stylesheet" href="' . $domain . '/lib/css/materialize.css' . '"/>';
+echo '<link rel="stylesheet" href="' . $domain . '/lib/css/toastr.css' . '"/>';
 ?>
