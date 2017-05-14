@@ -61,7 +61,7 @@
 			$conn = DB::connect();
 
 			$req = $conn->exec(" UPDATE $nomTable SET $reqConstructor WHERE id = $id; ");
-			var_dump($req);
+//			var_dump($req);
 
 			if ($req === false)
 				throw new Exception($conn->errorInfo()[2]);

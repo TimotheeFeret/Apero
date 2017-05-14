@@ -23,7 +23,7 @@ function replaceUndesirableCharatersForDB(text) {
 }
 
 function serialize(form) {
-    var data = $('form').serialize();
+    var data = form.serialize();
     return replaceUndesirableCharatersForDB(data);
 }
 
