@@ -2,11 +2,11 @@
 $emptyTab = "<li class=\"tab empty\"><a href=\"#empty\"></a></li>";
 
 // Données pour select
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/etablissement.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/classe.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/adhesion.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'assets/php/Utility.php';
-include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'modeles/famille.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/etablissement.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/classe.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/adhesion.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/assets/php/Utility.php';
+include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/modeles/famille.php';
 
 // Données pour alimenter les selects
 $etablissement = new Etablissement();

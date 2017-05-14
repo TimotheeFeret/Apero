@@ -1,48 +1,60 @@
 <?php
-	require_once "../modeles/famille.php";
-	require_once "../modeles/fonctions.php";
-	require_once "../config/connexion_bd.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/famille.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/modeles/fonctions.php";
+	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . "/config/connexion_bd.php";
 
 	switch ($_POST['event']) {
 		case 'add':
 			// Vérifie que les données sont renseignées.
 			if( !isset($_POST['data']) ) {
-				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
+				echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
+				return;
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$famille = new Famille($data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
-				$data['telephone'] );
+			// Création d'un tableau pour dissocier les données de leur nom.
+			foreach ($data as $param) {
+			    $split = explode('=', $param);
+			    $params[$split[0]] = $split[1];
+			}
+			$famille = new Famille($params['adhesion_id'], $params['nom'], $params['code_postal'], $params['ville'], $params['adresse'],
+				$params['telephone'] );
 			// Ajoute la famille ou génère une erreur si l'ajout a échoué.
 			try {
 				$famille->add();
 			} catch (Exception $e) {
-				return echo json_encode('error' => $e->getMessage());
+				echo json_encode('error' => $e->getMessage());
+				return;
 			}
-			return echo json_encode(true);
+			echo json_encode(true);
+			return;
 			break;
 
 		case 'delete':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
+				echo json_encode('error' => "L'id n'est pas renseigné");
+				return;
 			}
 			$famille = new Famille($_POST['id']);
 			// Supprime la famille ou génère une erreur si la suppression a échoué.
 			try {
 				$famille->delete();
 			} catch (Exception $e) {
-				return echo json_encode('error' => $e->getMessage());
+				echo json_encode('error' => $e->getMessage());
+				return;
 			}
 			break;
 
 		case 'update':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
+				echo json_encode('error' => "L'id n'est pas renseigné");
+				return;
 			}
 			if( !isset($_POST['data']) ) {
-				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
+				echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
+				return;
 			}
 			$data = explode('&', $_POST['data']);
 			$famille = new Famille($_POST['id'], $data['adhesion_id'], $data['nom'], $data['code_postal'], $data['ville'], $data['adresse'],
@@ -51,7 +63,8 @@
 			try {
 				$famille->update();
 			} catch (Exception $e) {
-				return echo json_encode('error' => $e->getMessage());
+				echo json_encode('error' => $e->getMessage());
+				return;
 			}
 			break;
 
@@ -61,7 +74,8 @@
 			try {
 				$famille->getAll();
 			} catch (Exception $e) {
-				return echo json_encode('error' => $e->getMessage());
+				echo json_encode('error' => $e->getMessage());
+				return;
 			}
 	}
 ?>
