@@ -47,8 +47,10 @@
 				echo json_encode(array('error' => 'Toutes les données ne sont pas renseignées'));
 				return;
 			}
+			var_dump($_POST['id']);
+			var_dump($_POST['data']);
 			// Récupère les données et les stocke dans un tableau.
-			parse_str($_POST['data'], $data);
+			parse_str($_POST['data'], $id, $famille, $enfants);
 			var_dump($_POST['id']);
 			var_dump($data);
 			$data = explode('&', $_POST['data']);
