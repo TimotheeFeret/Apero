@@ -17,7 +17,7 @@ $( document ).ready(function() {
         event.preventDefault();
 
         $.ajax({
-                url: '/apero/controleurs/famille.php',
+                url: '/apero/controleurs/exemplaire.php',
             type: 'POST',
             dataType: 'json',
                 data: {
@@ -26,11 +26,22 @@ $( document ).ready(function() {
                     exemplaires: serializeArray(cardExemplaires.find('>div'))
                 }
         })
-        .done(function () {
-            console.log("success");
+            .done(function (data) {
+                if (data.error === undefined) {
+                    getBonAchat();
+                }
         });
         
     });
+
+    function getBonAchat() {
+        $.ajax({
+            url: '/apero/modeles/documents/achat.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {id: $('#famille_acheteuse_id').val()},
+        });
+    }
 
     // EVENTS
     /**

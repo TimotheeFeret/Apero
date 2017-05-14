@@ -1,9 +1,9 @@
-<?php 
+<?php
 	require_once "fonctions.php";
 	require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/connexion_bd.php";
 
 	/**
-	* 
+	 *
 	*/
 	class Exemplaire extends Fonctions
 	{
@@ -16,7 +16,7 @@
 		protected $date_depot;
 		protected $date_achat;
 		protected $nomTable = 'exemplaire_occasion';
-		
+
 		function __construct() {
 	        $nbParam = func_get_args();
 	        switch( func_num_args() ) {
@@ -42,7 +42,7 @@
 
 		/**
 		*
-		*/		
+		 */
 		function __construct1()
 		{
 			// Ce constructeur est notamment utilisé pour faire un get de tous les exemplaires.
@@ -51,7 +51,7 @@
 
 		/**
 		*
-		*/		
+		 */
 		function __construct2($id)
 		{
 			$this->id = $id;
@@ -75,7 +75,7 @@
 
 		/**
 		*
-		*/	
+		 */
 		function __construct4($id, $livre_id, $famille_acheteuse_id, $famille_vendeuse_id, $etat_id, $prix, $date_depot, $date_achat)
 		{
 			$this->id = $id;

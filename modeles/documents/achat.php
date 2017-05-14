@@ -14,7 +14,8 @@ mysqli_select_db($mysqli, "apero") or die('Erreur de connection à la BDD : ' . m
 //	mysqli_query($mysqli, "SET NAMES UTF8");
 
 
-$var_id_famille = 126;
+$var_id_famille = 127;
+//$var_id_famille = $_POST['id'];
 
 // on sup les 2 cm en bas
 $pdf->SetAutoPagebreak(False);
@@ -93,7 +94,7 @@ While ($num_page <= $nb_page) {
     // observations
     $pdf->SetFont("Arial", "BU", 10);
     $pdf->SetXY(5, 75);
-    $pdf->Cell($pdf->GetStringWidth("Observations :"), 0, "Observations", 0, "L");
+    $pdf->Cell($pdf->GetStringWidth("Observations :"), 0, "Observations :", 0, "L");
     //$pdf->SetFont( "Arial", "", 10 ); $pdf->SetXY( 5, 78 ) ; $pdf->MultiCell(190, 4, $row[4], 0, "L");
 
     // adr fact du client
@@ -288,6 +289,13 @@ While ($num_page <= $nb_page) {
     $limit_inf += 18;
     $limit_sup += 18;
 }
+$dir = 'documents/achat';
+if (!file_exists($dir)) {
+    mkdir($dir, 0777, true);
+}
 
-$pdf->Output("I", $nom_file);
+$dest = $dir . '/' . $nom_file;
+$pdf->Output("F", $_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dest);
+
+echo json_encode('/apero/' . $dest);
 ?>
