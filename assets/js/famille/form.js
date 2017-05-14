@@ -253,7 +253,7 @@ $( document ).ready(function() {
 
         if(etablissement != undefined) {
             selectEtablissement.find('option[value=' + etablissement + ']').attr('selected', 'selected');
-            refreshClasses(etablissement, selectClasse, data['section_id']);
+            refreshClasses(etablissement, selectClasse, data['classe_id']);
         }
 
         if (input_field_id != null) {
