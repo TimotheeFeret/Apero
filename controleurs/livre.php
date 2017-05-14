@@ -11,13 +11,8 @@
 				return;
 			}
 			// Récupère les données et les stocke dans un tableau.
-			$data = explode('&', $_POST['data']);
-			// Création d'un tableau pour dissocier les données de leur nom.
-			foreach ($data as $param) {
-			    $split = explode('=', $param);
-			    $params[$split[0]] = $split[1];
-			}
-			$livre = new Livre($params['isbn'], $params['nom_livre'], $params['prix'], $params['annee_usage']);
+			parse_str($_POST['data'], $data);
+			$livre = new Livre($data['isbn'], $data['nom_livre'], $data['prix'], $data['annee_usage']);
 			// Ajoute le livre ou génère une erreur si l'ajout a échoué.
 			try {
 				$livre->add();
