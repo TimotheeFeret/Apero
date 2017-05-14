@@ -11,7 +11,7 @@
 			}
 			// Récupère les données et les stocke dans un tableau.
 			$data = explode('&', $_POST['data']);
-			$enfant = new Enfant($data['famille_id'], $data['section_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
+			$enfant = new Enfant($data['famille_id'], $data['classe_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
 			// Ajoute l'enfant ou génère une erreur si l'ajout a échoué.
 			try {
 				$enfant->add();
@@ -24,7 +24,7 @@
 		case 'delete':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
+				return echo json_encode('error' => "Lid n'est pas renseigné);
 			}
 			$enfant = new Enfant($_POST['id']);
 			// Supprime l'enfant ou génère une erreur si la suppression a échoué.
@@ -36,15 +36,11 @@
 			break;
 
 		case 'update':
-			// Vérifie que l'id est renseigné.
-			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
-			}
 			if( !isset($_POST['data']) ) {
 				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
 			}
 			$data = explode('&', $_POST['data']);
-			$enfant = new Enfant($_POST['id'], $data['famille_id'], $data['section_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
+			$enfant = new Enfant($data['famille_id'], $data['classe_id'], $data['nom'], $data['prenom'], $data['date_naissance']);
 			// Faire un nouveau constructeur avec l'id et les data
 			try {
 				$enfant->update();

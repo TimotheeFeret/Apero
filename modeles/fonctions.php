@@ -57,6 +57,8 @@
 			// Récupération des attributs de l'objet à modifier.
 			$attributs = get_object_vars ( $this );
 			$nomTable = $this->nomTable;
+			var_dump($nomTable);
+			var_dump($reqConstructor);
 			$id = $this->id;
 			$conn = DB::connect();
 

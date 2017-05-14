@@ -9,7 +9,7 @@
 	{
 		protected $id;
 		protected $famille_id;
-		protected $section_id;
+		protected $classe_id;
 		protected $nom;
 		protected $prenom;
 		protected $date_naissance;
@@ -58,10 +58,10 @@
 		/**
 		*
 		*/	
-		function __construct3($famille_id, $section_id, $nom, $prenom, $date_naissance)
+		function __construct3($famille_id, $classe_id, $nom, $prenom, $date_naissance)
 		{
 			$this->famille_id = $famille_id;
-			$this->section_id = $section_id;
+			$this->classe_id = $classe_id;
 			$this->nom = $nom;
 			$this->prenom = $prenom;
 			$this->date_naissance = $date_naissance;
@@ -71,11 +71,11 @@
 		/**
 		*
 		*/	
-		function __construct4($id, $famille_id, $section_id, $nom, $prenom, $date_naissance)
+		function __construct4($id, $famille_id, $classe_id, $nom, $prenom, $date_naissance)
 		{
 			$this->id = $id;
 			$this->famille_id = $famille_id;
-			$this->section_id = $section_id;
+			$this->classe_id = $classe_id;
 			$this->nom = $nom;
 			$this->prenom = $prenom;
 			$this->date_naissance = $date_naissance;
