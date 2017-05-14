@@ -53,6 +53,7 @@
 			$famille_id = $_POST['data']['id'];
 			parse_str($_POST['data']['famille'], $famille_data);
 			$famille_enfants_Update = json_decode($_POST['data']['enfants'], true);
+
 			// Création de la liste des ids des enfants de la famille modifiée.
 			foreach ($famille_enfants_Update as $key => $enfant) {
 				// Teste si l'enfant possède l'attribut id.
@@ -64,11 +65,13 @@
 					// L'enfant n'a pas d'id, on le crée en base de données.
 				}
 			}
+			echo('<br/>AFFICHAGE DE LA FAMILLE POUR VERIFIER LES PARAMETRES DES ENFANTS.');
 			var_dump($famille_enfants_Update);
 
 			// Instanciation de l'objet famille.
 			$famille = new Famille($famille_id, $famille_data['adhesion_id'], $famille_data['nom'], $famille_data['code_postal'],
 				$famille_data['ville'], $famille_data['adresse'], $famille_data['telephone']);
+			echo ('<br/>AFFICHAGE DE LA FAMILLE INSTANCIEE.');
 			var_dump($famille);
 
 			// Update des données de la famille modifiée.
