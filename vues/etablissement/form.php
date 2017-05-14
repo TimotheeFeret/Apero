@@ -34,7 +34,7 @@ if(!empty($_GET['id'])) {
 
             <div class="input-field">
                 <i class="material-icons prefix">people</i>
-                <select name="section_id" id="section_id" required multiple></select>
+                <select name="section_id[]" id="section_id" required multiple></select>
                 <label for="section_id">Sections</label>
             </div>
         </div>

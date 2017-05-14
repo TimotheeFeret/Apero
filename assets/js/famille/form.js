@@ -29,8 +29,8 @@ $( document ).ready(function() {
                     },
                 }
         })
-        .done(function () {
-            console.log("success");
+            .done(function (data) {
+                responseAjax(data)
         });
     });
 

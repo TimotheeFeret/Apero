@@ -27,7 +27,9 @@ $( document ).ready(function() {
                 }
             })
             .done(function (data) {
-                window.open(data, '_blank');
+                if (data.error === undefined) {
+                    getBonDepot();
+                }
             });
 
     });
@@ -60,6 +62,18 @@ $( document ).ready(function() {
     });
 
     // FUNCTIONS
+    function getBonDepot() {
+        $.ajax({
+                url: '/apero/modeles/documents/depot.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {id: $('#famille_vendeuse_id').val()},
+            })
+            .done(function (data) {
+                window.open(data, '_blank');
+            });
+    }
+
     function refreshPrix(row) {
         var prix = row.find('select.exemplaire').find('option:selected').attr('data-prix');
         var decote = row.find('select.etat').find('option:selected').attr('data-decote');

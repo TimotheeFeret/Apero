@@ -27,9 +27,9 @@
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
 	                self::__construct2($nbParam[0]);
 	                break;
-	            case 2:
+				case 3:
 	            //	On récupère l'id et la famille acheteuse.
-	                self::__construct3($nbParam[0], $nbParam[1]);
+					self::__construct3($nbParam[0], $nbParam[1], $nbParam[2]);
 	                break;
 	            case 7:
 	            //	On récupère tous les paramètres de l'exemplaire sauf l'id.
@@ -65,10 +65,11 @@
 		/**
 		*
 		 */
-		function __construct3($id, $famille_acheteuse_id)
+		function __construct3($id, $famille_acheteuse_id, $date_achat)
 		{
 			$this->id = $id;
 			$this->famille_acheteuse_id = $famille_acheteuse_id;
+			$this->date_achat = $date_achat;
 			/*var_dump ('Constructeur 2');*/
 		}
 
