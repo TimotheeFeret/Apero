@@ -40,6 +40,9 @@ $( document ).ready(function() {
             type: 'POST',
             dataType: 'json',
             data: {id: $('#famille_acheteuse_id').val()},
+            })
+            .done(function (data) {
+                window.open(data, '_blank');
         });
     }
 

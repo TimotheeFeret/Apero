@@ -289,9 +289,10 @@ While ($num_page <= $nb_page) {
     $limit_inf += 18;
     $limit_sup += 18;
 }
-$dir = 'documents/achat';
-if (!file_exists($dir)) {
-    mkdir($dir, 0777, true);
+
+$dir = '/documents/achat';
+if (!file_exists($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir)) {
+    mkdir($_SERVER['CONTEXT_DOCUMENT_ROOT'] . $dir, 0777, true);
 }
 
 $dest = $dir . '/' . $nom_file;
