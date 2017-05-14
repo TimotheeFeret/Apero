@@ -2,7 +2,7 @@
     <nav>
         <div class="nav-wrapper">
             <div class="container">
-                <a href="index.php" class="brand-logo">Apero</a>
+                <a href="index.php" class="brand-logo">APERO</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="vues/famille/list.php">Familles</a></li>
                     <li><a href="vues/etablissement/list.php">Établissements</a></li>

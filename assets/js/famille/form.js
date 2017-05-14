@@ -173,7 +173,7 @@ $( document ).ready(function() {
 
     function refreshClasses(idEtablissement, selectClasse, selectedValue) {
         selectClasse.empty();
-        addOptionsToSelect(selectClasse, classes[idEtablissement], 'section_id', 'section_nom', 'Choisissez une classe');
+        addOptionsToSelect(selectClasse, classes[idEtablissement], 'id', 'section_nom', 'Choisissez une classe');
         selectClasse.attr('disabled', false);
 
         if(selectedValue != undefined) {
