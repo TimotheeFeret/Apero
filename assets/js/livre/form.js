@@ -16,7 +16,7 @@ $(document).ready(function () {
                 if (data.error != undefined) {
                     Materialize.toast(data.error, 5000, 'red');
                 } else {
-                    window.loca
+                    window.location.replace(document.referrer)
                 }
             })
     });

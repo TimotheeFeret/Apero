@@ -22,7 +22,6 @@ $( document ).ready(function() {
             dataType: 'json',
                 data: {
                     event: eventPage,
-                    id: id,
                     data: {
                         id: id,
                         famille: serialize($('#Informations :input')),
