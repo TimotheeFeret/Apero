@@ -16,7 +16,6 @@ function initTabs() {
 }
 
 function replaceUndesirableCharatersForDB(text) {
-    console.log(text);
     text = text.replace('%20%E2%82%AC', ''); // ' €'
     text = text.replace(' €', '');
     text = text.replace('€', '');
@@ -97,7 +96,6 @@ function initForm(form, data) {
             } else if(typeof data[name] == 'object') {
                 $.each($(data[name]), function (dataindex, dataval) {
                     var name = val.attr('name');
-                    console.log(name);
                     val.find('option[value='+dataval[name]+']').attr('selected', 'selected');
                 });
             }

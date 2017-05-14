@@ -15,7 +15,6 @@ $( document ).ready(function() {
     // A la soumission du formulaire
     $(document).submit(function() {
         event.preventDefault();
-        console.log('submit');
 
         $.ajax({
             url: '/apero/controleurs/famille.php',
@@ -23,8 +22,12 @@ $( document ).ready(function() {
             dataType: 'json',
                 data: {
                     event: eventPage,
-                    data: serialize($('#Informations :input')),
-                    enfants: serializeArray($('#Enfants>div'))
+                    id: id,
+                    data: {
+                        id: id,
+                        famille: serialize($('#Informations :input')),
+                        enfants: serializeArray($('#Enfants>div'))
+                    },
                 }
         })
         .done(function () {
