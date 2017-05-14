@@ -39,7 +39,7 @@ function serializeArray(arrayJquery) {
         var datum = {};
 
         // Parcours les informations des données
-        $.each($(valData).find("input[type!='hidden'], select[type!='hidden']"), function (indexDatum, valDatum) {
+        $.each($(valData).find("input, select[type!='hidden']"), function (indexDatum, valDatum) {
             var name = $(valDatum).attr('name');
 
             if(name == undefined)

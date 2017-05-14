@@ -203,6 +203,16 @@ $( document ).ready(function() {
     function constructFormEnfant(idEnfant, data) {
         var div = $('<div>', {id: idEnfant, class: 'tab_content'});
 
+        // ID
+        var input_field_id = null;
+        if (data != undefined) {
+            var id = data == undefined ? null : data['id'];
+            var input_field_id = bc_input_field().attr('hidden', 'hidden');
+            input_field_id.append(bc_input_text().val(id).attr({
+                name: 'id#' + idEnfant
+            }));
+        }
+
         // Nom
         var nom = data == undefined ? $('#nom').val() : data['nom'];
         var input_field_nom = bc_input_field().addClass('col s6');
@@ -243,10 +253,12 @@ $( document ).ready(function() {
 
         if(etablissement != undefined) {
             selectEtablissement.find('option[value=' + etablissement + ']').attr('selected', 'selected');
-            console.log(data['section_id']);
             refreshClasses(etablissement, selectClasse, data['section_id']);
         }
 
+        if (input_field_id != null) {
+            div.append(input_field_id);
+        }
 
         div.append(
             bc_row()
