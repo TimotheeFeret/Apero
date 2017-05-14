@@ -64,6 +64,7 @@
 					// L'enfant n'a pas d'id, on le crée en base de données.
 				}
 			}
+			var_dump($famille_enfants_Update);
 
 			// Instanciation de l'objet famille.
 			$famille = new Famille($famille_id, $famille_data['adhesion_id'], $famille_data['nom'], $famille_data['code_postal'],
@@ -120,7 +121,7 @@
 						// Instanciation de l'enfant à modifier
 						echo("<br/>TOTOTOTOTOTOTO");
 						var_dump($enfantData);
-						$enfant = new Enfant ($enfantData['id'], $enfantData['famille_id'], $enfantData['classe_id'], $enfantData['nom'],
+						$enfant = new Enfant ($enfantData['id'], $famille_id, $enfantData['classe'], $enfantData['nom'],
 							$enfantData['prenom'], $enfantData['date_naissance']);
 						var_dump($enfant);
 						$enfant->update();

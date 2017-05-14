@@ -24,7 +24,7 @@
 		case 'delete':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => "Lid n'est pas renseigné);
+				return echo json_encode('error' => "L'id n'est pas renseigné);
 			}
 			$enfant = new Enfant($_POST['id']);
 			// Supprime l'enfant ou génère une erreur si la suppression a échoué.
