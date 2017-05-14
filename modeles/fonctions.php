@@ -13,25 +13,42 @@
 			$attributs = get_object_vars ( $this );
 			// Variable dans laquelle on construit une chaîne de caractère qui permettra d'exécuter une requête SQL.
 			$reqConstructor = null;
-
+			var_dump($attributs);
 			foreach ($attributs as $key => $attribut) {
 				// On n'ajoute pas l'id car il va être auto-incrémenté.
 				if ($key == 'id' || $key == 'nomTable')
 				{
+					var_dump('AAAAAAAAAAA');
 					continue;
 				}
 				
 				if($reqConstructor != null)
 				{
-					$reqConstructor .= ", " . $key . "='" . $attribut . "'";
+					if(empty($attribut))
+					{
+						// C'est le premier champ que l'on concatène à la variable $reqConstructor donc pas besoin de ','.
+						$reqConstructor .= ", " . $key . "=null";
+					}
+					else
+					{
+						$reqConstructor .= ", " . $key . "='" . $attribut . "'";
+					}
 				}
 				else
 				{
-					// C'est le premier champ que l'on concatène à la variable $reqConstructor donc pas besoin de ','.
-					$reqConstructor .=  $key . "='" . $attribut . "'";
+					if(empty($attribut))
+					{
+						// C'est le premier champ que l'on concatène à la variable $reqConstructor donc pas besoin de ','.
+						$reqConstructor .=  $key . "=null";
+					}
+					else
+					{
+						// C'est le premier champ que l'on concatène à la variable $reqConstructor donc pas besoin de ','.
+						$reqConstructor .=  $key . "='" . $attribut . "'";
+					}
 				}
 			}
-			/*var_dump($reqConstructor);*/
+			var_dump($reqConstructor);
 			return $reqConstructor;
 		}
 

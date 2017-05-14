@@ -24,7 +24,7 @@
 		case 'delete':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
+				return echo json_encode('error' => "L'id n'est pas renseigné");
 			}
 			$etablissement = new Etablissement($_POST['id']);
 			// Supprime l'établissement ou génère une erreur si la suppression a échoué.
@@ -38,7 +38,7 @@
 		case 'update':
 			// Vérifie que l'id est renseigné.
 			if( !isset($_POST['id']) ) {
-				return echo json_encode('error' => 'L''id n''est pas renseigné');
+				return echo json_encode('error' => "L'id n'est pas renseigné");
 			}
 			if( !isset($_POST['data']) ) {
 				return echo json_encode('error' => 'Toutes les données ne sont pas renseignées');
