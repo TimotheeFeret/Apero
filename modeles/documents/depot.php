@@ -108,7 +108,7 @@ While ($num_page <= $nb_page) {
     //$pdf->SetXY( $x, $y ); $pdf->Cell( 100, 8, $row_client[0], 0, 0, ''); $y += 4;
     if ($row_client[0]) {
         $pdf->SetXY($x, $y);
-        $pdf->Cell(100, 8, $row_client[0], 0, 0, '');
+        $pdf->Cell(100, 8, 'Famille ' . $row_client[0], 0, 0, '');
         $y += 4;
     }
     if ($row_client[1]) {
