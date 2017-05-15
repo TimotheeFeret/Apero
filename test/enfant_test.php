@@ -42,5 +42,7 @@
 	// OK
 	/*echo '// ******************** SUPPRESSION ENFANT ******************** //';
 	$enfant6 = new Enfant('90');
-	$enfant6->delete();*/
+	$enfant6->delete();
+	echo("<br/>AFFICHAGE DE L'ENFANT QUI A ETE SUPPRIME.")
+	var_dump($enfant5->get('90'));*/
 ?>
