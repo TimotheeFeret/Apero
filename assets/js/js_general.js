@@ -117,7 +117,7 @@ function responseAjax(data) {
     if (data.error != undefined) {
         Materialize.toast(data.error, 5000, 'red');
     } else {
-        window.location.replace(document.referrer)
+        window.location.replace(document.referrer);
     }
 }
 

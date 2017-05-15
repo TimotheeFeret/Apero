@@ -292,7 +292,7 @@ While ($num_page <= $nb_page) {
     $pdf->SetXY(1, 255);
     $pdf->SetFont('Arial', '', 8);
     if ($tot_ttc < 0) {
-        $pdf->Cell($pdf->GetPageWidth(), 5, "Un chèque vous sera envoyé dans les 30 jours suivant la réception de cette facture.", 0, 0, 'C');
+        $pdf->Cell($pdf->GetPageWidth(), 5, "Un chèque d'un montant de " . number_format(($tot_ttc < 0 ? $tot_ttc * -1 : $tot_ttc), 2, ',', ' ') . " €" . " vous sera envoyé dans les 30 jours suivant la réception de cette facture.", 0, 0, 'C');
     }
 
     $pdf->SetLineWidth(0.1);

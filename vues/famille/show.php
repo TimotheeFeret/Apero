@@ -240,7 +240,8 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
             <i class="large material-icons">edit</i>
         </a>
         <ul>
-            <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="Supprimer la famille"><i
+            <li><a class="btn-floating red tooltipped" data-position="left" data-tooltip="Supprimer la famille"
+                   id="BtDeleteFamille"><i
                         class="material-icons">delete</i></a></li>
             <li><a class="btn-floating blue tooltipped" data-position="left" data-tooltip="Imprimer la facture" id="BtImprimerFacture"><i
                         class="material-icons">print</i></a></li>

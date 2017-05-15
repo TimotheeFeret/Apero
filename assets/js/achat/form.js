@@ -138,6 +138,9 @@ $( document ).ready(function() {
 
             total += prix;
         });
+        total = total.toLocaleString('en-EN', {minimumFractionDigits: 2});
+        var pad = "00000";
+        total = pad.substring(0, pad.length - total.length) + total;
         $('.total').text(total + ' €');
     }
 

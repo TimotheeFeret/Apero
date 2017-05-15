@@ -249,7 +249,7 @@ While ($num_page <= $nb_page) {
         }
         mysqli_free_result($res);
 
-        $nombre_format_francais = "Net à payer TTC : " . number_format($tot_ttc, 2, ',', ' ') . " €";
+        $nombre_format_francais = "Montant TTC : " . number_format($tot_ttc, 2, ',', ' ') . " €";
         $pdf->SetFont('Arial', 'B', 12);
         $pdf->SetXY(5, 213);
         $pdf->Cell(90, 8, $nombre_format_francais, 0, 0, 'C');
@@ -288,10 +288,10 @@ While ($num_page <= $nb_page) {
     $pdf->Cell($pdf->GetPageWidth(), 5, "12000 RODEZ", 0, 0, 'C'); // adresse 
 
     $pdf->SetXY(1, $y1 + 12);
-    $pdf->Cell($pdf->GetPageWidth(), 5, "0500000000", 0, 0, 'C'); // telephone
+    $pdf->Cell($pdf->GetPageWidth(), 5, "05 64 84 75 14", 0, 0, 'C'); // telephone
 
     $pdf->SetXY(1, $y1 + 16);
-    $pdf->Cell($pdf->GetPageWidth(), 5, "apero.fr", 0, 0, 'C'); // site internet
+    $pdf->Cell($pdf->GetPageWidth(), 5, "www.apero.fr", 0, 0, 'C'); // site internet
 
     // par page de 18 lignes
     $num_page++;

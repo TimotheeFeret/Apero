@@ -15,4 +15,20 @@ $( document ).ready(function() {
                 window.open(data,'_blank');
             })
     });
+
+    $('#BtDeleteFamille').on('click', function () {
+        $.ajax({
+                url: '/apero/controleurs/famille.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {event: 'delete', id: id}
+            })
+            .done(function (data) {
+                if (data.error != undefined) {
+                    Materialize.toast(data.error, 5000, 'red');
+                } else {
+                    window.location.replace(document.referrer);
+                }
+            });
+    });
 });

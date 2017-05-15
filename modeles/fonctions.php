@@ -22,12 +22,12 @@
 				
 				if($reqConstructor != null)
 				{
-					$reqConstructor .= ", " . $key . "='" . $attribut . "'";
+					$reqConstructor .= ", " . $key . "=\"" . $attribut . "\"";
 				}
 				else
 				{
 					// C'est le premier champ que l'on concatène à la variable $reqConstructor donc pas besoin de ','.
-					$reqConstructor .=  $key . "='" . $attribut . "'";
+					$reqConstructor .= $key . "=\"" . $attribut . "\"";
 				}
 			}
 			return $reqConstructor;
