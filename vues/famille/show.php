@@ -6,7 +6,12 @@ $famille->setNomTable('v_famille');
 $enfants = $famille->getEnfants();
 $exemplaireDeposes = $famille->getExemplairesDeposes();
 $exemplaireAchetes = $famille->getExemplairesAchetes();
-$famille = $famille->get($_GET['id'])[0];
+$famille = $famille->get($_GET['id']);
+if (empty($famille[0])) {
+    die('Famille inexistante');
+} else {
+    $famille = $famille[0];
+}
 $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 'red' : 'green';
 ?>
 
