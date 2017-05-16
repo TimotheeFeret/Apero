@@ -9,7 +9,7 @@
 <?php include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/vues/topbar.php'; ?>
 
 <main class="container">
-    <h1 class="center">Acceuil</h1>
+    <h1 class="center">Accueil</h1>
 
     <div class="row center">
         <div class="col s1"></div>

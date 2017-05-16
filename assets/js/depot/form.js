@@ -10,7 +10,7 @@ $( document ).ready(function() {
     /**
      * Initialisation du formulaire
      */
-    addOptionsToSelect($('#famille_vendeuse_id'), familles, 'id', 'nom', 'Choissisez une famille');
+    addOptionsToSelect($('#famille_vendeuse_id'), familles, 'id', 'nom', 'Choisissez une famille');
     initSelect();
 
     $(document).submit(function() {
@@ -114,7 +114,7 @@ $( document ).ready(function() {
         var icon_livre = bc_icon().text('book');
         var select_livre = bc_select().attr('name', 'livre_id#'+id).addClass('exemplaire');
         var label_livre = bc_label().text('Exemplaire');
-        addOptionsToSelect(select_livre, livres, 'id', 'nom_prix', 'Choissisez un livre', {'data-prix': 'prix'});
+        addOptionsToSelect(select_livre, livres, 'id', 'nom_prix', 'Choisissez un livre', {'data-prix': 'prix'});
         input_field_livre
             .append(icon_livre)
             .append(select_livre)
@@ -126,7 +126,7 @@ $( document ).ready(function() {
         var icon_etat = bc_icon().text('star_rate');
         var select_etat = bc_select().attr('name', 'etat_id#'+id).addClass('etat');
         var label_etat = bc_label().text('État');
-        addOptionsToSelect(select_etat, etats, 'id', 'etat_decote', 'Choissisez un état', {'data-decote': 'decote'});
+        addOptionsToSelect(select_etat, etats, 'id', 'etat_decote', 'Choisissez un état', {'data-decote': 'decote'});
         input_field_etat
             .append(icon_etat)
             .append(select_etat)

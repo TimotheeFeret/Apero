@@ -10,7 +10,7 @@ $( document ).ready(function() {
     /**
      * Initialisation du formulaire
      */
-    addOptionsToSelect($('#famille_acheteuse_id'), familles, 'id', 'nom', 'Choissisez une famille');
+    addOptionsToSelect($('#famille_acheteuse_id'), familles, 'id', 'nom', 'Choisissez une famille');
     initSelect();
 
     $(document).submit(function() {
@@ -98,7 +98,7 @@ $( document ).ready(function() {
         var icon_livre = bc_icon().text('book');
         var select_livre = bc_select().attr('name', 'livre_id#'+id).addClass('exemplaire');
         var label_livre = bc_label().text('Exemplaire');
-        addOptionsToSelect(select_livre, livres, 'id', 'nom_etat', 'Choissisez un livre', {'data-prix': 'prix'});
+        addOptionsToSelect(select_livre, livres, 'id', 'nom_etat', 'Choisissez un livre', {'data-prix': 'prix'});
         input_field_livre
             .append(icon_livre)
             .append(select_livre)
@@ -170,7 +170,7 @@ $( document ).ready(function() {
 
             var input_prix = row.find('.prix');
 
-            if (input_prix.val() != '') return;
+            // if (input_prix.val() != '') return;
 
             prix = prix.toLocaleString('en-EN', {minimumFractionDigits: 2});
             var pad = "00000";

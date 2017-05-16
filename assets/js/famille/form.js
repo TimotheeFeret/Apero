@@ -241,7 +241,7 @@ $( document ).ready(function() {
         var input_field_etablissement = bc_input_field().addClass('col s6');
         input_field_etablissement.append(bc_icon().text('school'));
         var selectEtablissement = bc_select();
-        addOptionsToSelect(selectEtablissement, etablissements, 'id', 'nom', 'Choissisez un établissement');
+        addOptionsToSelect(selectEtablissement, etablissements, 'id', 'nom', 'Choisissez un établissement');
         input_field_etablissement.append(selectEtablissement.attr('name', 'etablissement#' + idEnfant).addClass('etablissement'));
         input_field_etablissement.append(bc_label().attr('for', 'etablissement#' + idEnfant).text('Établissement'));
 
