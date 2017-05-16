@@ -1,6 +1,10 @@
 <?php
 include_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . 'modeles/famille.php';
 
+if (empty($_GET['id'])) {
+    die('Identifiant introuvable');
+}
+
 $famille = new Famille($_GET['id']);
 $famille->setNomTable('v_famille');
 $enfants = $famille->getEnfants();
