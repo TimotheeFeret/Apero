@@ -28,7 +28,7 @@
 	                self::__construct2($nbParam[0]);
 	                break;
 				case 3:
-	            //	On récupère l'id et la famille acheteuse.
+	            //	On récupère l'id de la famille, l'id du livre et la famille acheteuse.
 					self::__construct3($nbParam[0], $nbParam[1], $nbParam[2]);
 	                break;
 	            case 7:
