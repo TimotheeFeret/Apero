@@ -22,6 +22,8 @@
 	echo '</br>// Création d\'un enfant avec (famille_id, section_id, nom, prenom, date_naissance).';
 	$enfant3 = new Enfant('126', '5', 'JeanJean', 'Jedusor', '2017-04-01');
 	$enfant3->add();
+	echo "<br/>AFFICHAGE DE l'ENFANT CREE EN BASE.";
+	var_dump($enfant3->get('126'));
 
 	// ******************** UPDATE ENFANT ******************** //
 	// OK
