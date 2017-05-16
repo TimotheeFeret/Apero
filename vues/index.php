@@ -19,7 +19,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/famille.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Familles</span>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/etablissement.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Établissements</span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/livre.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Livres</span>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/stock.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Stock</span>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/historique.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Historique</span>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/depot.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Dépôt</span>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     <div class="card-image">
                         <img src="/apero/assets/img/achat.png" class="btn-img">
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" style="word-wrap: break-word;">
                         <span class="card-title">Achat</span>
                     </div>
                 </div>
