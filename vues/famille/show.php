@@ -41,7 +41,7 @@ $colorAdhesion = strpos(strtolower($famille['adhesion_libelle']), 'non') > -1 ? 
     <!--    </div>-->
 
     <!--    Information de la famille-->
-    <h5>Information générales</h5>
+    <h5>Informations générales</h5>
     <div class="row">
         <div class="col s12">
             <div class="card darken-1">
